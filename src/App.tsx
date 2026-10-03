@@ -1,236 +1,364 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   ArrowDownRight,
+  ArrowRight,
   ArrowUpRight,
-  BarChart3,
-  CalendarDays,
   Check,
   ChevronDown,
-  ClipboardList,
   ExternalLink,
+  Mail,
+  Maximize2,
   Menu,
-  MessageCircle,
-  MoveUpRight,
-  Sparkles,
-  UserRound,
   X,
 } from 'lucide-react'
-import resumen from './assets/resumen-demo.svg'
-import pendientes from './assets/pendientes-demo.svg'
-import analisis from './assets/analisis-demo.svg'
+import { contactHref, site, type ProductView } from './siteConfig'
 
-const productViews = [
-  {
-    id: 'resumen',
-    label: '01 / Resumen',
-    eyebrow: 'VISIÓN GENERAL',
-    title: 'Una vista clara de lo que está pasando.',
-    text: 'Consultas y etapas del proceso en un mismo lugar para entender dónde hace falta actuar.',
-    image: resumen,
-    alt: 'Ilustración del resumen de DentFlow con embudo comercial y estado de las consultas',
-  },
-  {
-    id: 'pendientes',
-    label: '02 / Pendientes',
-    eyebrow: 'COLA DE TRABAJO',
-    title: 'Lo siguiente, a la vista del equipo.',
-    text: 'Las consultas que necesitan atención quedan ordenadas para que recepción pueda revisar el contexto y avanzar.',
-    image: pendientes,
-    alt: 'Ilustración de la cola de pendientes de DentFlow',
-  },
-  {
-    id: 'analisis',
-    label: '03 / Análisis',
-    eyebrow: 'LECTURA DEL PROCESO',
-    title: 'Datos para hacer mejores preguntas.',
-    text: 'El embudo muestra cómo avanzan las consultas entre etapas, con métricas que ayudan a detectar fricciones.',
-    image: analisis,
-    alt: 'Ilustración del análisis de etapas y embudo de DentFlow',
-  },
-] as const
+function useEntranceMotion() {
+  useEffect(() => {
+    if (!('IntersectionObserver' in window) || !('animate' in document.documentElement)) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-const process = [
-  {
-    number: '01',
-    icon: ClipboardList,
-    title: 'La consulta se registra',
-    text: 'Una landing con formulario incorpora la consulta al sistema con la información que el paciente dejó.',
-  },
-  {
-    number: '02',
-    icon: UserRound,
-    title: 'Recepción toma el contexto',
-    text: 'El CRM reúne estado, responsable, próxima acción y fechas para saber qué necesita atención.',
-  },
-  {
-    number: '03',
-    icon: MessageCircle,
-    title: 'El equipo da seguimiento',
-    text: 'Desde el CRM abre WhatsApp con un mensaje prellenado, lo envía y registra el avance.',
-  },
-]
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue
+        const element = entry.target as HTMLElement
+        element.animate(
+          [{ opacity: 0.3, transform: 'translateY(22px)' }, { opacity: 1, transform: 'translateY(0)' }],
+          { duration: 620, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'none' },
+        )
+        observer.unobserve(element)
+      }
+    }, { threshold: 0.12 })
 
-const capabilities = [
-  { icon: ClipboardList, label: 'Consultas organizadas', detail: 'Información centralizada para trabajar con contexto.' },
-  { icon: CalendarDays, label: 'Próxima acción visible', detail: 'Estado, responsable y fechas para continuar el seguimiento.' },
-  { icon: MessageCircle, label: 'Contacto más simple', detail: 'Acceso a WhatsApp con un mensaje preparado para revisar y enviar.' },
-  { icon: BarChart3, label: 'Métricas del proceso', detail: 'Una lectura de las etapas para encontrar puntos de fricción.' },
-]
+    document.querySelectorAll('[data-animate]').forEach((element) => observer.observe(element))
+    return () => observer.disconnect()
+  }, [])
+}
 
-const faqs = [
-  {
-    question: '¿DentFlow responde mensajes automáticamente?',
-    answer: 'No. El equipo abre WhatsApp desde el CRM con un mensaje prellenado, lo revisa, lo envía y registra el resultado. El seguimiento requiere trabajo humano.',
-  },
-  {
-    question: '¿De dónde salen las consultas?',
-    answer: 'En el funcionamiento actual, las consultas se registran mediante una landing con formulario y quedan organizadas en el CRM.',
-  },
-  {
-    question: '¿Se puede ver el producto?',
-    answer: 'Sí. Podés recorrer ilustraciones de las vistas de resumen, pendientes y análisis en la sección del producto, o abrir DentFlow desde esta página.',
-  },
-]
-
-function Brand({ inverse = false }: { inverse?: boolean }) {
+function Brand({ light = false }: { light?: boolean }) {
+  const [first, ...rest] = site.brand.toUpperCase().split(' ')
   return (
-    <a className={`brand ${inverse ? 'brand--inverse' : ''}`} href="#inicio" aria-label="Tiago Systems, volver al inicio">
-      <span className="brand-mark" aria-hidden="true"><span /><span /><span /></span>
-      <span className="brand-type">TIAGO<span>SYSTEMS</span></span>
+    <a className={`brand${light ? ' brand--light' : ''}`} href="#inicio" aria-label={`${site.brand}, ir al inicio`}>
+      <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
+      <span className="brand-wordmark">{first}<span>{rest.join(' ')}</span></span>
     </a>
   )
 }
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [activeView, setActiveView] = useState(0)
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
+type MediaFrameProps = {
+  src: string | null
+  alt: string
+  className?: string
+  eager?: boolean
+  fallback: string
+}
+
+function MediaFrame({ src, alt, className = '', eager = false, fallback }: MediaFrameProps) {
+  const [failed, setFailed] = useState(false)
+  return (
+    <div className={`media-frame ${className}`}>
+      {src && !failed ? (
+        <img src={src} alt={alt} width="1672" height="940" loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setFailed(true)} />
+      ) : (
+        <div className="media-fallback" role="img" aria-label={fallback}>
+          <span className="media-fallback-mark">DF</span>
+          <span>{fallback}</span>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function Header() {
+  const [open, setOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const firstLinkRef = useRef<HTMLAnchorElement>(null)
 
   useEffect(() => {
-    const elements = document.querySelectorAll<HTMLElement>('[data-reveal]')
-    if (!('IntersectionObserver' in window)) {
-      elements.forEach((element) => element.classList.add('is-visible'))
-      return
-    }
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible')
-          observer.unobserve(entry.target)
-        }
-      })
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' })
-    elements.forEach((element) => observer.observe(element))
-    return () => observer.disconnect()
-  }, [])
+    if (open) firstLinkRef.current?.focus()
+  }, [open])
 
-  const closeMenu = () => setMenuOpen(false)
-  const view = productViews[activeView]
+  useEffect(() => {
+    if (!open) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false)
+        menuButtonRef.current?.focus()
+      }
+    }
+    const onPointer = (event: PointerEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) setOpen(false)
+    }
+    const onResize = () => {
+      if (window.innerWidth > 760) setOpen(false)
+    }
+    document.addEventListener('keydown', onKey)
+    document.addEventListener('pointerdown', onPointer)
+    window.addEventListener('resize', onResize)
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.removeEventListener('pointerdown', onPointer)
+      window.removeEventListener('resize', onResize)
+    }
+  }, [open])
+
+  return (
+    <header className="site-header" id="inicio" ref={headerRef}>
+      <div className="shell nav-inner">
+        <Brand />
+        <nav id="main-navigation" className={`nav-links${open ? ' nav-links--open' : ''}`} aria-label="Navegación principal">
+          {site.navigation.map((item, index) => (
+            <a key={item.href} ref={index === 0 ? firstLinkRef : undefined} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
+          ))}
+          <a className="nav-mobile-contact" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined} onClick={() => setOpen(false)}>Contacto <ArrowUpRight size={18} /></a>
+        </nav>
+        <a className="nav-cta" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined}>Hablemos <ArrowUpRight size={17} /></a>
+        <button ref={menuButtonRef} className="menu-button" type="button" aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen((value) => !value)}>
+          {open ? <X size={23} /> : <Menu size={23} />}
+        </button>
+      </div>
+    </header>
+  )
+}
+
+function ProductGallery() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const tabsRef = useRef<(HTMLButtonElement | null)[]>([])
+  const dialogRef = useRef<HTMLDialogElement>(null)
+  const enlargeRef = useRef<HTMLButtonElement>(null)
+  const view = site.product.views[activeIndex]
+
+  const selectTab = (index: number) => {
+    setActiveIndex(index)
+    tabsRef.current[index]?.focus()
+  }
+
+  const onTabKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
+    let next: number | null = null
+    if (event.key === 'ArrowRight') next = (index + 1) % site.product.views.length
+    if (event.key === 'ArrowLeft') next = (index - 1 + site.product.views.length) % site.product.views.length
+    if (event.key === 'Home') next = 0
+    if (event.key === 'End') next = site.product.views.length - 1
+    if (next !== null) {
+      event.preventDefault()
+      selectTab(next)
+    }
+  }
+
+  return (
+    <>
+      <div className="gallery" data-animate>
+        <div className="gallery-topline">
+          <span className="gallery-index">EXPLORÁ EL PRODUCTO</span>
+          <span className="gallery-note">Pantallas adaptadas · datos de ejemplo</span>
+        </div>
+        <div className="product-tabs" role="tablist" aria-label="Vistas de DentFlow">
+          {site.product.views.map((item, index) => (
+            <button
+              key={item.id}
+              ref={(element) => { tabsRef.current[index] = element }}
+              type="button"
+              className={`product-tab${activeIndex === index ? ' product-tab--active' : ''}`}
+              role="tab"
+              id={`tab-${item.id}`}
+              aria-selected={activeIndex === index}
+              aria-controls="product-panel"
+              tabIndex={activeIndex === index ? 0 : -1}
+              onClick={() => setActiveIndex(index)}
+              onKeyDown={(event) => onTabKeyDown(event, index)}
+            >
+              <span>0{index + 1}</span>{item.tab}<ArrowUpRight size={17} aria-hidden="true" />
+            </button>
+          ))}
+        </div>
+        <div className="product-panel" id="product-panel" role="tabpanel" aria-labelledby={`tab-${view.id}`} tabIndex={0}>
+          <div className="product-panel-copy" key={view.id}>
+            <span className="eyebrow eyebrow--orange">{view.eyebrow}</span>
+            <h3>{view.title}</h3>
+            <p>{view.description}</p>
+            <div className="gallery-controls">
+              <button ref={enlargeRef} className="view-image" type="button" onClick={() => dialogRef.current?.showModal()}>
+                Ampliar pantalla <Maximize2 size={17} />
+              </button>
+            </div>
+          </div>
+          <div className="product-image-wrap" key={`image-${view.id}`}>
+            <MediaFrame src={view.image} alt={view.alt} fallback={`Vista ${view.tab} no disponible`} />
+            <div className="image-caption"><span>CAPTURA ADAPTADA</span><span>{view.detail}</span></div>
+          </div>
+        </div>
+      </div>
+      <dialog ref={dialogRef} className="image-dialog" aria-label={`Vista ampliada: ${view.tab}`} onClose={() => enlargeRef.current?.focus()} onClick={(event) => { if (event.target === event.currentTarget) dialogRef.current?.close() }}>
+        <div className="dialog-top"><span>{view.tab} / datos de ejemplo</span><a href={view.image} target="_blank" rel="noopener noreferrer">Abrir imagen completa <ExternalLink size={16} /></a><button type="button" aria-label="Cerrar imagen ampliada" onClick={() => dialogRef.current?.close()}><X size={22} /></button></div>
+        <MediaFrame key={`dialog-${view.id}`} src={view.image} alt={view.alt} fallback={`Vista ${view.tab} no disponible`} eager />
+      </dialog>
+    </>
+  )
+}
+
+function FounderPortrait() {
+  const [failed, setFailed] = useState(false)
+  const photo = site.founder.photo
+  return (
+    <div className="portrait" data-animate>
+      {photo && !failed ? <img src={photo} alt={`Retrato de ${site.founder.name}`} width="800" height="960" loading="lazy" onError={() => setFailed(true)} /> : (
+        <div className="portrait-placeholder" role="img" aria-label={`Espacio reservado para una futura foto profesional de ${site.founder.name}`}>
+          <span className="portrait-grid" aria-hidden="true" />
+          <span className="portrait-initial" aria-hidden="true">T<span>O</span></span>
+          <span className="portrait-placeholder-note">RETRATO<br />PRÓXIMAMENTE</span>
+        </div>
+      )}
+      <div className="portrait-caption"><span>{site.founder.name.toUpperCase()}</span><span>01 / FUNDADOR</span></div>
+    </div>
+  )
+}
+
+function Faq() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  return (
+    <section className="faq section-cream" id="preguntas" aria-labelledby="faq-title">
+      <div className="shell faq-grid">
+        <div className="faq-heading" data-animate>
+          <span className="eyebrow">{site.copy.faq.eyebrow}</span>
+          <h2 id="faq-title">{site.copy.faq.title}<br /><em>{site.copy.faq.accent}</em></h2>
+          <p>{site.copy.faq.description}</p>
+        </div>
+        <div className="faq-list" data-animate>
+          {site.questions.map((item, index) => (
+            <div className={`faq-item${openIndex === index ? ' faq-item--open' : ''}`} key={item.question}>
+              <h3>
+                <button type="button" id={`faq-trigger-${index}`} aria-expanded={openIndex === index} aria-controls={`faq-answer-${index}`} onClick={() => setOpenIndex((current) => current === index ? null : index)}>
+                  <span className="faq-number">0{index + 1}</span><span>{item.question}</span><ChevronDown size={21} aria-hidden="true" />
+                </button>
+              </h3>
+              <div className="faq-answer" id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-trigger-${index}`} aria-hidden={openIndex !== index}>
+                <div><p>{item.answer}</p></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function App() {
+  useEntranceMotion()
+  const heroView: ProductView = site.product.views[0]
 
   return (
     <>
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
-      <div className="topline"><span>TECNOLOGÍA APLICADA A NEGOCIOS</span><span>HECHO PARA EL TRABAJO REAL <span className="topline-star">✳</span></span></div>
-      <header className="site-header" id="inicio">
-        <div className="shell nav-inner">
-          <Brand />
-          <nav className={menuOpen ? 'nav-links nav-links--open' : 'nav-links'} aria-label="Navegación principal">
-            <a href="#enfoque" onClick={closeMenu}>Enfoque</a>
-            <a href="#dentflow" onClick={closeMenu}>DentFlow</a>
-            <a href="#proceso" onClick={closeMenu}>Cómo funciona</a>
-            <a href="#sobre-tiago" onClick={closeMenu}>Sobre Tiago</a>
-            <a className="mobile-contact" href="#contacto" onClick={closeMenu}>Siguiente paso <ArrowUpRight size={16} /></a>
-          </nav>
-          <a className="nav-cta" href="#contacto">Siguiente paso <ArrowUpRight size={16} strokeWidth={1.8} /></a>
-          <button className="menu-button" type="button" aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
-        </div>
-      </header>
-
+      <Header />
       <main id="contenido">
         <section className="hero section-dark" aria-labelledby="hero-title">
-          <div className="hero-grid" aria-hidden="true" />
-          <div className="hero-glow" aria-hidden="true" />
-          <div className="shell hero-inner">
+          <div className="hero-grid-pattern" aria-hidden="true" />
+          <div className="shell hero-layout">
             <div className="hero-copy">
-              <div className="eyebrow hero-eyebrow"><span className="eyebrow-line" /> SISTEMAS QUE PONEN ORDEN</div>
-              <h1 id="hero-title">Menos ruido.<br /><span>Más claridad</span><br />para avanzar<span className="period">.</span></h1>
-              <p className="hero-lead">Diseño y desarrollo tecnología para que los negocios puedan ver mejor su operación y actuar con contexto.</p>
+              <span className="eyebrow eyebrow--orange">{site.hero.eyebrow}</span>
+              <h1 id="hero-title">{site.hero.title.before} <span>{site.hero.title.accent}</span> {site.hero.title.after}<span className="orange-dot">.</span></h1>
+              <p>{site.hero.description}</p>
               <div className="hero-actions">
-                <a className="button button-primary" href="#dentflow">Conocé DentFlow <ArrowUpRight size={19} /></a>
-                <a className="text-link" href="#enfoque">Explorar el enfoque <ArrowDownRight size={19} /></a>
+                <a className="button button--orange" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined}>Hablemos de tu proyecto <ArrowUpRight size={19} /></a>
+                <a className="text-link" href="#dentflow">Conocé DentFlow <ArrowDownRight size={18} /></a>
               </div>
-              <div className="hero-signature"><span className="signature-line" /><span>TIAGO ORTEGA<br /><small>Detrás de Tiago Systems</small></span></div>
+              <div className="hero-credit"><span>{site.founder.name.toUpperCase()}</span><span>{site.founder.role}</span></div>
             </div>
-            <div className="hero-art" aria-label="Vista previa del producto DentFlow">
-              <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-              <div className="hero-art-label hero-art-label--top"><span className="status-dot" /> ILUSTRACIÓN DEL FLUJO</div>
-              <div className="hero-window">
-                <div className="window-top"><span className="window-dots"><i /><i /><i /></span><span>dentflow / panel de trabajo</span><span className="window-code">01—03</span></div>
-                <div className="window-body">
-                  <div className="mock-sidebar"><span className="mock-logo">D<span>F</span></span><span className="mock-side-active" /><span /><span /><span /><span /></div>
-                  <div className="mock-content"><div className="mock-kicker">FLUJO DE TRABAJO</div><div className="mock-title">Todo empieza con claridad.</div><div className="mock-subtitle">Lo que requiere atención, en un solo lugar.</div><div className="mock-metrics"><div><small>CONSULTA</small><strong>✓</strong><em>Registrada</em></div><div><small>CONTEXTO</small><strong>✓</strong><em>Disponible</em></div><div><small>PRÓXIMO PASO</small><strong>→</strong><em>Definido</em></div></div><div className="mock-list"><span className="mock-list-icon"><MessageCircle size={17} /></span><span><b>Seguimiento preparado</b><small>Contexto · responsable · próxima acción</small></span><ArrowUpRight size={17} /></div></div>
-                </div>
+            <div className="hero-visual">
+              <div className="hero-visual-top"><span className="signal-dot" /> PRODUCTO DESTACADO <span>01 / DENTFLOW</span></div>
+              <div className="hero-screen">
+                <div className="hero-screen-bar"><span className="screen-dots"><i /><i /><i /></span><span>dentflow / resumen</span><span>VISTA 01</span></div>
+                <MediaFrame src={heroView.image} alt={heroView.alt} fallback="Vista del producto no disponible" eager />
               </div>
-              <div className="hero-art-label hero-art-label--bottom">IDEA <span>→</span> SISTEMA <span>→</span> ACCIÓN</div>
+              <div className="hero-visual-bottom"><span>CAPTURA ADAPTADA · DATOS DE EJEMPLO</span><span>OPERACIÓN MÁS VISIBLE <ArrowUpRight size={16} /></span></div>
             </div>
           </div>
-          <div className="hero-bottom shell"><span>01 / UNA MARCA, UN ENFOQUE</span><span>DESLIZÁ PARA EXPLORAR <ArrowDownRight size={16} /></span></div>
+          <div className="shell hero-footer"><span>TECNOLOGÍA PARA EL TRABAJO REAL</span><a href="#enfoque">DESLIZÁ PARA EXPLORAR <ArrowDownRight size={16} /></a></div>
         </section>
 
-        <section className="manifesto section-light" id="enfoque">
-          <div className="shell manifesto-grid">
-            <div className="section-label" data-reveal><span className="label-square" /> 01 / EL ENFOQUE</div>
-            <div data-reveal>
-              <h2>La tecnología tiene sentido cuando <em>ayuda a trabajar mejor.</em></h2>
-              <div className="manifesto-bottom"><p>Tiago Systems es el espacio donde convierto problemas concretos de negocio en herramientas claras, útiles y pensadas para quienes las usan todos los días.</p><span className="asterisk" aria-hidden="true">✳</span></div>
+        <section className="approach section-light" id="enfoque" aria-labelledby="approach-title">
+          <div className="shell">
+            <div className="section-heading approach-heading" data-animate>
+              <span className="eyebrow">{site.copy.approach.eyebrow}</span>
+              <h2 id="approach-title">{site.copy.approach.title} <em>{site.copy.approach.accent}</em></h2>
+              <p>{site.copy.approach.description}</p>
             </div>
+            <div className="issue-grid">
+              {site.issues.map((issue) => (
+                <article className="issue" key={issue.number} data-animate>
+                  <span className="issue-number">{issue.number} / 03</span>
+                  <h3>{issue.title}</h3>
+                  <p>{issue.text}</p>
+                </article>
+              ))}
+            </div>
+            <div className="approach-note" data-animate><span className="note-symbol" aria-hidden="true">✳</span><p>{site.copy.approach.note}</p></div>
           </div>
         </section>
 
         <section className="product section-dark" id="dentflow" aria-labelledby="product-title">
           <div className="shell">
-            <div className="product-heading" data-reveal>
-              <div><div className="section-label section-label--orange"><span className="label-square" /> 02 / PRODUCTO ACTUAL</div><h2 id="product-title">Conocé <span>DentFlow.</span></h2></div>
-              <p>Un CRM para clínicas odontológicas que reúne consultas, seguimiento y métricas en un flujo de trabajo más claro.</p>
+            <div className="section-heading product-heading" data-animate>
+              <div><span className="eyebrow eyebrow--orange">{site.copy.product.eyebrow}</span><h2 id="product-title">{site.copy.product.title} <em>{site.copy.product.accent}</em></h2></div>
+              <p>{site.copy.product.description}</p>
             </div>
-            <div className="product-showcase" data-reveal>
-              <div className="product-tabs" role="tablist" aria-label="Vistas de DentFlow">
-                {productViews.map((item, index) => <button key={item.id} className={activeView === index ? 'product-tab product-tab--active' : 'product-tab'} type="button" role="tab" id={`tab-${item.id}`} aria-selected={activeView === index} aria-controls="product-panel" onClick={() => setActiveView(index)}>{item.label}<ArrowUpRight size={17} /></button>)}
-              </div>
-              <div className="product-panel" id="product-panel" role="tabpanel" aria-labelledby={`tab-${view.id}`}>
-                <div className="product-panel-copy"><span className="mini-label"><span className="status-dot" /> {view.eyebrow}</span><h3>{view.title}</h3><p>{view.text}</p><span className="real-screen"><Check size={15} /> ILUSTRACIÓN DEL PRODUCTO</span></div>
-                <div className={`screen-frame screen-frame--${view.id}`}><img src={view.image} alt={view.alt} loading="lazy" /></div>
+            <ProductGallery />
+            <div className="product-bottom" data-animate>
+              <div><span className="eyebrow eyebrow--orange">LO QUE HACE</span><h3>{site.copy.product.capabilitiesTitle}</h3></div>
+              <div className="capability-list">
+                {site.capabilities.map(({ icon: Icon, title, text }) => (
+                  <div className="capability" key={title}><Icon size={24} strokeWidth={1.6} aria-hidden="true" /><div><h4>{title}</h4><p>{text}</p></div></div>
+                ))}
               </div>
             </div>
-            <div className="feature-grid">
-              {capabilities.map(({ icon: Icon, label, detail }, index) => <div className="feature" key={label} data-reveal><span className="feature-number">0{index + 1}</span><Icon size={27} strokeWidth={1.5} /><h3>{label}</h3><p>{detail}</p></div>)}
+            <div className="product-links">
+              {site.product.crmUrl && <a className="product-access" href={site.product.crmUrl} target="_blank" rel="noopener noreferrer">Acceder al CRM de DentFlow <ExternalLink size={17} /><span>Acceso al sistema, separado de esta presentación.</span></a>}
+              <div className="social-links" aria-label="Redes de DentFlow"><span>SEGUÍ DENTFLOW</span><a href={site.social.dentflowInstagram} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={15} /></a><a href={site.social.dentflowTikTok} target="_blank" rel="noopener noreferrer">TikTok <ArrowUpRight size={15} /></a></div>
             </div>
           </div>
         </section>
 
-        <section className="process section-cream" id="proceso" aria-labelledby="process-title">
+        <section className="process section-light" id="proceso" aria-labelledby="process-title">
           <div className="shell">
-            <div className="process-heading" data-reveal><div className="section-label"><span className="label-square" /> 03 / CÓMO FUNCIONA</div><h2 id="process-title">Del primer interés<br />al <em>próximo paso.</em></h2><p>Un recorrido simple para que ninguna consulta quede suelta y el equipo sepa qué hacer después.</p></div>
+            <div className="section-heading process-heading" data-animate><span className="eyebrow">{site.copy.process.eyebrow}</span><h2 id="process-title">{site.copy.process.title} <em>{site.copy.process.accent}</em></h2><p>{site.copy.process.description}</p></div>
             <div className="steps">
-              {process.map(({ number, icon: Icon, title, text }) => <article className="step" key={number} data-reveal><div className="step-top"><span>{number} / 03</span><Icon size={26} strokeWidth={1.5} /></div><div><h3>{title}</h3><p>{text}</p></div><ArrowUpRight className="step-arrow" size={21} strokeWidth={1.5} /></article>)}
+              {site.steps.map((step) => (
+                <article className="step" key={step.number} data-animate><span className="step-number">{step.number}</span><div className="step-body"><h3>{step.title}</h3><p>{step.text}</p></div><ArrowRight size={23} strokeWidth={1.5} aria-hidden="true" /></article>
+              ))}
             </div>
-            <div className="transparency" data-reveal><div className="transparency-icon"><Sparkles size={28} strokeWidth={1.5} /></div><div><span className="mini-label">UNA DISTINCIÓN IMPORTANTE</span><h3>El sistema ordena. Las personas hacen el seguimiento.</h3></div><p>DentFlow ayuda a registrar y priorizar. Recepción revisa cada caso, envía el mensaje desde WhatsApp y actualiza el avance en el CRM.</p></div>
+            <div className="human-note" data-animate><span className="human-note-icon"><Check size={24} /></span><p><strong>El seguimiento sigue siendo humano.</strong> DentFlow prepara y ordena; recepción revisa cada caso y decide qué mensaje enviar.</p></div>
           </div>
         </section>
 
         <section className="founder section-dark" id="sobre-tiago" aria-labelledby="founder-title">
           <div className="shell founder-grid">
-            <div className="founder-art" data-reveal><div className="founder-orbit founder-orbit--one" /><div className="founder-orbit founder-orbit--two" /><div className="founder-monogram">TO<span>✳</span></div><div className="founder-art-caption">PERSONA <span>→</span> MARCA <span>→</span> PRODUCTO</div></div>
-            <div className="founder-copy" data-reveal><div className="section-label section-label--orange"><span className="label-square" /> 04 / DETRÁS DEL SISTEMA</div><h2 id="founder-title">Hay una persona detrás de cada decisión<span>.</span></h2><p className="founder-lead">Soy Tiago Ortega. Tiago Systems es mi marca de tecnología aplicada a negocios, y DentFlow es el producto que hoy estoy construyendo para clínicas odontológicas.</p><p>Me interesa crear herramientas que hagan visible el trabajo, ordenen la información y ayuden a tomar la siguiente decisión con más claridad.</p><div className="founder-name"><span className="founder-line" /> TIAGO ORTEGA <ArrowUpRight size={18} /></div></div>
+            <FounderPortrait />
+            <div className="founder-copy" data-animate>
+              <span className="eyebrow eyebrow--orange">{site.copy.founder.eyebrow}</span>
+              <h2 id="founder-title">Soy {site.founder.name}<span className="orange-dot">.</span></h2>
+              <p className="founder-lead">{site.copy.founder.lead}</p>
+              <p>{site.copy.founder.body}</p>
+              <p>{site.copy.founder.values}</p>
+              <div className="founder-signature"><span className="signature-line" /><div><strong>{site.founder.name.toUpperCase()}</strong><span>{site.founder.role}</span></div></div>
+              <a className="founder-social" href={site.social.tiagoTikTok} target="_blank" rel="noopener noreferrer">Tiago Systems en TikTok <ArrowUpRight size={16} /></a>
+            </div>
           </div>
         </section>
 
-        <section className="faq section-light" aria-labelledby="faq-title"><div className="shell faq-grid"><div data-reveal><div className="section-label"><span className="label-square" /> 05 / PREGUNTAS FRECUENTES</div><h2 id="faq-title">Claro desde<br />el principio<span>.</span></h2><p>Estas son algunas respuestas sobre el funcionamiento actual de DentFlow.</p></div><div className="faq-list" data-reveal>{faqs.map(({ question, answer }, index) => <div className={`faq-item ${openFaq === index ? 'faq-item--open' : ''}`} key={question}><button type="button" aria-expanded={openFaq === index} aria-controls={`faq-answer-${index}`} onClick={() => setOpenFaq(openFaq === index ? null : index)}><span className="faq-index">0{index + 1}</span><span>{question}</span><ChevronDown size={20} /></button><div className="faq-answer" id={`faq-answer-${index}`} hidden={openFaq !== index}><p>{answer}</p></div></div>)}</div></div></section>
+        <Faq />
 
-        <section className="contact" id="contacto" aria-labelledby="contact-title"><div className="shell contact-inner" data-reveal><div className="section-label"><span className="label-square" /> 06 / SIGUIENTE PASO</div><h2 id="contact-title">De una idea clara<br />a un <em>sistema real.</em></h2><p>DentFlow es el producto actual de Tiago Systems. Mirá sus pantallas en esta página y accedé al sistema desde aquí.</p><a className="button button-dark" href="https://dental-crm-one.vercel.app/" target="_blank" rel="noreferrer">Abrir DentFlow <ExternalLink size={19} /></a><div className="contact-footnote">DE LA IDEA AL SISTEMA <span>✳</span> TIAGO SYSTEMS</div></div></section>
+        <section className="contact" id="contacto" aria-labelledby="contact-title">
+          <div className="shell contact-layout" data-animate>
+            <div><span className="eyebrow">{site.copy.contact.eyebrow}</span><h2 id="contact-title">{site.copy.contact.title} <em>{site.copy.contact.accent}</em></h2></div>
+            <div className="contact-aside"><p>{site.copy.contact.description}</p>
+              {contactHref ? <a className="button button--dark" href={contactHref} target={site.contact.whatsapp && !site.contact.email ? '_blank' : undefined} rel={site.contact.whatsapp && !site.contact.email ? 'noopener noreferrer' : undefined}>{site.contact.email ? 'Escribime por email' : 'Hablemos por WhatsApp'} {site.contact.email ? <Mail size={20} /> : <ArrowUpRight size={20} />}</a> : <div className="contact-pending">Canal de contacto directo próximamente.</div>}
+              {site.contact.linkedin && <a className="contact-secondary" href={site.contact.linkedin} target="_blank" rel="noopener noreferrer">Ver perfil profesional <ExternalLink size={16} /></a>}
+            </div>
+          </div>
+        </section>
       </main>
-
-      <footer className="footer"><div className="shell footer-main"><Brand inverse /><div className="footer-right"><a href="#inicio">Volver arriba <MoveUpRight size={17} /></a><span>TIAGO ORTEGA · TIAGO SYSTEMS · DENTFLOW</span></div></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} TIAGO SYSTEMS</span><span>TECNOLOGÍA PARA EL TRABAJO REAL.</span></div></footer>
+      <footer className="footer"><div className="shell footer-main"><Brand light /><a href="#inicio">Volver arriba <ArrowUpRight size={17} /></a></div><div className="shell footer-bottom"><span>© {new Date().getFullYear()} TIAGO SYSTEMS</span><span>TECNOLOGÍA PARA EL TRABAJO REAL.</span></div></footer>
     </>
   )
 }
