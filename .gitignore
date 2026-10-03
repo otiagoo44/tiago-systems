@@ -1,0 +1,11 @@
+node_modules
+dist
+.vercel
+*.local
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+capturas-dentflow/
+inspiracion-landing/
+ultima-conversacion.txt

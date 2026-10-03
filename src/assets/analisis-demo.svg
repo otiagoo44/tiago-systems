@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#090d14"/>
+  <rect width="230" height="700" fill="#0d1420"/>
+  <path d="M230 0v700" stroke="#263245"/>
+  <text x="28" y="46" fill="#d9b976" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3">DENTFLOW</text>
+  <text x="28" y="73" fill="#8d9aaf" font-family="Arial,sans-serif" font-size="12">Panel de trabajo</text>
+  <text x="33" y="139" fill="#a6b2c4" font-family="Arial,sans-serif" font-size="15">Resumen</text>
+  <text x="33" y="193" fill="#a6b2c4" font-family="Arial,sans-serif" font-size="15">Pacientes</text>
+  <text x="33" y="243" fill="#a6b2c4" font-family="Arial,sans-serif" font-size="15">Pendientes</text>
+  <text x="33" y="293" fill="#a6b2c4" font-family="Arial,sans-serif" font-size="15">Agenda</text>
+  <rect x="16" y="312" width="198" height="42" rx="9" fill="#252726" stroke="#b99a60"/>
+  <text x="33" y="339" fill="#fff" font-family="Arial,sans-serif" font-size="15">◉  Análisis</text>
+  <rect x="268" y="33" width="262" height="24" rx="12" fill="#293344"/>
+  <text x="282" y="50" fill="#f1d28e" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1">VISTA ILUSTRATIVA · DATOS FICTICIOS</text>
+  <text x="268" y="107" fill="#fff" font-family="Arial,sans-serif" font-size="35" font-weight="700">Análisis del proceso</text>
+  <text x="268" y="137" fill="#a4b1c5" font-family="Arial,sans-serif" font-size="16">Entendé cómo avanzan las consultas.</text>
+  <rect x="268" y="171" width="892" height="46" rx="9" fill="#121c2c" stroke="#2d3c54"/>
+  <text x="292" y="200" fill="#d6b872" font-family="Arial,sans-serif" font-size="14" font-weight="700">Embudo</text>
+  <text x="418" y="200" fill="#a4b1c5" font-family="Arial,sans-serif" font-size="14">Fuentes</text>
+  <text x="530" y="200" fill="#a4b1c5" font-family="Arial,sans-serif" font-size="14">Tratamientos</text>
+  <text x="680" y="200" fill="#a4b1c5" font-family="Arial,sans-serif" font-size="14">Equipo</text>
+  <rect x="268" y="238" width="555" height="416" rx="15" fill="#121c2c" stroke="#2d3c54"/>
+  <text x="295" y="276" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Embudo</text>
+  <text x="295" y="301" fill="#a4b1c5" font-family="Arial,sans-serif" font-size="13">Consultas creadas dentro del período</text>
+  <path d="M268 323h555M268 384h555M268 445h555M268 506h555M268 567h555" stroke="#2d3c54"/>
+  <g fill="#e3e8ef" font-family="Arial,sans-serif" font-size="15" font-weight="700"><text x="295" y="360">Consultas</text><text x="295" y="421">Contactadas</text><text x="295" y="482">Citas agendadas</text><text x="295" y="543">Asistieron</text><text x="295" y="604">Presupuestos</text></g>
+  <g fill="#fff" font-family="Arial,sans-serif" font-size="21" font-weight="700" text-anchor="end"><text x="791" y="362">24</text><text x="791" y="423">18</text><text x="791" y="484">11</text><text x="791" y="545">8</text><text x="791" y="606">5</text></g>
+  <rect x="842" y="238" width="318" height="257" rx="15" fill="#1b1c1b" stroke="#7c673d"/>
+  <text x="868" y="278" fill="#d6b872" font-family="Arial,sans-serif" font-size="12" font-weight="700">MAYOR CAÍDA DEL EMBUDO</text>
+  <text x="868" y="319" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">Citas agendadas</text>
+  <text x="868" y="350" fill="#c5ccd5" font-family="Arial,sans-serif" font-size="14">Revisá el avance entre etapas.</text>
+  <rect x="868" y="395" width="154" height="41" rx="9" fill="#243148"/>
+  <text x="886" y="421" fill="#fff" font-family="Arial,sans-serif" font-size="13" font-weight="700">Ver pendientes →</text>
+  <rect x="842" y="512" width="318" height="142" rx="15" fill="#121c2c" stroke="#2d3c54"/>
+  <text x="868" y="550" fill="#d6b872" font-family="Arial,sans-serif" font-size="12" font-weight="700">LECTURA DEL PERÍODO</text>
+  <text x="868" y="585" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Datos para decidir</text>
+  <text x="868" y="612" fill="#a4b1c5" font-family="Arial,sans-serif" font-size="14">Un proceso más visible.</text>
+</svg>
