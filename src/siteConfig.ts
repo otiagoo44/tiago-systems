@@ -1,26 +1,12 @@
-import resumen from './assets/dentflow-resumen-publico.png'
-import pendientes from './assets/dentflow-pendientes-publico.png'
-import analisis from './assets/dentflow-analisis-publico.png'
 import { BarChart3, ClipboardList, Focus, MessageCircle, type LucideIcon } from 'lucide-react'
-
-export type ProductView = {
-  id: 'resumen' | 'pendientes' | 'analisis'
-  tab: string
-  eyebrow: string
-  title: string
-  description: string
-  image: string
-  alt: string
-  detail: string
-}
 
 type SiteConfig = {
   brand: string
   founder: { name: string; role: string; photo: string | null }
-  product: { name: string; crmUrl: string | null; views: readonly ProductView[] }
+  product: { name: string }
   contact: { email: string | null; whatsapp: string | null; linkedin: string | null }
   social: {
-    tiagoTikTok: string
+    tiagoInstagram: string
     dentflowInstagram: string
     dentflowTikTok: string
   }
@@ -30,7 +16,7 @@ type SiteConfig = {
     approach: { eyebrow: string; title: string; accent: string; description: string; note: string }
     product: { eyebrow: string; title: string; accent: string; description: string; capabilitiesTitle: string }
     process: { eyebrow: string; title: string; accent: string; description: string }
-    founder: { eyebrow: string; lead: string; body: string; values: string }
+    founder: { eyebrow: string; title: string; lead: string; body: string; productBefore: string; productEmphasis: string; iteration: string; quote: string }
     faq: { eyebrow: string; title: string; accent: string; description: string }
     contact: { eyebrow: string; title: string; accent: string; description: string }
   }
@@ -47,49 +33,14 @@ export const site: SiteConfig = {
     role: 'Fundador y desarrollador',
     photo: null,
   },
-  product: {
-    name: 'DentFlow',
-    crmUrl: 'https://dental-crm-one.vercel.app/',
-    views: [
-      {
-        id: 'resumen',
-        tab: 'Resumen',
-        eyebrow: '01 / VISIÓN GENERAL',
-        title: 'El estado de las consultas, de un vistazo.',
-        description: 'El resumen reúne etapas y pendientes para que el equipo sepa dónde concentrar su atención.',
-        image: resumen,
-        alt: 'Vista adaptada de Resumen en DentFlow, con datos de ejemplo y sin información privada',
-        detail: 'Embudo de consultas y puntos de atención del período.',
-      },
-      {
-        id: 'pendientes',
-        tab: 'Pendientes',
-        eyebrow: '02 / COLA DE TRABAJO',
-        title: 'Cada consulta tiene un siguiente paso.',
-        description: 'La cola de trabajo ordena lo que requiere atención y muestra el contexto antes de actuar.',
-        image: pendientes,
-        alt: 'Vista adaptada de Pendientes en DentFlow, con consultas y datos de ejemplo',
-        detail: 'Prioridad, tratamiento y acción pendiente en la misma vista.',
-      },
-      {
-        id: 'analisis',
-        tab: 'Análisis',
-        eyebrow: '03 / LECTURA DEL PROCESO',
-        title: 'Los datos ayudan a hacer mejores preguntas.',
-        description: 'El análisis muestra cómo avanzan las consultas entre etapas y dónde conviene revisar el proceso.',
-        image: analisis,
-        alt: 'Vista adaptada de Análisis en DentFlow, con indicadores de ejemplo',
-        detail: 'Etapas del embudo con sus denominadores explícitos.',
-      },
-    ],
-  },
+  product: { name: 'DentFlow' },
   contact: {
     email: null,
     whatsapp: '+595 993 367341',
     linkedin: null,
   },
   social: {
-    tiagoTikTok: 'https://www.tiktok.com/@tiago.systems',
+    tiagoInstagram: 'https://www.instagram.com/tiago.systems/',
     dentflowInstagram: 'https://www.instagram.com/dentflow.py/',
     dentflowTikTok: 'https://www.tiktok.com/@dentflow.py',
   },
@@ -126,10 +77,14 @@ export const site: SiteConfig = {
       description: 'Un recorrido breve que mantiene a las personas a cargo del seguimiento.',
     },
     founder: {
-      eyebrow: '04 / DETRÁS DEL SISTEMA',
-      lead: 'Fundé Tiago Systems para crear tecnología aplicada a problemas concretos de negocio.',
-      body: 'Diseño y desarrollo las herramientas que construyo. DentFlow muestra mi forma de trabajar: entender un proceso, ordenar su información y hacer más claro el siguiente paso para el equipo.',
-      values: 'Soy cristiano y busco hacer mi trabajo con excelencia, criterio y responsabilidad.',
+      eyebrow: 'QUIÉN ESTÁ DETRÁS',
+      title: 'Construyo sistemas para resolver problemas operativos reales.',
+      lead: 'Soy Tiago, fundador de Tiago Systems y creador de DentFlow.',
+      body: 'Mi foco actual está en entender cómo las clínicas odontológicas gestionan sus consultas, seguimiento y proceso comercial, y convertir esos problemas en sistemas más simples.',
+      productBefore: 'DentFlow nació de esa idea: no agregar más herramientas porque sí, sino darle al equipo una forma clara de saber ',
+      productEmphasis: 'qué está pasando con cada consulta y cuál debería ser el próximo paso',
+      iteration: 'Estoy construyendo el producto cerca del problema: hablando con clínicas, observando cómo trabajan e iterando sobre lo que realmente necesitan.',
+      quote: 'Me interesa construir software que se use, no software que solamente se vea bien en una demo.',
     },
     faq: {
       eyebrow: '05 / PREGUNTAS FRECUENTES',
@@ -163,7 +118,7 @@ export const site: SiteConfig = {
   questions: [
     { question: '¿DentFlow envía mensajes automáticamente?', answer: 'No. El sistema prepara el mensaje, pero una persona lo revisa, abre WhatsApp y decide enviarlo. Después registra el avance en el CRM.' },
     { question: '¿Qué información organiza?', answer: 'Consultas, estados, responsables, próximas acciones y etapas del seguimiento. La vista de análisis ayuda a revisar cómo avanza el proceso.' },
-    { question: '¿Las cifras de las imágenes son resultados reales?', answer: 'No. Las imágenes son versiones adaptadas de pantallas del producto. Los datos visibles son de ejemplo para proteger información privada.' },
+    { question: '¿Las cifras de la demo son resultados reales?', answer: 'No. La demo usa datos ficticios y calcula sus cifras a partir de las acciones que probás. No está conectada al CRM privado ni envía mensajes reales.' },
     { question: '¿Podemos conversar sobre un proyecto?', answer: 'Sí. Contame qué proceso querés ordenar y qué usa hoy tu equipo. A partir de eso podemos definir si tiene sentido trabajar juntos.' },
   ],
 }

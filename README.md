@@ -1,46 +1,58 @@
 # Tiago Systems
 
-Landing de Tiago Ortega y presentación de DentFlow, construida con React, TypeScript, Vite y CSS propio. Las decisiones visuales están documentadas en [DESIGN.md](DESIGN.md).
+Landing de Tiago Ortega y presentación pública de DentFlow. React 19, TypeScript, Vite y CSS propio. Sistema visual en [DESIGN.md](DESIGN.md).
 
-## Desarrollo
+## Desarrollo y verificación
 
 ```bash
 npm install
 npm run dev
-```
-
-Para comprobar el build de producción:
-
-```bash
+npm test
 npm run build
 npm run preview
 ```
 
-En Vercel, usar `npm run build` y el directorio de salida `dist`.
+Las pruebas usan el runner integrado de Node y requieren **Node 24 o superior**. No agregan dependencias. En Vercel, el comando de build es `npm run build` y la salida es `dist`. No se realizó un despliegue como parte de esta corrección.
 
-## Contenido editable
+## Configuración y destinos
 
-Los textos, enlaces e imágenes principales se configuran en `src/siteConfig.ts`. El CTA principal abre el WhatsApp público autorizado por Tiago. Para cambiar los canales:
+Los textos públicos, enlaces y retrato se editan en `src/siteConfig.ts`.
 
-- `site.contact.whatsapp`: número público con código de país. Puede incluir `+` y espacios; el enlace se normaliza para `wa.me`.
-- `site.contact.email`: dirección pública opcional. Si hay email y WhatsApp, el email tiene prioridad en el CTA principal.
-- `site.contact.linkedin`: perfil profesional opcional.
+- WhatsApp comercial autorizado: `+595 993 367341`. El enlace se normaliza automáticamente. Email y LinkedIn son opcionales.
+- Tiago Systems: **solo Instagram**, `@tiago.systems`.
+- DentFlow: Instagram y TikTok, `@dentflow.py`.
+- “Conocer DentFlow” lleva a `#dentflow`; “Probá la demo interactiva” lleva a `#demo-crm`.
+- La landing no enlaza al acceso privado del CRM: requiere una cuenta y no es una presentación pública.
 
-Los perfiles confirmados también están en `src/siteConfig.ts`: TikTok de Tiago Systems (`@tiago.systems`) e Instagram y TikTok de DentFlow (`@dentflow.py`).
+## Demo funcional
 
-`site.product.crmUrl` apunta al acceso al CRM, separado del contacto comercial y de esta página informativa. Su URL respondió al momento de la revisión, pero conviene comprobar el destino antes de publicar. Cuando haya un dominio definitivo para esta landing, agregá la URL canónica y una imagen social rasterizada apropiada en `index.html`.
+- `src/demo/model.ts`: datos ficticios, reducer, validación y cálculos.
+- `src/demo/DentFlowDemo.tsx`: Resumen, Pacientes, Pendientes, Análisis, detalle, diálogos y recorrido guiado. Incluye el resumen del hero, conectado al mismo estado.
+- `src/demo/demo.css`: adaptación móvil y estilos de la interfaz, usando los tokens globales.
+- `tests/demo.test.ts`: transiciones y cálculos, incluidos los casos de error y cancelación.
+- `tests/render.test.mjs`: renderizado React en Node, texto del fundador, destinos internos y ausencia de enlaces al CRM privado. No es una prueba visual de navegador.
 
-## Imágenes
+Hay diez consultas ficticias con teléfonos no operativos. Todo funciona en memoria; recargar o reiniciar restaura exactamente la configuración inicial. No hay backend, almacenamiento persistente, login, llamadas al CRM ni mensajes reales.
 
-- `src/assets/dentflow-resumen-publico.png`, `dentflow-pendientes-publico.png` y `dentflow-analisis-publico.png` son **versiones adaptadas y anonimizadas de capturas del producto**. Se generaron a partir de las capturas locales mediante una edición de privacidad; pueden diferir en detalles visuales del estado actual del CRM. Todos los valores visibles se presentan como ejemplos. La etiqueta exterior en la galería y la etiqueta interior de cada imagen lo indican.
-- Los originales permanecen en `capturas-dentflow/` y están excluidos por `.gitignore`. No los subas: contienen nombres, teléfonos y datos de una cuenta. `inspiracion-landing/` y `ultima-conversacion.txt` también están excluidos.
-- Para reemplazar una vista, prepará una captura nueva **sin datos personales, credenciales ni métricas privadas**, idealmente de **1672 × 940 px** o proporción **16:9**. Importala en `src/siteConfig.ts` y actualizá `image`, `alt` y `detail` de esa vista. `MediaFrame` conserva el espacio, muestra la imagen completa y ofrece un fallback si falla.
-- Para el retrato de Tiago, usá una foto autorizada de al menos **800 × 960 px**, idealmente proporción **5:6**. Guardala en `src/assets/` y asigná su import a `site.founder.photo`. El placeholder actual no representa a una persona real.
+El reloj de la demo empieza el **3 de octubre de 2026 a las 12:00 de Paraguay** y avanza un minuto por cambio. Se muestra en la interfaz. Para agendar se requiere una fecha válida posterior a ese reloj; por ejemplo, 5 de octubre de 2026 a las 10:30. Es un escenario reproducible, no una agenda real.
 
-## Pendientes para publicar
+El embudo acumulado cuenta etapas alcanzadas y conserva los pasos anteriores. “Etapa actual” cuenta cada consulta una sola vez. Fuentes y tratamientos se agrupan desde esas mismas consultas. Un intento sin respuesta no suma una respuesta ni una cita. “No está interesado” retira las acciones pendientes conservando el historial. Simular contacto no hace retroceder etapas avanzadas.
 
-1. Foto profesional autorizada de Tiago, si se desea mostrar un retrato.
-2. Dominio final de la landing para URL canónica y vista previa social.
-3. Revisión visual final en navegador a 360–390, 768, 1024 y 1440 px antes del despliegue.
+El recorrido guiado utiliza las mismas acciones que el uso manual: Pendientes → consulta → contacto simulado → resultado → cita → Resumen. Cancelarlo conserva los cambios; reiniciarlo restaura el escenario inicial. “Reiniciar demo” también limpia filtros, selección, diálogos y recorrido.
 
-La landing está implementada visualmente y el enlace directo de contacto está configurado. Antes de publicarla falta completar la revisión visual en navegador.
+## Foto y archivos privados
+
+La foto profesional sigue pendiente. Prepará una imagen autorizada de al menos **800 × 960 px**, proporción **5:6**; guardala en `src/assets/`, importala en `src/siteConfig.ts` y asignala a `site.founder.photo`. El componente reserva la proporción y vuelve al placeholder si falla la carga.
+
+Las imágenes `src/assets/dentflow-*-publico.png` de la versión anterior se conservan como referencia histórica, pero ya no se importan ni publican en el build. La presentación actual del producto se genera con componentes reales y datos ficticios.
+
+Los originales de `capturas-dentflow/`, las referencias de `inspiracion-landing/` y las conversaciones locales permanecen excluidos de Git. No los publiques: pueden contener información privada.
+
+## Verificaciones y pendientes
+
+- Build de producción y TypeScript comprobados.
+- Pruebas del recorrido completo, filtros combinados y vacíos, citas inválidas, asistencia, historial, métricas, no respuesta, desinterés, cancelación, recorrido guiado y reinicio exacto.
+- Contraste de los tokens principales calculado; sin colores de marca anteriores en el código activo y favicon.
+- **Revisión visual en navegador pendiente**: la conexión a Chrome denegó la URL local mediante una preferencia guardada. No se verificaron visualmente los tamaños 360–390, 768, 1024 y 1440 px, el foco real, la consola ni movimiento reducido en el navegador.
+
+Antes de publicar: completar esa revisión, definir el dominio definitivo para la URL canónica y, si se desea, aportar retrato e imagen social. El contacto público ya está configurado. No confundir implementación y build completos con publicación final aprobada.

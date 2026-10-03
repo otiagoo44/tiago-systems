@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useReducer, useRef, useState } from 'react'
 import {
   ArrowDownRight,
   ArrowRight,
@@ -7,11 +7,12 @@ import {
   ChevronDown,
   ExternalLink,
   Mail,
-  Maximize2,
   Menu,
   X,
 } from 'lucide-react'
-import { contactHref, site, type ProductView } from './siteConfig'
+import { contactHref, site } from './siteConfig'
+import { DentFlowDemo, HeroPreview } from './demo/DentFlowDemo'
+import { createInitialState, demoReducer } from './demo/model'
 
 function useEntranceMotion() {
   useEffect(() => {
@@ -42,30 +43,6 @@ function Brand({ light = false }: { light?: boolean }) {
       <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
       <span className="brand-wordmark">{first}<span>{rest.join(' ')}</span></span>
     </a>
-  )
-}
-
-type MediaFrameProps = {
-  src: string | null
-  alt: string
-  className?: string
-  eager?: boolean
-  fallback: string
-}
-
-function MediaFrame({ src, alt, className = '', eager = false, fallback }: MediaFrameProps) {
-  const [failed, setFailed] = useState(false)
-  return (
-    <div className={`media-frame ${className}`}>
-      {src && !failed ? (
-        <img src={src} alt={alt} width="1672" height="940" loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setFailed(true)} />
-      ) : (
-        <div className="media-fallback" role="img" aria-label={fallback}>
-          <span className="media-fallback-mark">DF</span>
-          <span>{fallback}</span>
-        </div>
-      )}
-    </div>
   )
 }
 
@@ -122,81 +99,6 @@ function Header() {
   )
 }
 
-function ProductGallery() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const tabsRef = useRef<(HTMLButtonElement | null)[]>([])
-  const dialogRef = useRef<HTMLDialogElement>(null)
-  const enlargeRef = useRef<HTMLButtonElement>(null)
-  const view = site.product.views[activeIndex]
-
-  const selectTab = (index: number) => {
-    setActiveIndex(index)
-    tabsRef.current[index]?.focus()
-  }
-
-  const onTabKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
-    let next: number | null = null
-    if (event.key === 'ArrowRight') next = (index + 1) % site.product.views.length
-    if (event.key === 'ArrowLeft') next = (index - 1 + site.product.views.length) % site.product.views.length
-    if (event.key === 'Home') next = 0
-    if (event.key === 'End') next = site.product.views.length - 1
-    if (next !== null) {
-      event.preventDefault()
-      selectTab(next)
-    }
-  }
-
-  return (
-    <>
-      <div className="gallery" data-animate>
-        <div className="gallery-topline">
-          <span className="gallery-index">EXPLORÁ EL PRODUCTO</span>
-          <span className="gallery-note">Pantallas adaptadas · datos de ejemplo</span>
-        </div>
-        <div className="product-tabs" role="tablist" aria-label="Vistas de DentFlow">
-          {site.product.views.map((item, index) => (
-            <button
-              key={item.id}
-              ref={(element) => { tabsRef.current[index] = element }}
-              type="button"
-              className={`product-tab${activeIndex === index ? ' product-tab--active' : ''}`}
-              role="tab"
-              id={`tab-${item.id}`}
-              aria-selected={activeIndex === index}
-              aria-controls="product-panel"
-              tabIndex={activeIndex === index ? 0 : -1}
-              onClick={() => setActiveIndex(index)}
-              onKeyDown={(event) => onTabKeyDown(event, index)}
-            >
-              <span>0{index + 1}</span>{item.tab}<ArrowUpRight size={17} aria-hidden="true" />
-            </button>
-          ))}
-        </div>
-        <div className="product-panel" id="product-panel" role="tabpanel" aria-labelledby={`tab-${view.id}`} tabIndex={0}>
-          <div className="product-panel-copy" key={view.id}>
-            <span className="eyebrow eyebrow--orange">{view.eyebrow}</span>
-            <h3>{view.title}</h3>
-            <p>{view.description}</p>
-            <div className="gallery-controls">
-              <button ref={enlargeRef} className="view-image" type="button" onClick={() => dialogRef.current?.showModal()}>
-                Ampliar pantalla <Maximize2 size={17} />
-              </button>
-            </div>
-          </div>
-          <div className="product-image-wrap" key={`image-${view.id}`}>
-            <MediaFrame src={view.image} alt={view.alt} fallback={`Vista ${view.tab} no disponible`} />
-            <div className="image-caption"><span>CAPTURA ADAPTADA</span><span>{view.detail}</span></div>
-          </div>
-        </div>
-      </div>
-      <dialog ref={dialogRef} className="image-dialog" aria-label={`Vista ampliada: ${view.tab}`} onClose={() => enlargeRef.current?.focus()} onClick={(event) => { if (event.target === event.currentTarget) dialogRef.current?.close() }}>
-        <div className="dialog-top"><span>{view.tab} / datos de ejemplo</span><a href={view.image} target="_blank" rel="noopener noreferrer">Abrir imagen completa <ExternalLink size={16} /></a><button type="button" aria-label="Cerrar imagen ampliada" onClick={() => dialogRef.current?.close()}><X size={22} /></button></div>
-        <MediaFrame key={`dialog-${view.id}`} src={view.image} alt={view.alt} fallback={`Vista ${view.tab} no disponible`} eager />
-      </dialog>
-    </>
-  )
-}
-
 function FounderPortrait() {
   const [failed, setFailed] = useState(false)
   const photo = site.founder.photo
@@ -245,7 +147,7 @@ function Faq() {
 
 function App() {
   useEntranceMotion()
-  const heroView: ProductView = site.product.views[0]
+  const [demo, dispatchDemo] = useReducer(demoReducer, undefined, createInitialState)
 
   return (
     <>
@@ -256,11 +158,11 @@ function App() {
           <div className="hero-grid-pattern" aria-hidden="true" />
           <div className="shell hero-layout">
             <div className="hero-copy">
-              <span className="eyebrow eyebrow--orange">{site.hero.eyebrow}</span>
-              <h1 id="hero-title">{site.hero.title.before} <span>{site.hero.title.accent}</span> {site.hero.title.after}<span className="orange-dot">.</span></h1>
+              <span className="eyebrow eyebrow--brand">{site.hero.eyebrow}</span>
+              <h1 id="hero-title">{site.hero.title.before} <span>{site.hero.title.accent}</span> {site.hero.title.after}<span className="brand-dot">.</span></h1>
               <p>{site.hero.description}</p>
               <div className="hero-actions">
-                <a className="button button--orange" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined}>Hablemos de tu proyecto <ArrowUpRight size={19} /></a>
+                <a className="button button--brand" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined}>Hablemos de tu proyecto <ArrowUpRight size={19} /></a>
                 <a className="text-link" href="#dentflow">Conocé DentFlow <ArrowDownRight size={18} /></a>
               </div>
               <div className="hero-credit"><span>{site.founder.name.toUpperCase()}</span><span>{site.founder.role}</span></div>
@@ -269,9 +171,9 @@ function App() {
               <div className="hero-visual-top"><span className="signal-dot" /> PRODUCTO DESTACADO <span>01 / DENTFLOW</span></div>
               <div className="hero-screen">
                 <div className="hero-screen-bar"><span className="screen-dots"><i /><i /><i /></span><span>dentflow / resumen</span><span>VISTA 01</span></div>
-                <MediaFrame src={heroView.image} alt={heroView.alt} fallback="Vista del producto no disponible" eager />
+                <HeroPreview state={demo} />
               </div>
-              <div className="hero-visual-bottom"><span>CAPTURA ADAPTADA · DATOS DE EJEMPLO</span><span>OPERACIÓN MÁS VISIBLE <ArrowUpRight size={16} /></span></div>
+              <div className="hero-visual-bottom"><span>DEMO INTERACTIVA · DATOS FICTICIOS</span><span>OPERACIÓN MÁS VISIBLE <ArrowUpRight size={16} /></span></div>
             </div>
           </div>
           <div className="shell hero-footer"><span>TECNOLOGÍA PARA EL TRABAJO REAL</span><a href="#enfoque">DESLIZÁ PARA EXPLORAR <ArrowDownRight size={16} /></a></div>
@@ -300,12 +202,12 @@ function App() {
         <section className="product section-dark" id="dentflow" aria-labelledby="product-title">
           <div className="shell">
             <div className="section-heading product-heading" data-animate>
-              <div><span className="eyebrow eyebrow--orange">{site.copy.product.eyebrow}</span><h2 id="product-title">{site.copy.product.title} <em>{site.copy.product.accent}</em></h2></div>
+              <div><span className="eyebrow eyebrow--brand">{site.copy.product.eyebrow}</span><h2 id="product-title">{site.copy.product.title} <em>{site.copy.product.accent}</em></h2></div>
               <p>{site.copy.product.description}</p>
             </div>
-            <ProductGallery />
+            <DentFlowDemo state={demo} dispatch={dispatchDemo} />
             <div className="product-bottom" data-animate>
-              <div><span className="eyebrow eyebrow--orange">LO QUE HACE</span><h3>{site.copy.product.capabilitiesTitle}</h3></div>
+              <div><span className="eyebrow eyebrow--brand">LO QUE HACE</span><h3>{site.copy.product.capabilitiesTitle}</h3></div>
               <div className="capability-list">
                 {site.capabilities.map(({ icon: Icon, title, text }) => (
                   <div className="capability" key={title}><Icon size={24} strokeWidth={1.6} aria-hidden="true" /><div><h4>{title}</h4><p>{text}</p></div></div>
@@ -313,7 +215,6 @@ function App() {
               </div>
             </div>
             <div className="product-links">
-              {site.product.crmUrl && <a className="product-access" href={site.product.crmUrl} target="_blank" rel="noopener noreferrer">Acceder al CRM de DentFlow <ExternalLink size={17} /><span>Acceso al sistema, separado de esta presentación.</span></a>}
               <div className="social-links" aria-label="Redes de DentFlow"><span>SEGUÍ DENTFLOW</span><a href={site.social.dentflowInstagram} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={15} /></a><a href={site.social.dentflowTikTok} target="_blank" rel="noopener noreferrer">TikTok <ArrowUpRight size={15} /></a></div>
             </div>
           </div>
@@ -335,13 +236,14 @@ function App() {
           <div className="shell founder-grid">
             <FounderPortrait />
             <div className="founder-copy" data-animate>
-              <span className="eyebrow eyebrow--orange">{site.copy.founder.eyebrow}</span>
-              <h2 id="founder-title">Soy {site.founder.name}<span className="orange-dot">.</span></h2>
+              <span className="eyebrow eyebrow--brand">{site.copy.founder.eyebrow}</span>
+              <h2 id="founder-title">{site.copy.founder.title}</h2>
               <p className="founder-lead">{site.copy.founder.lead}</p>
               <p>{site.copy.founder.body}</p>
-              <p>{site.copy.founder.values}</p>
-              <div className="founder-signature"><span className="signature-line" /><div><strong>{site.founder.name.toUpperCase()}</strong><span>{site.founder.role}</span></div></div>
-              <a className="founder-social" href={site.social.tiagoTikTok} target="_blank" rel="noopener noreferrer">Tiago Systems en TikTok <ArrowUpRight size={16} /></a>
+              <p>{site.copy.founder.productBefore}<strong>{site.copy.founder.productEmphasis}</strong>.</p>
+              <p>{site.copy.founder.iteration}</p>
+              <blockquote>{site.copy.founder.quote}</blockquote>
+              <div className="founder-links"><a className="founder-social" href={site.social.tiagoInstagram} target="_blank" rel="noopener noreferrer">Seguir el proceso →</a><a className="founder-social" href="#dentflow">Conocer DentFlow →</a></div>
             </div>
           </div>
         </section>
@@ -352,7 +254,7 @@ function App() {
           <div className="shell contact-layout" data-animate>
             <div><span className="eyebrow">{site.copy.contact.eyebrow}</span><h2 id="contact-title">{site.copy.contact.title} <em>{site.copy.contact.accent}</em></h2></div>
             <div className="contact-aside"><p>{site.copy.contact.description}</p>
-              {contactHref ? <a className="button button--dark" href={contactHref} target={site.contact.whatsapp && !site.contact.email ? '_blank' : undefined} rel={site.contact.whatsapp && !site.contact.email ? 'noopener noreferrer' : undefined}>{site.contact.email ? 'Escribime por email' : 'Hablemos por WhatsApp'} {site.contact.email ? <Mail size={20} /> : <ArrowUpRight size={20} />}</a> : <div className="contact-pending">Canal de contacto directo próximamente.</div>}
+              {contactHref ? <a className="button button--brand" href={contactHref} target={site.contact.whatsapp && !site.contact.email ? '_blank' : undefined} rel={site.contact.whatsapp && !site.contact.email ? 'noopener noreferrer' : undefined}>{site.contact.email ? 'Escribime por email' : 'Hablemos por WhatsApp'} {site.contact.email ? <Mail size={20} /> : <ArrowUpRight size={20} />}</a> : <div className="contact-pending">Canal de contacto directo próximamente.</div>}
               {site.contact.linkedin && <a className="contact-secondary" href={site.contact.linkedin} target="_blank" rel="noopener noreferrer">Ver perfil profesional <ExternalLink size={16} /></a>}
             </div>
           </div>
