@@ -17,12 +17,14 @@ import { createInitialState, demoReducer } from './demo/model'
 function useEntranceMotion() {
   useEffect(() => {
     if (!('IntersectionObserver' in window) || !('animate' in document.documentElement)) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (reducedMotion.matches) return
 
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue
         const element = entry.target as HTMLElement
+        if (reducedMotion.matches) { observer.unobserve(element); continue }
         element.animate(
           [{ opacity: 0.3, transform: 'translateY(22px)' }, { opacity: 1, transform: 'translateY(0)' }],
           { duration: 620, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'none' },
@@ -81,7 +83,9 @@ function Header() {
   }, [open])
 
   return (
-    <header className="site-header" id="inicio" ref={headerRef}>
+    <header className="site-header" id="inicio" ref={headerRef} onBlur={(event) => {
+      if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) setOpen(false)
+    }}>
       <div className="shell nav-inner">
         <Brand />
         <nav id="main-navigation" className={`nav-links${open ? ' nav-links--open' : ''}`} aria-label="Navegación principal">
@@ -112,6 +116,37 @@ function FounderPortrait() {
         </div>
       )}
       <div className="portrait-caption"><span>{site.founder.name.toUpperCase()}</span><span>01 / FUNDADOR</span></div>
+    </div>
+  )
+}
+
+function WorkMap() {
+  const [active, setActive] = useState(0)
+  const item = site.workflow[active]
+  return (
+    <div className="work-map" data-animate>
+      <div className="work-map-intro">
+        <span className="eyebrow">DEL PROBLEMA A LA HERRAMIENTA</span>
+        <h3>Primero, entender.<br />Después, construir.</h3>
+        <p>Así se traduce un problema operativo en una decisión de diseño. Elegí una pregunta para ver un ejemplo aplicado a DentFlow.</p>
+        <div className="work-map-options" aria-label="Preguntas sobre el proceso">
+          {site.workflow.map((entry, index) => (
+            <button key={entry.question} type="button" aria-pressed={active === index} aria-controls="work-map-example" onClick={() => setActive(index)}>
+              <span>0{index + 1}</span>{entry.question}<ArrowUpRight size={18} aria-hidden="true" />
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="work-map-example" id="work-map-example" aria-live="polite" aria-atomic="true">
+        <div className="work-map-content" key={active}>
+          <span className="map-index" aria-hidden="true">0{active + 1}</span>
+          <span className="eyebrow">LA SITUACIÓN</span>
+          <p className="map-problem">{item.problem}</p>
+          <h4>{item.decision}</h4>
+          <ol className="map-route">{item.steps.map((step) => <li key={step}><span className="map-node" aria-hidden="true" />{step}</li>)}</ol>
+          <p className="map-output">{item.output}</p>
+        </div>
+      </div>
     </div>
   )
 }
@@ -159,11 +194,11 @@ function App() {
           <div className="shell hero-layout">
             <div className="hero-copy">
               <span className="eyebrow eyebrow--brand">{site.hero.eyebrow}</span>
-              <h1 id="hero-title">{site.hero.title.before} <span>{site.hero.title.accent}</span> {site.hero.title.after}<span className="brand-dot">.</span></h1>
+              <h1 id="hero-title">{site.hero.title.before}<br /><span>{site.hero.title.accent}</span>{site.hero.title.after}<span className="brand-dot">.</span></h1>
               <p>{site.hero.description}</p>
               <div className="hero-actions">
-                <a className="button button--brand" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined}>Hablemos de tu proyecto <ArrowUpRight size={19} /></a>
-                <a className="text-link" href="#dentflow">Conocé DentFlow <ArrowDownRight size={18} /></a>
+                <a className="button button--brand" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined}>Hablemos por WhatsApp <ArrowUpRight size={19} /></a>
+                <a className="button button--dark" href="#dentflow">Conocé DentFlow <ArrowDownRight size={18} /></a>
               </div>
               <div className="hero-credit"><span>{site.founder.name.toUpperCase()}</span><span>{site.founder.role}</span></div>
             </div>
@@ -186,6 +221,7 @@ function App() {
               <h2 id="approach-title">{site.copy.approach.title} <em>{site.copy.approach.accent}</em></h2>
               <p>{site.copy.approach.description}</p>
             </div>
+            <WorkMap />
             <div className="issue-grid">
               {site.issues.map((issue) => (
                 <article className="issue" key={issue.number} data-animate>
@@ -205,6 +241,7 @@ function App() {
               <div><span className="eyebrow eyebrow--brand">{site.copy.product.eyebrow}</span><h2 id="product-title">{site.copy.product.title} <em>{site.copy.product.accent}</em></h2></div>
               <p>{site.copy.product.description}</p>
             </div>
+            <div className="demo-intro" data-animate><p><strong>De una consulta a una próxima acción.</strong> Buscá a Ana Demo, simulá el contacto y agendá una cita. El resumen y el análisis se actualizan con lo que hagas.</p><a className="text-link" href="#demo-crm" onClick={() => dispatchDemo({ type: 'startTour' })}>Probar ese recorrido <ArrowDownRight size={18} aria-hidden="true" /></a></div>
             <DentFlowDemo state={demo} dispatch={dispatchDemo} />
             <div className="product-bottom" data-animate>
               <div><span className="eyebrow eyebrow--brand">LO QUE HACE</span><h3>{site.copy.product.capabilitiesTitle}</h3></div>
@@ -214,6 +251,7 @@ function App() {
                 ))}
               </div>
             </div>
+            <div className="product-fit" data-animate><span className="eyebrow">¿PARA QUIÉN TIENE SENTIDO?</span><p>Para clínicas que reciben consultas y necesitan que el equipo vea <strong>qué pasó, quién sigue y qué falta hacer.</strong></p><a className="text-link" href="#contacto">Conversemos sobre tu clínica <ArrowUpRight size={18} aria-hidden="true" /></a></div>
             <div className="product-links">
               <div className="social-links" aria-label="Redes de DentFlow"><span>SEGUÍ DENTFLOW</span><a href={site.social.dentflowInstagram} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={15} /></a><a href={site.social.dentflowTikTok} target="_blank" rel="noopener noreferrer">TikTok <ArrowUpRight size={15} /></a></div>
             </div>

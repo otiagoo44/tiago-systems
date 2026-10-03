@@ -109,7 +109,7 @@ export function demoReducer(state: DemoState, action: DemoAction): DemoState {
   if (action.type === 'restartTour') return demoReducer(createInitialState(), { type: 'startTour' })
   if (action.type === 'startTour') {
     const consultation = state.consultations.find((item) => item.stage === 'lead')
-    return consultation ? { ...state, view: 'pending', selectedId: null, modal: null, tour: { id: consultation.id, step: 0 }, error: '', notice: 'Recorrido iniciado. Abrí la consulta señalada.' } : { ...state, notice: 'No quedan consultas nuevas. Reiniciá la demo para iniciar el recorrido.' }
+    return consultation ? { ...state, view: 'pending', filters: { search: '', treatment: '', stage: '', source: '' }, selectedId: null, modal: null, tour: { id: consultation.id, step: 0 }, error: '', notice: 'Recorrido iniciado. Abrí la consulta señalada.' } : { ...state, notice: 'No quedan consultas nuevas. Reiniciá la demo para iniciar el recorrido.' }
   }
   if (action.type === 'cancelTour') return { ...state, tour: null, modal: null, error: '', notice: 'Recorrido cancelado. Tus cambios en la demo se conservan.' }
   if (action.type === 'navigate') return { ...state, view: action.view, selectedId: null, modal: null, error: '' }

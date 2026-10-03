@@ -12,17 +12,18 @@ npm run build
 npm run preview
 ```
 
-Las pruebas usan el runner integrado de Node y requieren **Node 24 o superior**. No agregan dependencias. En Vercel, el comando de build es `npm run build` y la salida es `dist`. No se realizó un despliegue como parte de esta corrección.
+Las pruebas usan el runner integrado de Node y requieren **Node 24 o superior**. No agregan dependencias. En Vercel, el comando de build es `npm run build` y la salida es `dist`. El repositorio está conectado a Vercel: un push a `main` actualiza producción. El propietario autorizó ese push al finalizar esta recuperación.
 
 ## Configuración y destinos
 
-Los textos públicos, enlaces y retrato se editan en `src/siteConfig.ts`.
+Los textos públicos, enlaces, ejemplos del mapa de trabajo y retrato se editan en `src/siteConfig.ts`.
 
 - WhatsApp comercial autorizado: `+595 993 367341`. El enlace se normaliza automáticamente. Email y LinkedIn son opcionales.
 - Tiago Systems: **solo Instagram**, `@tiago.systems`.
 - DentFlow: Instagram y TikTok, `@dentflow.py`.
 - “Conocer DentFlow” lleva a `#dentflow`; “Probá la demo interactiva” lleva a `#demo-crm`.
 - La landing no enlaza al acceso privado del CRM: requiere una cuenta y no es una presentación pública.
+- Producción confirmada en la configuración pública del repositorio: `https://tiago-systems.vercel.app/`. URL canónica y metadatos sociales en `index.html`; imagen original de marca en `public/social-preview.png` (1200 × 630). Actualizar estas URL si se conecta un dominio propio.
 
 ## Demo funcional
 
@@ -53,6 +54,7 @@ Los originales de `capturas-dentflow/`, las referencias de `inspiracion-landing/
 - Build de producción y TypeScript comprobados.
 - Pruebas del recorrido completo, filtros combinados y vacíos, citas inválidas, asistencia, historial, métricas, no respuesta, desinterés, cancelación, recorrido guiado y reinicio exacto.
 - Contraste de los tokens principales calculado; sin colores de marca anteriores en el código activo y favicon.
-- **Revisión visual en navegador pendiente**: la conexión a Chrome denegó la URL local mediante una preferencia guardada. No se verificaron visualmente los tamaños 360–390, 768, 1024 y 1440 px, el foco real, la consola ni movimiento reducido en el navegador.
+- **Revisión en Chromium realizada** a 390, 768, 1024 y 1440 px: sin desbordes ni errores JavaScript. Recorrido manual y guiado, métricas compartidas, búsqueda, citas, reinicio, pestañas, FAQ, menú móvil, foco de diálogos y movimiento reducido comprobados.
+- Sistema negro/dorado reconciliado en `DESIGN.md`; lint oficial 0.4.0 con cero errores y advertencias. Decisiones de las cinco skills, hallazgos y capturas en [RECOVERY_REPORT.md](docs/design/RECOVERY_REPORT.md).
 
-Antes de publicar: completar esa revisión, definir el dominio definitivo para la URL canónica y, si se desea, aportar retrato e imagen social. El contacto público ya está configurado. No confundir implementación y build completos con publicación final aprobada.
+El único recurso editorial pendiente es la foto profesional opcional: el espacio reservado se conserva. No se incorporó información nueva de Instagram porque su lectura pública fue bloqueada. La revisión visual se hizo con viewports emulados, no con teléfonos físicos; no constituye una certificación WCAG ni una medición de Core Web Vitals de campo.

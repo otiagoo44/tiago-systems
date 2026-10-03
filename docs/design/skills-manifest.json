@@ -1,0 +1,900 @@
+{
+  "source": "Existing verified personal design skill adaptations; vendored unchanged with licenses and provenance.",
+  "files": [
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/SKILL.md",
+      "sha256": "a8be76f9391c2c520ff2be709d29aafc02e6d1a142b52a361852717cb5c2ae41"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/provenance.json",
+      "sha256": "ca7bd0c5d4599852297469d9c9b56ff613ec679c320f079367bb7be5a1e46b50"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/catalog.md",
+      "sha256": "43a4979e3b81f46307f815cc5efa4fa12aa5fb8a59e7fcd2865f493afa89a8f4"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/LICENSE.upstream",
+      "sha256": "6d4bdc9a9cf30e7beb593475fdcdbf29f981ea6bd7923f202866145409f87b44"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/coordination.md",
+      "sha256": "90888ae771d27a0041ec43ac9ddd8493a5c66f01586aeed17faaabf84318f6c0"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/agents/openai.yaml",
+      "sha256": "0dc7a293d14faf8a6fec2b0f3b42b70d8ce3efbeb04819e69ae393dfe45ced0f"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/assets/icon.svg",
+      "sha256": "49315dda7125ec5fc77ef5f2b96126d8b2121c6e72944b4702972e90f321d3ee"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/hashicorp/DESIGN.md",
+      "sha256": "d2df9be72d867e48d318fd18db04e60a78357c27e392ab921fc2ba7f46951442"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/clickhouse/DESIGN.md",
+      "sha256": "50987e29b603cc7503ebe724af810fcf43845e96fdd4083e0fbe5fe00d2cdd2e"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/x.ai/DESIGN.md",
+      "sha256": "9c9ef45d8c0c3b9a7622833cdff8bd125ed6bf296a82cc7274215276706e52eb"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/ibm/DESIGN.md",
+      "sha256": "46f6fd65b5e7524fed1133b9b3c0dd619f9a0f145fbb2b87f3675c701a88f3bd"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/elevenlabs/DESIGN.md",
+      "sha256": "3b359acfaafadbb499c7ed3eebe813a76e0be497a7157b77de207fe275068a66"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/webflow/DESIGN.md",
+      "sha256": "9230c7b3951371fc2edc04958962e32bb7ec9a9b703aa6b72eaf5c7991b7c984"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/figma/DESIGN.md",
+      "sha256": "716ce8431f47eb8b8135552710e3c4d538bccccf1202e4ceac5428c9aada9972"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/composio/DESIGN.md",
+      "sha256": "e7db886dabecca61f29b83e8f46d7a1e8a43889d30b81bc6e48162ccaafcbb2f"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/spacex/DESIGN.md",
+      "sha256": "495450c79faab54d12d677649ca0a2c30a60f64f536a802e945ad54185c5baad"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/airtable/DESIGN.md",
+      "sha256": "1d225e511213044d3c705bde50265ad010932bfd8a15740a144dd4f480128889"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/slack/DESIGN.md",
+      "sha256": "03cb243015a2e11d0faf05caba7f3d0c7fda6839b1f5ce707a23e8d46d1a11bd"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/wired/DESIGN.md",
+      "sha256": "eb439dcc573401dc30583f40e7eef8a60b769232da59e524de6dce56d5c3593e"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/wise/DESIGN.md",
+      "sha256": "442df0ad7380efd8712f5574bdca34a73cfb41a2a43454ff459863a6258af547"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/mastercard/DESIGN.md",
+      "sha256": "e76ceaa187f43bd24b8338d2b2314e71e9225b36492e40f32a55782281a10437"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/theverge/DESIGN.md",
+      "sha256": "5da2c3116e6845826b043ac115a80896a399efda2cebc0188981fba2ef9bb526"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/replicate/DESIGN.md",
+      "sha256": "c22062d7b4174bf9ced7bc61c48389086cf6eed96a958e098ee70389893b0a15"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/bmw/DESIGN.md",
+      "sha256": "b7268279e7c98e85fb80890e06765f4ee8340ba1ea1ccb5a8a5b134de43dac3e"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/playstation/DESIGN.md",
+      "sha256": "2a56c109af6cb847fa091b768f719b498ac56b582d010860e73ea5fb72a1590d"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/kraken/DESIGN.md",
+      "sha256": "41bcbd5642c926a549f0d50f1151484c5776b4536233240c8415cfb79bcf1f38"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/binance/DESIGN.md",
+      "sha256": "378ff97d568ccbc316519b9d45a29d6649ed8961c9c486c3ed4cea7501d72371"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/renault/DESIGN.md",
+      "sha256": "b343df9a67e57f248e9eee704f52b17dff9cf6a46d1dc9f8d7ab36741940db59"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/revolut/DESIGN.md",
+      "sha256": "b7fa8473315541f5d7e7d76f68a77105d255e6dae00d31d5eb34621d1d52de59"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/meta/DESIGN.md",
+      "sha256": "306dfad97c006d47b134fb0dbd55ff68d3baa526844d6eb37346373c9ef35339"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/framer/DESIGN.md",
+      "sha256": "a5d47dddacf5a04577cec0be6fe0fc53b7402254c7686874af3e59bcc7588cb4"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/claude/DESIGN.md",
+      "sha256": "3d972f34f8d4f33b442fa28220cf3b7ca2f13c0a97c468e3988148f82521f9df"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/together.ai/DESIGN.md",
+      "sha256": "aee472c583f55a2f2c7ee1c403a96dddadb3ff6dc518335451f431e313bf43cf"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/bugatti/DESIGN.md",
+      "sha256": "375f0a20ada88cdee5e995ca7edcfbd584ddf5f887024deebd1bc75bfd55b1bc"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/sanity/DESIGN.md",
+      "sha256": "ea1c442de2b23443f79af46524a81f33951606c8ff043ea9c25ba886264fbdd8"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/warp/DESIGN.md",
+      "sha256": "5b1201f7b1b4e72570d148d1f980fd1cb35e6e4122d48dd271787aa3538a25ad"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/resend/DESIGN.md",
+      "sha256": "99536f1b2380511a539f7f3466d46d351e4bf35a5af0c0df395bdc20af05c9be"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/opencode.ai/DESIGN.md",
+      "sha256": "d1a8893c4b8ac90b1e86230eee2effa8bd15add3582853477920e32432336dda"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/airbnb/DESIGN.md",
+      "sha256": "add34130d67209ad105346d60fe2b290728b9711683969db4b7760e29477a5fe"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/posthog/DESIGN.md",
+      "sha256": "01f497f751d56296bfcd5eb8806325a4bb4786d364941ec6e65c65fa9ee6d362"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/cohere/DESIGN.md",
+      "sha256": "1c49a5a5f88d43841d4f4afa33831328d47a5715048700a3b75086a822575883"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/intercom/DESIGN.md",
+      "sha256": "962be23cd947e87a86b2ffbc0440e9d0808243a6ef3af2aa04e8e7cc04d48ba3"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/supabase/DESIGN.md",
+      "sha256": "f57287d7f44d59e8169dc4b4304ff03c1a2efb37f5433b9c04460caae7710880"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/expo/DESIGN.md",
+      "sha256": "1be7e129b6f75afaa12318a7c51ab22f6f74a214dec22c4827cecc519f112363"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/coinbase/DESIGN.md",
+      "sha256": "c8c67800dd7f58fcc87ed7d267a3bba862e3419e499e8a66d67731a69d2de1d6"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/mongodb/DESIGN.md",
+      "sha256": "4523f10efd5ccd46f9aeac3b98626e24bcf907bc0c1e46500cb0e3920f932e71"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/pinterest/DESIGN.md",
+      "sha256": "26a202fd244e9213d5e2475d81581828da1dd97e089e44639d9783d04f96e4a8"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/clay/DESIGN.md",
+      "sha256": "1abd803a207fbe950a06e155adcd6013c2e149b13e7b88844f5069f9d3d99eb3"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/mistral.ai/DESIGN.md",
+      "sha256": "40e2c692d72c54bae1e43446e2d059b71d773668d39d71ccb7ededa9fa07d145"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/shopify/DESIGN.md",
+      "sha256": "495e89b8d0a1848ded013c040f7a2ae62077e9d87fc4385350e25dee02ccdb38"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/minimax/DESIGN.md",
+      "sha256": "2658b96488bb629749259b152c5ba2912a0e8feb6a03477e265879abd9264c50"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/vercel/DESIGN.md",
+      "sha256": "d0951b93c2b4ce9840c715c9f9b3e58a386c6c58ae5cc0f804dec3b116b95bd8"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/apple/DESIGN.md",
+      "sha256": "83fbc614443a9b3d7569e9956a43e7b8740f9d0f939f58b8154f7a7cec3002b2"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/lamborghini/DESIGN.md",
+      "sha256": "9aa68c53b481a0befdf72859db5625f85454122294509989aa58414aaee04b34"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/nike/DESIGN.md",
+      "sha256": "d2a3d363665839e2ddc15c91b8a9f3e92b1962ff55a7ca5d964ab3bb88b8186c"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/cursor/DESIGN.md",
+      "sha256": "a3db9b3019dc2f514fdee7cd0ca0a5232c0bd0119e23178e8eebaf6916258d9d"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/lovable/DESIGN.md",
+      "sha256": "92790895c833104072643929ba56ebbf42c8f88ffb7bff1926462545d0ace6c7"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/stripe/DESIGN.md",
+      "sha256": "5c8806b7dd3e0c2554ccba9d1e2a7c78e7c6e50e44fcf6ff5daea6026f8a9ed9"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/cal/DESIGN.md",
+      "sha256": "8cd21b7d67e94c899843d517f4b426e4fee33d47354a433d6a63ebcf79d5a654"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/spotify/DESIGN.md",
+      "sha256": "72e964a6cf551d0603f9854f2f42ee08e97ad4d9e17e037f50f6233508288295"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/sentry/DESIGN.md",
+      "sha256": "655c91d7d23b5e869a966b7f1b63ae650567ad5d69003cfc64b0ee62c8e02c1f"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/mintlify/DESIGN.md",
+      "sha256": "754ffcf35dcd39ef8aef450085ce936aaca5b872ff92caa66be99e91a5c3d5ec"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/raycast/DESIGN.md",
+      "sha256": "6e2c5137e4d914b70996d589688374a801b6f29a35c9c019c22abb5e0170bda3"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/notion/DESIGN.md",
+      "sha256": "fa9d6e78216d8f3e5d3990709ca2de6bc2e268e945bb94f255fd1bfb15455266"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/linear.app/DESIGN.md",
+      "sha256": "30bd30e72c48a16e4bdbd010f2d1c85fab657c6fae3cc85389399aab10f9cb5f"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/bmw-m/DESIGN.md",
+      "sha256": "824a1707c0a8d1609d72477d0fa211b9ebe4bdeb3e1fd701790af7b7bb669a4a"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/voltagent/DESIGN.md",
+      "sha256": "4457887741ae5e965e205282b03c4bff83e47dd7a03cd7f38c64623a17569fcd"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/ferrari/DESIGN.md",
+      "sha256": "1199e2832641cac7e384aaf3b1f3db87f992240cea5d3d1eee04d9dc00acb17c"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/ollama/DESIGN.md",
+      "sha256": "3f36f897e5aad870344dd97e282c8f125ad208dc99449bb08dd38b9259d2f451"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/uber/DESIGN.md",
+      "sha256": "f30d2257d2d090790332d00ccb16cd2516c3c6008be61ad2ce83c4e991bcc803"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/hp/DESIGN.md",
+      "sha256": "4c9a248046684bdde5311a0c9881814f50e2381c2b0f3c75b02a35fc64bc8bb8"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/dell-1996/DESIGN.md",
+      "sha256": "e186c614b1223fe7015670472ac6bc84b5b3fdd5de5325b3ce5bfb7fbe9c8d6e"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/superhuman/DESIGN.md",
+      "sha256": "3640298bd2957aee80ce88eb465a7541ba835ec105cba364a6a621d885c7f34f"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/tesla/DESIGN.md",
+      "sha256": "19f2f7e6073d708f46d2512e6bab3c7c417cf2b4d9f57ff6ec6f2e056ea942b0"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/nintendo-2001/DESIGN.md",
+      "sha256": "9630af17090d5c39ba9d8b5915a597a96c7552efe1422b3b8c3f31fb3e636716"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/vodafone/DESIGN.md",
+      "sha256": "293a40951e654283978fa744b24177a159d8f2a60f402bc735bf081618af0ef6"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/zapier/DESIGN.md",
+      "sha256": "9aee43ba8ece1b4fd0753b4cad0a29f3497331882fa376f0dd4fea8a018c32fc"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/runwayml/DESIGN.md",
+      "sha256": "b0e69bf643f89bb57ac0b82a3bf025e59ff1478c244cb0528ad1e38b3f80dac9"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/miro/DESIGN.md",
+      "sha256": "87c71f76297277d64f9679e015a50da88e72d86d7b41badf8733eae1e4cde335"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/nvidia/DESIGN.md",
+      "sha256": "d649be85daf075c98a17071e707e3901c6e19150044a81716acd01ef1169cc83"
+    },
+    {
+      "skill": "awesome-design-md",
+      "path": ".agents/skills/awesome-design-md/references/designs/starbucks/DESIGN.md",
+      "sha256": "e20338ee10226c63cf2588207288c08e12d60754a53f681657adaf364dfe8fa7"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/SKILL.md",
+      "sha256": "987926910df5ff888da0ed30eebc9931c0dd6b436e3fdf83fe3f2a52aca3a2b5"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/references/cli-reference.md",
+      "sha256": "0cb9242992168cccfb79585000612c90c5c3e054d66d1ff90672dcc51288e91d"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/references/provenance.json",
+      "sha256": "aa599b748d02229062369d2e265211fd03c75f056175dbb5babbbb8a2d139f2e"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/references/LICENSE.upstream",
+      "sha256": "1bdd03995456d191707e379eb06ceac20cf30d520bec90c97c2b6d220906c66e"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/references/spec.md",
+      "sha256": "8f297a7bd38cf08bde06c96f5eea2ebfcd9930a8bc1dfe964f8e8dec894e691a"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/references/coordination.md",
+      "sha256": "90888ae771d27a0041ec43ac9ddd8493a5c66f01586aeed17faaabf84318f6c0"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/agents/openai.yaml",
+      "sha256": "12d1ffa17896306b299fda39078dae919c9f4d8a994743e2890791f6b2fb5429"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/assets/icon.svg",
+      "sha256": "49315dda7125ec5fc77ef5f2b96126d8b2121c6e72944b4702972e90f321d3ee"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/scripts/designmd.py",
+      "sha256": "73c04f5c8da4c3671626db8c12d9b105a185eafa7fd0a28ea6ffa4b7db0c9df7"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/scripts/google-cli/spec-config.yaml",
+      "sha256": "6244e829849e63b55316258f32e1110833d193b79943ec79f245b33ebeec2ef8"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/scripts/google-cli/index.mjs",
+      "sha256": "874a6a4dde402f563882621f01b4789a7a12c64bc8a7abb1e18731e97eb271f0"
+    },
+    {
+      "skill": "google-design-md",
+      "path": ".agents/skills/google-design-md/scripts/google-cli/spec.md",
+      "sha256": "8f297a7bd38cf08bde06c96f5eea2ebfcd9930a8bc1dfe964f8e8dec894e691a"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/SKILL.md",
+      "sha256": "f44b56d2d400558afc7170f52a5ed58e8d58d460e3753ef4e130db06bfd2bce3"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/references/pro-rules.md",
+      "sha256": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/references/provenance.json",
+      "sha256": "52da248a39e143bb25e3f7d253b38da26cfd78685a48da3b1e08c1c3cbfd5b53"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/references/LICENSE.upstream",
+      "sha256": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/references/quick-reference.md",
+      "sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/references/coordination.md",
+      "sha256": "90888ae771d27a0041ec43ac9ddd8493a5c66f01586aeed17faaabf84318f6c0"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/agents/openai.yaml",
+      "sha256": "c2b573fae246bd1097093f11f98015fcc935b3b36b0f55f9f51680dafdd0d0bc"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/assets/icon.svg",
+      "sha256": "e9301497fa98ef56aaca7ede0857b9a18dc06c34040f0679c609a6bf49b1d38b"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/react-performance.csv",
+      "sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/motion.csv",
+      "sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/landing.csv",
+      "sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/charts.csv",
+      "sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/catalog-summary.json",
+      "sha256": "6638da97231c07fb5cef3cd9d3ce483ca7b2f9748980f8c27490eb03968d8894"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/typography.csv",
+      "sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/icons.csv",
+      "sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/app-interface.csv",
+      "sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/google-fonts.csv",
+      "sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/colors.csv",
+      "sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/styles.csv",
+      "sha256": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/data-provenance.json",
+      "sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/google-font-licenses.json",
+      "sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/products.csv",
+      "sha256": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/scripts/design_system.py",
+      "sha256": "e7d1c94c4b2eada17c5551157668362659ccf9626d34dbd58e68142410f90103"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/scripts/core.py",
+      "sha256": "c3be4b23e7150e6b45095213158cfa3c8ad96502f01dde3f6ffff9de64a4f481"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/scripts/validate_data.py",
+      "sha256": "a599aa256049cf30954d1f164721b99e453eb7e4cb8241bcab2d5573e6cf58b8"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/scripts/search.py",
+      "sha256": "d54e648fe0ec2932cac66684220cc17be4bd4b4eba1d23d3195d509d398db374"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/winui.csv",
+      "sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/uwp.csv",
+      "sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "sha256": "fce682a338cfcdbf35d318d20e5befbe7b5d81b05abc37f87677a6d9cde84dc6"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/javafx.csv",
+      "sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/react.csv",
+      "sha256": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/uno.csv",
+      "sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/wpf.csv",
+      "sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "sha256": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623"
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9"
+    },
+    {
+      "skill": "impeccable",
+      "path": ".agents/skills/impeccable/SKILL.md",
+      "sha256": "ff493127dbc6702861feb1849e4e5fb81fb367abba5b266ab169b9c7b8a49e93"
+    },
+    {
+      "skill": "impeccable",
+      "path": ".agents/skills/impeccable/references/design-review.md",
+      "sha256": "4dfce775c44eebe7c17c8aa2aa8ca0ecf522aaf101834bc73f7c887842cccec1"
+    },
+    {
+      "skill": "impeccable",
+      "path": ".agents/skills/impeccable/references/NOTICE.upstream.md",
+      "sha256": "c60a093c2845fd9fb82f9c6f742ece31f379f8190b535309d32d66c45ccffdcb"
+    },
+    {
+      "skill": "impeccable",
+      "path": ".agents/skills/impeccable/references/provenance.json",
+      "sha256": "b72fd8dbe65e0a2242114a523eae75e55ca359ce558b563a038411fc02df90a9"
+    },
+    {
+      "skill": "impeccable",
+      "path": ".agents/skills/impeccable/references/LICENSE.upstream",
+      "sha256": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812"
+    },
+    {
+      "skill": "impeccable",
+      "path": ".agents/skills/impeccable/references/coordination.md",
+      "sha256": "90888ae771d27a0041ec43ac9ddd8493a5c66f01586aeed17faaabf84318f6c0"
+    },
+    {
+      "skill": "impeccable",
+      "path": ".agents/skills/impeccable/agents/openai.yaml",
+      "sha256": "ce5d808d57298001045e92118c67d58dee70b4212bce4cae8e4b1e81c423918e"
+    },
+    {
+      "skill": "impeccable",
+      "path": ".agents/skills/impeccable/assets/icon.svg",
+      "sha256": "49315dda7125ec5fc77ef5f2b96126d8b2121c6e72944b4702972e90f321d3ee"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/SKILL.md",
+      "sha256": "516669310e92ab5ddd8cf778151a49a9b7348de56ff4e3ab251af14640ff2919"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-15.md",
+      "sha256": "afd89b8bad7d88082d050a76ef0cebaffff7c4fb3f31be9f476f76563c3566e3"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-01.md",
+      "sha256": "4a03d1d2728673ca5077986e4dae59fca2ad3cd45cf9abdb7587893f87cdff82"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-00.md",
+      "sha256": "c4f0dfe5076f19b4ee4ef86a7dc4f8d7729a7c5f6a48ff9705c989de30c1f19e"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-12.md",
+      "sha256": "491f0d8aee669b3f3a0b06cf3911e560df9dbc652c8fccb3d1904d93e8483ec2"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-04.md",
+      "sha256": "c66ce92fa2efa7d5ec235b0113da08389a7c86f7efb7170b5582b1d232b4fd39"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-11.md",
+      "sha256": "243baf44f7dba3e5e668e1d5b0db0f98f6bcd84f7d84aa2020d3dc94b41a8f36"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-14.md",
+      "sha256": "7b69a35b7ea1b3a20491bb5c1cebea0590ea7a6f4d62e70273ea12ac229b1f1b"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-09.md",
+      "sha256": "f4ec062c9848207c52d45545631ae13ca9d17983edf8fabd9639360f883b772d"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/index.md",
+      "sha256": "51b9b5cacec7f8ecc866a60677f97a0a1e7d56d9c56344acbeea7ed62d04384e"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-17.md",
+      "sha256": "ac20f3527504945045475f4b7a0f5f76ad87dd17cd3571d63a9d839403a830f3"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/provenance.json",
+      "sha256": "347f7f641a25201158ec1c83e65f6d677841a2f05b8a34a2bc9b8b896bdffd98"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-02.md",
+      "sha256": "801b82144caf95ce9bb8085372e64992b3e23cdb85469c54fcd9d5b1ce29f084"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/LICENSE.upstream",
+      "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-08.md",
+      "sha256": "92eda98f687850eae45417d7ce2a77257b3e95f496ba657f8dca71c6e28ce118"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-10.md",
+      "sha256": "cae326bf75fb69185592813daac259f6234be2f8636d4a01fb91ba96d5c93cbb"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-06.md",
+      "sha256": "4fa88e9e604a994721ef9e442e6efc8beec8c85b6294aef45213663dd0495d13"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-13.md",
+      "sha256": "1cc553c632eab1409174b511c21a747ce59b35b628dcaaef54fa79e0703430ce"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-03.md",
+      "sha256": "ac1a5a970a84f6bc40f02e4f89ef6da50f8ed6eedc6fb1ae9981662ccdf9a859"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/coordination.md",
+      "sha256": "90888ae771d27a0041ec43ac9ddd8493a5c66f01586aeed17faaabf84318f6c0"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-18.md",
+      "sha256": "0587a35c52c9a138a667371c42ec52443e57bea2c024ca70aabc88e5fb87b712"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-05.md",
+      "sha256": "1729f1ce25dbf36d406eee5da4fec6844116e7ff51fe576d1b1e848157102310"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-07.md",
+      "sha256": "f9d14be480a9da19e7ba4a1092e52a1dc584ecaa5e621e9b5f507f27b21b1690"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/references/taste-16.md",
+      "sha256": "e680860b812289b5fd5a59081aaea7f4e2c64ad2c1b634cb13957447a3641a79"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/agents/openai.yaml",
+      "sha256": "2f69f3f5ad029652940c8fb3edcbaa3b616c036affc51c09c343aea8e1239695"
+    },
+    {
+      "skill": "taste",
+      "path": ".agents/skills/taste/assets/icon.svg",
+      "sha256": "49315dda7125ec5fc77ef5f2b96126d8b2121c6e72944b4702972e90f321d3ee"
+    }
+  ]
+}

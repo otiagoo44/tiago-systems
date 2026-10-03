@@ -1,0 +1,97 @@
+{
+  "checks": [
+    "Recorrido guiado completo en móvil",
+    "Foco contenido en diálogo móvil",
+    "Animación hero activa por defecto"
+  ],
+  "contrast": [
+    {
+      "selector": ".button--brand",
+      "text": [
+        5,
+        7,
+        11
+      ],
+      "background": [
+        210,
+        179,
+        108
+      ],
+      "contrast": 9.99
+    },
+    {
+      "selector": ".hero-copy > p",
+      "text": [
+        217,
+        222,
+        231
+      ],
+      "background": [
+        5,
+        7,
+        11
+      ],
+      "contrast": 14.93
+    },
+    {
+      "selector": ".crm-muted",
+      "text": [
+        156,
+        168,
+        185
+      ],
+      "background": [
+        5,
+        7,
+        11
+      ],
+      "contrast": 8.37
+    },
+    {
+      "selector": ".crm-funnel-cells small",
+      "text": [
+        156,
+        168,
+        185
+      ],
+      "background": [
+        13,
+        20,
+        32
+      ],
+      "contrast": 7.66
+    },
+    {
+      "selector": ".work-map-options button[aria-pressed=true]",
+      "text": [
+        246,
+        247,
+        249
+      ],
+      "background": [
+        21.400000000000002,
+        20.76,
+        18.76
+      ],
+      "contrast": 17.07
+    },
+    {
+      "selector": ".map-output",
+      "text": [
+        156,
+        168,
+        185
+      ],
+      "background": [
+        5,
+        7,
+        11
+      ],
+      "contrast": 8.37
+    },
+    {
+      "selector": ".crm-stage",
+      "missing": true
+    }
+  ]
+}

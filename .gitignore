@@ -9,3 +9,5 @@ dist
 capturas-dentflow/
 inspiracion-landing/
 ultima-conversacion.txt
+__pycache__/
+*.pyc

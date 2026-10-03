@@ -1,0 +1,104 @@
+{
+  "tokens": {
+    "colors": {
+      "added": [
+        "primary",
+        "primary-hover",
+        "on-primary",
+        "background",
+        "background-secondary",
+        "background-alternate",
+        "surface",
+        "surface-raised",
+        "surface-hover",
+        "text",
+        "text-secondary",
+        "text-muted",
+        "primary-subtle",
+        "info",
+        "border",
+        "border-hover",
+        "border-control",
+        "success",
+        "danger"
+      ],
+      "removed": [],
+      "modified": []
+    },
+    "typography": {
+      "added": [
+        "display",
+        "heading",
+        "subheading",
+        "body",
+        "label",
+        "button"
+      ],
+      "removed": [],
+      "modified": []
+    },
+    "rounded": {
+      "added": [
+        "sm",
+        "control",
+        "panel",
+        "frame"
+      ],
+      "removed": [],
+      "modified": []
+    },
+    "spacing": {
+      "added": [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl",
+        "section-mobile",
+        "section-desktop"
+      ],
+      "removed": [],
+      "modified": []
+    },
+    "components": {
+      "added": [
+        "button-primary",
+        "button-primary-hover",
+        "button-secondary",
+        "input",
+        "panel",
+        "muted-on-hover",
+        "selected",
+        "founder",
+        "hero-frame",
+        "selection-tint",
+        "informational",
+        "separator",
+        "frame-edge",
+        "input-edge",
+        "status-success",
+        "status-error"
+      ],
+      "removed": [],
+      "modified": []
+    }
+  },
+  "findings": {
+    "before": {
+      "errors": 0,
+      "warnings": 1,
+      "infos": 0
+    },
+    "after": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1
+    },
+    "delta": {
+      "errors": 0,
+      "warnings": -1
+    }
+  },
+  "regression": false
+}

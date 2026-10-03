@@ -21,6 +21,7 @@ type SiteConfig = {
     contact: { eyebrow: string; title: string; accent: string; description: string }
   }
   issues: readonly { number: string; title: string; text: string }[]
+  workflow: readonly { question: string; problem: string; decision: string; steps: readonly string[]; output: string }[]
   capabilities: readonly { icon: LucideIcon; title: string; text: string }[]
   steps: readonly { number: string; title: string; text: string }[]
   questions: readonly { question: string; answer: string }[]
@@ -52,15 +53,15 @@ export const site: SiteConfig = {
   ],
   hero: {
     eyebrow: 'TIAGO SYSTEMS · TECNOLOGÍA APLICADA A NEGOCIOS',
-    title: { before: 'Transformo procesos', accent: 'dispersos', after: 'en sistemas fáciles de usar' },
-    description: 'Soy Tiago Ortega. Diseño y desarrollo herramientas para que los equipos trabajen con más contexto. DentFlow es mi producto para organizar consultas y seguimiento en clínicas odontológicas.',
+    title: { before: 'Procesos dispersos.', accent: 'Sistemas claros', after: '' },
+    description: 'Soy Tiago Ortega. Construyo sistemas para ordenar el trabajo de los equipos. Conocé DentFlow, mi CRM para consultas y seguimiento en clínicas odontológicas.',
   },
   copy: {
     approach: {
       eyebrow: '01 / EL ENFOQUE',
       title: 'Cuando el trabajo se dispersa,',
       accent: 'el sistema tiene que unirlo.',
-      description: 'Una herramienta útil empieza por entender lo que pasa entre la primera consulta y la próxima decisión.',
+      description: 'Consultas entre chats, seguimiento de memoria y dudas sobre quién sigue. Una herramienta útil empieza por entender ese trabajo.',
       note: 'Diseño la herramienta alrededor del proceso del equipo: información visible, acciones claras y menos pasos sueltos.',
     },
     product: {
@@ -100,9 +101,32 @@ export const site: SiteConfig = {
     },
   },
   issues: [
-    { number: '01', title: 'La consulta llega', text: 'Un mensaje o formulario inicia el trabajo. Si queda aislado, el contexto se pierde.' },
-    { number: '02', title: 'El estado cambia', text: 'Entre una respuesta y la próxima acción, el equipo necesita saber qué pasó y quién sigue.' },
-    { number: '03', title: 'Hay que decidir', text: 'Ver el proceso completo permite revisar pendientes y actuar con más criterio.' },
+    { number: '01', title: 'Claridad antes que complejidad.', text: 'Reunir el contexto y hacer visible el próximo paso antes de sumar más herramientas.' },
+    { number: '02', title: 'WhatsApp sigue en el trabajo.', text: 'El equipo conversa donde ya lo hace. El sistema ordena lo que pasó y qué queda por hacer.' },
+    { number: '03', title: 'Medir antes de optimizar.', text: 'Ver dónde se frena el seguimiento para decidir qué revisar, sin confundir actividad con resultados.' },
+  ],
+  workflow: [
+    {
+      question: '¿Dónde queda cada consulta?',
+      problem: 'Si la información queda repartida entre mensajes y anotaciones, reconstruir cada caso se vuelve parte del trabajo.',
+      decision: 'Reunir el contexto.',
+      steps: ['Consulta recibida', 'Datos y origen', 'Responsable asignado'],
+      output: 'Una ficha que permite entender qué necesita la persona y quién sigue el caso.',
+    },
+    {
+      question: '¿Qué hay que hacer después?',
+      problem: 'Responder un mensaje no siempre cierra una tarea. Puede quedar una cita por coordinar o una decisión por retomar.',
+      decision: 'Hacer visible el próximo paso.',
+      steps: ['Revisar el caso', 'Registrar el resultado', 'Definir acción y fecha'],
+      output: 'Un pendiente concreto que el equipo puede retomar sin depender de la memoria.',
+    },
+    {
+      question: '¿Dónde se frena el proceso?',
+      problem: 'Contar consultas no explica qué pasó después. Para decidir qué mejorar, hay que mirar el recorrido entre etapas.',
+      decision: 'Medir con contexto.',
+      steps: ['Etapas registradas', 'Avance entre etapas', 'Punto a revisar'],
+      output: 'Una lectura del seguimiento para hacer mejores preguntas, sin confundir actividad con resultados.',
+    },
   ],
   capabilities: [
     { icon: ClipboardList, title: 'Consultas en un lugar', text: 'La información de cada consulta queda disponible para el equipo.' },
@@ -114,11 +138,13 @@ export const site: SiteConfig = {
     { number: '01', title: 'Ingresa la consulta', text: 'El formulario de una landing registra el interés y la información que la persona dejó.' },
     { number: '02', title: 'Se organiza el seguimiento', text: 'DentFlow reúne el estado, el responsable y el próximo paso de cada caso.' },
     { number: '03', title: 'El equipo actúa', text: 'Recepción revisa el contexto, abre WhatsApp y registra el resultado de su gestión.' },
+    { number: '04', title: 'Queda un próximo paso', text: 'El resultado actualiza el estado: coordinar una cita, retomar el contacto o cerrar el seguimiento.' },
   ],
   questions: [
     { question: '¿DentFlow envía mensajes automáticamente?', answer: 'No. El sistema prepara el mensaje, pero una persona lo revisa, abre WhatsApp y decide enviarlo. Después registra el avance en el CRM.' },
     { question: '¿Qué información organiza?', answer: 'Consultas, estados, responsables, próximas acciones y etapas del seguimiento. La vista de análisis ayuda a revisar cómo avanza el proceso.' },
     { question: '¿Las cifras de la demo son resultados reales?', answer: 'No. La demo usa datos ficticios y calcula sus cifras a partir de las acciones que probás. No está conectada al CRM privado ni envía mensajes reales.' },
+    { question: '¿Cómo sé si encaja con mi clínica?', answer: 'DentFlow está orientado a clínicas que necesitan organizar consultas y dar visibilidad al equipo. Podemos conversar sobre cómo trabajan hoy y revisar qué necesitan antes de definir una implementación.' },
     { question: '¿Podemos conversar sobre un proyecto?', answer: 'Sí. Contame qué proceso querés ordenar y qué usa hoy tu equipo. A partir de eso podemos definir si tiene sentido trabajar juntos.' },
   ],
 }
