@@ -18,10 +18,10 @@ Las pruebas usan el runner integrado de Node y requieren **Node 24 o superior**.
 
 Los textos públicos, enlaces, ejemplos del mapa de trabajo y retrato se editan en `src/siteConfig.ts`.
 
-- WhatsApp comercial autorizado: `+595 993 367341`. El enlace se normaliza automáticamente. Email y LinkedIn son opcionales.
+- WhatsApp comercial autorizado: `+595 993 367341`. `getContactHref()` normaliza el número y codifica los mensajes de `whatsappMessages`: general, demo y final. El canal principal es WhatsApp; email es un fallback opcional.
 - Tiago Systems: **solo Instagram**, `@tiago.systems`.
 - DentFlow: Instagram y TikTok, `@dentflow.py`.
-- “Conocer DentFlow” lleva a `#dentflow`; “Probá la demo interactiva” lleva a `#demo-crm`.
+- “Ver DentFlow en acción” lleva a `#dentflow`; “Probá la demo interactiva” y “Volver a la demo” llevan a `#demo-crm`. Se conservan los anclajes históricos.
 - La landing no enlaza al acceso privado del CRM: requiere una cuenta y no es una presentación pública.
 - Producción confirmada en la configuración pública del repositorio: `https://tiago-systems.vercel.app/`. URL canónica y metadatos sociales en `index.html`; imagen original de marca en `public/social-preview.png` (1200 × 630). Actualizar estas URL si se conecta un dominio propio.
 
@@ -43,7 +43,7 @@ El recorrido guiado utiliza las mismas acciones que el uso manual: Pendientes �
 
 ## Foto y archivos privados
 
-La foto profesional sigue pendiente. Prepará una imagen autorizada de al menos **800 × 960 px**, proporción **5:6**; guardala en `src/assets/`, importala en `src/siteConfig.ts` y asignala a `site.founder.photo`. El componente reserva la proporción y vuelve al placeholder si falla la carga.
+La foto profesional autorizada de Tiago está integrada en `src/assets/tiago-ortega.webp` (900 × 1125, ~90 KB) y `tiago-ortega-mobile.webp` (480 × 600, ~22 KB). `site.founder.photo` y `photoMobile` configuran el retrato responsive. La sección usa un primer plano con bordes fundidos al fondo, nombre a gran escala y relato debajo, sin marco cuadrado. El original permanece fuera del repositorio; el rostro no se modificó. Carga diferida, dimensiones reservadas y monograma si falla la imagen.
 
 Las imágenes `src/assets/dentflow-*-publico.png` de la versión anterior se conservan como referencia histórica, pero ya no se importan ni publican en el build. La presentación actual del producto se genera con componentes reales y datos ficticios.
 
@@ -57,4 +57,14 @@ Los originales de `capturas-dentflow/`, las referencias de `inspiracion-landing/
 - **Revisión en Chromium realizada** a 390, 768, 1024 y 1440 px: sin desbordes ni errores JavaScript. Recorrido manual y guiado, métricas compartidas, búsqueda, citas, reinicio, pestañas, FAQ, menú móvil, foco de diálogos y movimiento reducido comprobados.
 - Sistema negro/dorado reconciliado en `DESIGN.md`; lint oficial 0.4.0 con cero errores y advertencias. Decisiones de las cinco skills, hallazgos y capturas en [RECOVERY_REPORT.md](docs/design/RECOVERY_REPORT.md).
 
-El único recurso editorial pendiente es la foto profesional opcional: el espacio reservado se conserva. No se incorporó información nueva de Instagram porque su lectura pública fue bloqueada. La revisión visual se hizo con viewports emulados, no con teléfonos físicos; no constituye una certificación WCAG ni una medición de Core Web Vitals de campo.
+La foto profesional está incorporada. No se incorporó información nueva de Instagram porque su lectura pública fue bloqueada en la recuperación anterior. La revisión visual se hizo con viewports emulados, no con teléfonos físicos; no constituye una certificación WCAG ni una medición de Core Web Vitals de campo.
+
+## Recorrido comercial y recurso opcional
+
+La revisión de conversión de octubre de 2026 conserva el diseño negro/dorado, fuentes, motion, hero y lógica de la demo. El recorrido es: problema → cuatro preguntas → DentFlow → recepción/dirección → implementación → prueba disponible → encaje → fundador → FAQ → conversación por WhatsApp.
+
+`site.resource` permanece `null`: no existe una URL verificada del recurso gratuito. Para publicarlo después, asignar un objeto con `url`, `title`, `description` y `cta`, únicamente tras comprobar su URL pública real. La sección aparece entre FAQ y contacto. No hay formularios ni descargas ficticias.
+
+La regresión de navegador está en `scripts/verify-landing.mjs`. Con el build servido en `http://localhost:4173`, ejecutar `node scripts/verify-landing.mjs` en un entorno con Playwright disponible. Si la instalación es externa, definir `PLAYWRIGHT_MODULE` con su ruta y, opcionalmente, `CHROMIUM_EXECUTABLE` con el navegador instalado; `QA_URL` permite otro destino. No son dependencias de producción. El script verifica 375, 430, 768, 1024 y 1440 px, interacciones de la demo, teclado, FAQ, navegación, enlaces WhatsApp y SEO. Regenera evidencia en `docs/design/evidence/conversion/`.
+
+Resultados y límites de esta revisión: [CONVERSION_REPORT.md](docs/design/CONVERSION_REPORT.md). Sólo queda pendiente la URL real del recurso gratuito opcional; mientras no exista, su CTA permanece oculto.

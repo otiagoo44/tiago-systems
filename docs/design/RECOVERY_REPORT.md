@@ -1,5 +1,23 @@
 # Recuperación de Tiago Systems
 
+> Cierre, 5 de octubre de 2026: foto profesional real incorporada y revisión comercial finalizada. La nota de foto pendiente al final de la recuperación histórica ya no aplica. El recurso gratuito permanece oculto porque no tiene URL real.
+
+> Continuidad, 4 de octubre de 2026: la revisión comercial solicitada posteriormente conserva esta recuperación visual. La arquitectura, CTAs, evidencia nueva, comparación tipográfica/motion y QA están en [CONVERSION_REPORT.md](CONVERSION_REPORT.md). No se reemplazó la demo ni se modificaron sus archivos.
+
+## Acabado final del 5 de octubre de 2026
+
+Se retomaron los cambios comerciales sin commit sobre `main` (`b4d9f7b`) y se conservaron. Se leyeron completamente las cinco skills de diseño vendorizadas y sus recursos relevantes; estaban disponibles en el selector. Se abrió cada inspiración GAZU, URBANX y Formix del índice de referencias, los tres assets DentFlow públicos y la foto profesional real entregada. Se compararon los candidatos históricos `91c6541` y `2504ab0`, sin reemplazar archivos completos de versiones antiguas.
+
+Principios aplicados: jerarquía editorial y protagonismo del producto (Linear), ritmo y espacio en superficies oscuras (Resend), contraste y acento dorado contenido, reutilización de divisores/grillas existentes, dimensiones reservadas y formatos responsive. La pareja Space Grotesk/DM Sans y las escalas generales se mantienen. La composición del fundador pasa de retrato enmarcado junto a texto a primer plano centrado, bordes fundidos, nombre 48–174 px y narrativa debajo. El rostro real no se modificó. Se preserva su copy exacto y un monograma accesible si falla la imagen.
+
+Motion comparado: se conservan hero escalonado, asentamiento del producto, revelados, mapa operativo, pestañas, diálogos y FAQ. No hay bibliotecas nuevas ni pérdida de animación por defecto. La alternativa reduced-motion mantiene contenido y controles; el menú permite foco inmediato conservando sus transiciones.
+
+Verificación final: tests 10/10, TypeScript/Vite correctos, lint oficial de DESIGN.md sin errores ni advertencias, `git diff --check` limpio. Chromium a 375/430/768/1024/1440 sin overflow ni anclas rotas; demo manual y guiada, citas, búsqueda, resumen compartido, teclado, WhatsApp prellenado sin envío y fallback del retrato comprobados. Axe 4.13.0: cero violaciones automáticas a 375/1440. Lighthouse móvil local: rendimiento 88, accesibilidad/buenas prácticas/SEO 100, CLS 0; no es certificación WCAG ni medición de campo. Se inspeccionaron capturas reales desktop/mobile, no sólo el build.
+
+Evidencia final: [fundador desktop](evidence/conversion/sobre-tiago-1440.png), [fundador móvil](evidence/conversion/sobre-tiago-375.png), [hero móvil](evidence/conversion/hero-375.png), [regresión de navegador](evidence/conversion/browser-report.json), [accesibilidad](evidence/conversion/axe-final.json), [rendimiento](evidence/conversion/lighthouse-final-mobile.json). Arquitectura, copy, archivos y límites detallados en [CONVERSION_REPORT.md](CONVERSION_REPORT.md).
+
+---
+
 Fecha: 3 de octubre de 2026. Rama inicial: `feat/tiago-systems-landing`. El propietario pidió finalizar y después autorizó integrar y pushear todo a `main` para actualizar Vercel.
 
 ## Resultado y alcance

@@ -1,0 +1,109 @@
+{
+  "base": "http://localhost:4173",
+  "checkedAt": "2026-10-05T20:30:41.678Z",
+  "viewports": [
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": "Que ninguna consulta quede sin próximo paso.",
+      "overflow": [],
+      "brokenAnchors": [],
+      "primary": {
+        "x": 19,
+        "y": 564.375,
+        "width": 337,
+        "height": 54,
+        "top": 564.375,
+        "right": 356,
+        "bottom": 618.375,
+        "left": 19
+      }
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430,
+      "h1": "Que ninguna consulta quede sin próximo paso.",
+      "overflow": [],
+      "brokenAnchors": [],
+      "primary": {
+        "x": 19,
+        "y": 567.875,
+        "width": 370,
+        "height": 54,
+        "top": 567.875,
+        "right": 389,
+        "bottom": 621.875,
+        "left": 19
+      }
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": "Que ninguna consulta quede sin próximo paso.",
+      "overflow": [],
+      "brokenAnchors": [],
+      "primary": {
+        "x": 28,
+        "y": 453.90625,
+        "width": 370,
+        "height": 54,
+        "top": 453.90625,
+        "right": 398,
+        "bottom": 507.90625,
+        "left": 28
+      }
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "h1": "Que ninguna consulta quede sin próximo paso.",
+      "overflow": [],
+      "brokenAnchors": [],
+      "primary": {
+        "x": 28,
+        "y": 623.1875,
+        "width": 370,
+        "height": 54,
+        "top": 623.1875,
+        "right": 398,
+        "bottom": 677.1875,
+        "left": 28
+      }
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": "Que ninguna consulta quede sin próximo paso.",
+      "overflow": [],
+      "brokenAnchors": [],
+      "primary": {
+        "x": 40,
+        "y": 591.21875,
+        "width": 370,
+        "height": 54,
+        "top": 591.21875,
+        "right": 410,
+        "bottom": 645.21875,
+        "left": 40
+      }
+    }
+  ],
+  "interactions": [
+    "Search, combined/empty filters, contact, cancellation, focus trap/return, invalid/valid appointment, attendance, analysis, shared hero metrics, tabs and reset at 375",
+    "Search, combined/empty filters, contact, cancellation, focus trap/return, invalid/valid appointment, attendance, analysis, shared hero metrics, tabs and reset at 1440",
+    "Guided tour, restart and cancellation",
+    "Four-question interactive map and all nine FAQ panels by keyboard",
+    "Mobile menu: focus, Escape, all navigation anchors and close on selection",
+    "Five WhatsApp links, three exact contexts, real phone, encoded messages and click destinations; no message sent",
+    "SEO, language, canonical, social metadata, favicon/OG assets and absent resource CTA",
+    "Authorized portrait loads at all five widths; responsive sources, alt, stable frame and failed-image fallback",
+    "Reduced motion retains visible content and disables running entrance animations"
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "forbiddenRequests": [],
+  "expectedFallbackErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "passed": true
+}

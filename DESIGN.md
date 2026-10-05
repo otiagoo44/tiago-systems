@@ -128,7 +128,7 @@ components:
 
 Landing editorial para responsables de clínicas y equipos con problemas operativos, con producto real explorable y contacto directo con Tiago Ortega. Identidad negra/azul casi negro con dorado restringido. Esta versión reemplaza la dirección azul de fd03ccb por instrucción expresa del propietario.
 
-React + TypeScript + Vite y CSS propio. Diales Taste: variance 6, motion 4, density 3 para marketing; la demo conserva mayor densidad de producto. Referencias: Linear (profundidad por superficies, interfaz protagonista) y Notion (explicar trabajo con diagramas y ejemplos). No se adoptan sus paletas, marcas, fuentes, precios ni promesas.
+React + TypeScript + Vite y CSS propio. Diales Taste: variance 6, motion 4, density 3 para marketing; la demo conserva mayor densidad de producto. Referencias del acabado actual: Linear (profundidad por superficies, interfaz protagonista) y Resend (ritmo editorial sobre fondo oscuro). No se adoptan sus paletas, marcas, fuentes, precios ni promesas.
 
 ## Colors
 
@@ -140,17 +140,17 @@ No usar grandes manchas doradas ni párrafos enteros de color. Contraste validad
 
 ## Typography
 
-Space Grotesk para títulos/cifras; DM Sans para cuerpo/controles. Se conserva la pareja histórica en vez de sustituirla. Hero fluido 47–86px; títulos de sección 40–100px según jerarquía; fundador 44–68px; cuerpo de lectura 16–17px. Etiquetas CRM 11–13px acompañan datos y no reemplazan contenido explicativo.
+Space Grotesk para títulos/cifras; DM Sans para cuerpo/controles. Se conserva la pareja histórica en vez de sustituirla. Hero fluido 47–86px; títulos de sección 40–100px según jerarquía; encabezado del fundador 44–68px y nombre editorial 48–174px; cuerpo de lectura 16–17px. Etiquetas CRM 11–13px acompañan datos y no reemplazan contenido explicativo.
 
 `text-wrap: balance` en titulares, anchos limitados y saltos deliberados en el hero. Cuerpo con interlínea 1.65–1.75. Las fuentes usan `display=swap` y preconexión a Google Fonts. El fallback sans-serif mantiene contenido visible.
 
 ## Layout
 
-Contenedor máximo 1360px, márgenes de 40px en desktop y 19px en móvil. Ritmo de secciones 72–112px. Hero a dos columnas desde 901px; una columna por debajo. Mapa interactivo a dos paneles desde 761px; preguntas y diagrama apilados en móvil. Principios editoriales separados por líneas, producto a ancho completo, proceso numerado vertical, retrato y texto del fundador, FAQ compacta.
+Contenedor máximo 1360px, márgenes de 40px en desktop y 19px en móvil. Ritmo de secciones 72–112px. Hero a dos columnas desde 901px; una columna por debajo. Mapa interactivo a dos paneles desde 761px; preguntas y diagrama apilados en móvil. Principios editoriales separados por líneas, producto a ancho completo, proceso numerado vertical y FAQ compacta. Fundador: encabezado amplio, retrato centrado con nombre superpuesto en el área inferior y relato debajo en dos columnas, una en móvil.
 
-El contenido agregado explica decisiones, inicio de la demo y encaje con una clínica. No se agregan siete secciones repetidas ni métricas comerciales inventadas. La navegación principal y los anclajes existentes permanecen.
+La arquitectura comercial parte del problema de seguimiento: situaciones reconocibles, cuatro preguntas, producto, utilidad para el equipo, implementación, prueba disponible y encaje. Reutiliza divisores editoriales, mapa interactivo y proceso numerado. La navegación dice Problema, DentFlow, Cómo funciona y FAQ; los anclajes históricos se conservan. No se presentan métricas comerciales inventadas.
 
-CRM: sidebar en desktop, cuatro pestañas en móvil; filas y formularios se reorganizan, nunca se escala la aplicación entera. Espacio de foto 5:6 con dimensiones 800×960 reservado; placeholder explícito hasta recibir una foto autorizada.
+CRM: sidebar en desktop, cuatro pestañas en móvil; filas y formularios se reorganizan, nunca se escala la aplicación entera. Retrato real autorizado, optimizado a WebP 900×1125 y 480×600, con srcset, dimensiones y carga diferida. El encuadre se resuelve con CSS: primer plano, bordes fundidos con el fondo y sin marco cuadrado. El espacio conserva su altura y un monograma accesible si falla la imagen; no se modifica el rostro.
 
 ## Elevation & Depth
 
@@ -162,7 +162,7 @@ Radios de 4–6px en controles, 8px en paneles y 12px en marcos. Círculos sólo
 
 ## Components
 
-CTA principal consistente: Hablemos por WhatsApp, hacia el número confirmado de `siteConfig.ts`. Acceso secundario: Conocé DentFlow. El mapa usa botones con `aria-pressed`, salida con anuncio cortés y recorrido ordenado. La introducción del producto inicia el mismo tour de la demo.
+CTA principal: Revisar el seguimiento de mi clínica, hacia el número confirmado de `siteConfig.ts`, con mensajes prellenados según contexto general, después de la demo y cierre. Acceso secundario: Ver DentFlow en acción. El mapa conserva botones con `aria-pressed`, salida con anuncio cortés y recorrido ordenado; ahora explica estado, responsable, próxima acción y fecha. La introducción del producto inicia el mismo tour de la demo. El recurso gratuito permanece oculto mientras su configuración sea null.
 
 Demo con reducer compartido, búsqueda/filtros, resumen, pacientes, pendientes, análisis, timeline, contacto interno, resultados y citas. Hero y métricas derivan de las mismas consultas. `Reiniciar demo` devuelve el escenario inicial exacto. Datos y reloj simulados identificados. Ninguna acción de la demo envía mensajes o consulta el CRM de producción.
 

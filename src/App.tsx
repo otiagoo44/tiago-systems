@@ -6,11 +6,10 @@ import {
   Check,
   ChevronDown,
   ExternalLink,
-  Mail,
   Menu,
   X,
 } from 'lucide-react'
-import { contactHref, site } from './siteConfig'
+import { getContactHref, site, type ContactContext } from './siteConfig'
 import { DentFlowDemo, HeroPreview } from './demo/DentFlowDemo'
 import { createInitialState, demoReducer } from './demo/model'
 
@@ -43,9 +42,21 @@ function Brand({ light = false }: { light?: boolean }) {
   return (
     <a className={`brand${light ? ' brand--light' : ''}`} href="#inicio" aria-label={`${site.brand}, ir al inicio`}>
       <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-      <span className="brand-wordmark">{first}<span>{rest.join(' ')}</span></span>
+      <span className="brand-wordmark">{first}{' '}<span>{rest.join(' ')}</span></span>
     </a>
   )
+}
+
+function ContactLink({ context = 'general', className = 'button button--brand', children, onClick }: {
+  context?: ContactContext; className?: string; children: string; onClick?: () => void
+}) {
+  const href = getContactHref(context)
+  const external = href?.startsWith('https:')
+  return <a className={className} href={href ?? '#contacto'} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined} onClick={onClick}>{children}<ArrowUpRight size={18} aria-hidden="true" /></a>
+}
+
+function DecisionColumns({ items }: { items: readonly { title: string; items: readonly string[] }[] }) {
+  return <div className="decision-columns">{items.map((item) => <article key={item.title} data-animate><h3>{item.title}</h3><ul>{item.items.map((text) => <li key={text}>{text}</li>)}</ul></article>)}</div>
 }
 
 function Header() {
@@ -92,9 +103,9 @@ function Header() {
           {site.navigation.map((item, index) => (
             <a key={item.href} ref={index === 0 ? firstLinkRef : undefined} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
           ))}
-          <a className="nav-mobile-contact" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined} onClick={() => setOpen(false)}>Contacto <ArrowUpRight size={18} /></a>
+          <ContactLink className="nav-mobile-contact" onClick={() => setOpen(false)}>{site.ctas.header}</ContactLink>
         </nav>
-        <a className="nav-cta" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined}>Hablemos <ArrowUpRight size={17} /></a>
+        <ContactLink className="nav-cta">{site.ctas.header}</ContactLink>
         <button ref={menuButtonRef} className="menu-button" type="button" aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen((value) => !value)}>
           {open ? <X size={23} /> : <Menu size={23} />}
         </button>
@@ -107,16 +118,17 @@ function FounderPortrait() {
   const [failed, setFailed] = useState(false)
   const photo = site.founder.photo
   return (
-    <div className="portrait" data-animate>
-      {photo && !failed ? <img src={photo} alt={`Retrato de ${site.founder.name}`} width="800" height="960" loading="lazy" onError={() => setFailed(true)} /> : (
-        <div className="portrait-placeholder" role="img" aria-label={`Espacio reservado para una futura foto profesional de ${site.founder.name}`}>
+    <figure className="founder-stage" data-animate>
+      <div className="portrait">
+      {photo && !failed ? <img src={photo} srcSet={site.founder.photoMobile ? `${site.founder.photoMobile} 480w, ${photo} 900w` : undefined} sizes="(max-width: 580px) 88vw, 480px" alt={`Retrato de ${site.founder.name}, fundador de Tiago Systems`} width="900" height="1125" loading="lazy" decoding="async" onError={() => setFailed(true)} /> : (
+        <div className="portrait-placeholder" role="img" aria-label={`Monograma de ${site.founder.name}; retrato no disponible`}>
           <span className="portrait-grid" aria-hidden="true" />
           <span className="portrait-initial" aria-hidden="true">T<span>O</span></span>
-          <span className="portrait-placeholder-note">RETRATO<br />PRÓXIMAMENTE</span>
         </div>
       )}
-      <div className="portrait-caption"><span>{site.founder.name.toUpperCase()}</span><span>01 / FUNDADOR</span></div>
-    </div>
+      </div>
+      <figcaption className="founder-identity"><span className="founder-name">{site.founder.name}</span><span className="founder-role">{site.founder.role} · {site.brand}</span></figcaption>
+    </figure>
   )
 }
 
@@ -124,30 +136,31 @@ function WorkMap() {
   const [active, setActive] = useState(0)
   const item = site.workflow[active]
   return (
-    <div className="work-map" data-animate>
+    <section className="work-map" aria-labelledby="model-title" data-animate>
       <div className="work-map-intro">
-        <span className="eyebrow">DEL PROBLEMA A LA HERRAMIENTA</span>
-        <h3>Primero, entender.<br />Después, construir.</h3>
-        <p>Así se traduce un problema operativo en una decisión de diseño. Elegí una pregunta para ver un ejemplo aplicado a DentFlow.</p>
-        <div className="work-map-options" aria-label="Preguntas sobre el proceso">
+        <span className="eyebrow">{site.copy.model.eyebrow}</span>
+        <h2 id="model-title">{site.copy.model.title}</h2>
+        <p>{site.copy.model.description}</p>
+        <div className="work-map-options" role="group" aria-label="Preguntas sobre el proceso">
           {site.workflow.map((entry, index) => (
             <button key={entry.question} type="button" aria-pressed={active === index} aria-controls="work-map-example" onClick={() => setActive(index)}>
               <span>0{index + 1}</span>{entry.question}<ArrowUpRight size={18} aria-hidden="true" />
             </button>
           ))}
         </div>
+        <p className="model-conclusion">{site.copy.model.conclusion}</p>
       </div>
       <div className="work-map-example" id="work-map-example" aria-live="polite" aria-atomic="true">
         <div className="work-map-content" key={active}>
           <span className="map-index" aria-hidden="true">0{active + 1}</span>
           <span className="eyebrow">LA SITUACIÓN</span>
           <p className="map-problem">{item.problem}</p>
-          <h4>{item.decision}</h4>
+          <h3>{item.decision}</h3>
           <ol className="map-route">{item.steps.map((step) => <li key={step}><span className="map-node" aria-hidden="true" />{step}</li>)}</ol>
           <p className="map-output">{item.output}</p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
@@ -194,11 +207,11 @@ function App() {
           <div className="shell hero-layout">
             <div className="hero-copy">
               <span className="eyebrow eyebrow--brand">{site.hero.eyebrow}</span>
-              <h1 id="hero-title">{site.hero.title.before}<br /><span>{site.hero.title.accent}</span>{site.hero.title.after}<span className="brand-dot">.</span></h1>
+              <h1 id="hero-title">{site.hero.title}<span className="brand-dot">.</span></h1>
               <p>{site.hero.description}</p>
               <div className="hero-actions">
-                <a className="button button--brand" href={contactHref ?? '#contacto'} target={contactHref ? '_blank' : undefined} rel={contactHref ? 'noopener noreferrer' : undefined}>Hablemos por WhatsApp <ArrowUpRight size={19} /></a>
-                <a className="button button--dark" href="#dentflow">Conocé DentFlow <ArrowDownRight size={18} /></a>
+                <div className="hero-primary"><ContactLink>{site.ctas.primary}</ContactLink><p className="cta-microcopy">{site.hero.microcopy}</p></div>
+                <a className="button button--dark" href="#dentflow">{site.ctas.demo} <ArrowDownRight size={18} aria-hidden="true" /></a>
               </div>
               <div className="hero-credit"><span>{site.founder.name.toUpperCase()}</span><span>{site.founder.role}</span></div>
             </div>
@@ -221,17 +234,17 @@ function App() {
               <h2 id="approach-title">{site.copy.approach.title} <em>{site.copy.approach.accent}</em></h2>
               <p>{site.copy.approach.description}</p>
             </div>
-            <WorkMap />
-            <div className="issue-grid">
+            <div className="issue-grid issue-grid--problems">
               {site.issues.map((issue) => (
                 <article className="issue" key={issue.number} data-animate>
-                  <span className="issue-number">{issue.number} / 03</span>
+                  <span className="issue-number">{issue.number} / 04</span>
                   <h3>{issue.title}</h3>
                   <p>{issue.text}</p>
                 </article>
               ))}
             </div>
             <div className="approach-note" data-animate><span className="note-symbol" aria-hidden="true">✳</span><p>{site.copy.approach.note}</p></div>
+            <WorkMap />
           </div>
         </section>
 
@@ -241,20 +254,20 @@ function App() {
               <div><span className="eyebrow eyebrow--brand">{site.copy.product.eyebrow}</span><h2 id="product-title">{site.copy.product.title} <em>{site.copy.product.accent}</em></h2></div>
               <p>{site.copy.product.description}</p>
             </div>
-            <div className="demo-intro" data-animate><p><strong>De una consulta a una próxima acción.</strong> Buscá a Ana Demo, simulá el contacto y agendá una cita. El resumen y el análisis se actualizan con lo que hagas.</p><a className="text-link" href="#demo-crm" onClick={() => dispatchDemo({ type: 'startTour' })}>Probar ese recorrido <ArrowDownRight size={18} aria-hidden="true" /></a></div>
+            <div className="demo-intro" data-animate><p><strong>{site.copy.product.demoLead}</strong> {site.copy.product.demoInstructions}</p><a className="text-link" href="#demo-crm" onClick={() => dispatchDemo({ type: 'startTour' })}>Probar ese recorrido <ArrowDownRight size={18} aria-hidden="true" /></a></div>
+            <p className="demo-disclosure">{site.copy.product.demoNotice}</p>
             <DentFlowDemo state={demo} dispatch={dispatchDemo} />
-            <div className="product-bottom" data-animate>
-              <div><span className="eyebrow eyebrow--brand">LO QUE HACE</span><h3>{site.copy.product.capabilitiesTitle}</h3></div>
-              <div className="capability-list">
-                {site.capabilities.map(({ icon: Icon, title, text }) => (
-                  <div className="capability" key={title}><Icon size={24} strokeWidth={1.6} aria-hidden="true" /><div><h4>{title}</h4><p>{text}</p></div></div>
-                ))}
-              </div>
-            </div>
-            <div className="product-fit" data-animate><span className="eyebrow">¿PARA QUIÉN TIENE SENTIDO?</span><p>Para clínicas que reciben consultas y necesitan que el equipo vea <strong>qué pasó, quién sigue y qué falta hacer.</strong></p><a className="text-link" href="#contacto">Conversemos sobre tu clínica <ArrowUpRight size={18} aria-hidden="true" /></a></div>
+            <div className="demo-next-step" data-animate><p>{site.copy.product.afterDemo}</p><ContactLink context="demo">{site.ctas.afterDemo}</ContactLink></div>
             <div className="product-links">
-              <div className="social-links" aria-label="Redes de DentFlow"><span>SEGUÍ DENTFLOW</span><a href={site.social.dentflowInstagram} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={15} /></a><a href={site.social.dentflowTikTok} target="_blank" rel="noopener noreferrer">TikTok <ArrowUpRight size={15} /></a></div>
+              <nav className="social-links" aria-label="Redes de DentFlow"><span>SEGUÍ DENTFLOW</span><a href={site.social.dentflowInstagram} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={15} aria-hidden="true" /></a><a href={site.social.dentflowTikTok} target="_blank" rel="noopener noreferrer">TikTok <ArrowUpRight size={15} aria-hidden="true" /></a></nav>
             </div>
+          </div>
+        </section>
+
+        <section className="approach section-dark" id="equipo" aria-labelledby="roles-title">
+          <div className="shell">
+            <div className="section-heading approach-heading" data-animate><span className="eyebrow">{site.copy.roles.eyebrow}</span><h2 id="roles-title">{site.copy.roles.title}</h2><p>{site.copy.roles.description}</p></div>
+            <DecisionColumns items={site.roles} />
           </div>
         </section>
 
@@ -270,16 +283,31 @@ function App() {
           </div>
         </section>
 
+        <section className="approach section-dark" id="prueba" aria-labelledby="proof-title">
+          <div className="shell">
+            <div className="section-heading approach-heading" data-animate><span className="eyebrow">{site.copy.proof.eyebrow}</span><h2 id="proof-title">{site.copy.proof.title}</h2><p>{site.copy.proof.description}</p></div>
+            <div className="issue-grid">{site.proof.map((item) => <article className="issue" key={item.number} data-animate><span className="issue-number">{item.number} / 03</span><h3>{item.title}</h3><p>{item.text}</p><a className="text-link" href={item.href}>{item.cta}<ArrowUpRight size={18} aria-hidden="true" /></a></article>)}</div>
+          </div>
+        </section>
+
+        <section className="approach section-light" id="para-tu-clinica" aria-labelledby="fit-title">
+          <div className="shell">
+            <div className="section-heading approach-heading" data-animate><span className="eyebrow">{site.copy.fit.eyebrow}</span><h2 id="fit-title">{site.copy.fit.title}</h2><p>{site.copy.fit.description}</p></div>
+            <DecisionColumns items={site.fit} />
+            <div className="human-note" data-animate><span className="human-note-icon"><Check size={24} aria-hidden="true" /></span><p>{site.copy.fit.note}</p></div>
+          </div>
+        </section>
+
         <section className="founder section-dark" id="sobre-tiago" aria-labelledby="founder-title">
-          <div className="shell founder-grid">
-            <FounderPortrait />
-            <div className="founder-copy" data-animate>
+          <div className="shell">
+            <div className="founder-heading" data-animate>
               <span className="eyebrow eyebrow--brand">{site.copy.founder.eyebrow}</span>
               <h2 id="founder-title">{site.copy.founder.title}</h2>
-              <p className="founder-lead">{site.copy.founder.lead}</p>
-              <p>{site.copy.founder.body}</p>
-              <p>{site.copy.founder.productBefore}<strong>{site.copy.founder.productEmphasis}</strong>.</p>
-              <p>{site.copy.founder.iteration}</p>
+            </div>
+            <FounderPortrait />
+            <div className="founder-copy" data-animate>
+              <div><p className="founder-lead">{site.copy.founder.lead}</p><p>{site.copy.founder.body}</p></div>
+              <div><p>{site.copy.founder.productBefore}<strong>{site.copy.founder.productEmphasis}</strong>.</p><p>{site.copy.founder.iteration}</p></div>
               <blockquote>{site.copy.founder.quote}</blockquote>
               <div className="founder-links"><a className="founder-social" href={site.social.tiagoInstagram} target="_blank" rel="noopener noreferrer">Seguir el proceso →</a><a className="founder-social" href="#dentflow">Conocer DentFlow →</a></div>
             </div>
@@ -288,11 +316,14 @@ function App() {
 
         <Faq />
 
+        {site.resource && <section className="approach section-dark" id="recurso" aria-labelledby="resource-title"><div className="shell"><div className="section-heading" data-animate><span className="eyebrow">RECURSO GRATUITO</span><h2 id="resource-title">{site.resource.title}</h2><p>{site.resource.description}</p><a className="text-link" href={site.resource.url} target="_blank" rel="noopener noreferrer">{site.resource.cta}<ArrowUpRight size={18} aria-hidden="true" /></a></div></div></section>}
+
         <section className="contact" id="contacto" aria-labelledby="contact-title">
           <div className="shell contact-layout" data-animate>
             <div><span className="eyebrow">{site.copy.contact.eyebrow}</span><h2 id="contact-title">{site.copy.contact.title} <em>{site.copy.contact.accent}</em></h2></div>
             <div className="contact-aside"><p>{site.copy.contact.description}</p>
-              {contactHref ? <a className="button button--brand" href={contactHref} target={site.contact.whatsapp && !site.contact.email ? '_blank' : undefined} rel={site.contact.whatsapp && !site.contact.email ? 'noopener noreferrer' : undefined}>{site.contact.email ? 'Escribime por email' : 'Hablemos por WhatsApp'} {site.contact.email ? <Mail size={20} /> : <ArrowUpRight size={20} />}</a> : <div className="contact-pending">Canal de contacto directo próximamente.</div>}
+              {getContactHref('final') ? <ContactLink context="final">{site.ctas.final}</ContactLink> : <div className="contact-pending">Canal de contacto directo próximamente.</div>}
+              <a className="contact-secondary" href="#demo-crm">Volver a la demo <ArrowDownRight size={18} aria-hidden="true" /></a>
               {site.contact.linkedin && <a className="contact-secondary" href={site.contact.linkedin} target="_blank" rel="noopener noreferrer">Ver perfil profesional <ExternalLink size={16} /></a>}
             </div>
           </div>
