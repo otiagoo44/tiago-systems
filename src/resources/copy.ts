@@ -1,5 +1,12 @@
+import { initScrollReveals } from '../scrollReveals'
+
+initScrollReveals([
+  '.kit-index', '.resource-routes > article', '.library-heading', '.resource-card',
+  '.resource-faq > div:first-child', '.resource-faq > div:last-child > details',
+  '.resource-contact > .shell', '.footer-main', '.footer-bottom',
+].join(', '))
+
 const button = document.querySelector<HTMLButtonElement>('#copy-prompt')
-export {}
 const text = document.querySelector<HTMLElement>('#prompt-text')
 const status = document.querySelector<HTMLElement>('#copy-status')
 

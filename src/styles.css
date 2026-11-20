@@ -28,6 +28,7 @@
   --success: #4ADE80;
   --danger: #FB7185;
   --motion-enter: 560ms;
+  --motion-reveal: 650ms;
   --motion-ease: cubic-bezier(.2,.7,.2,1);
 }
 
@@ -567,4 +568,10 @@ button, a, input, select { scroll-margin-block: 100px 24px; }
 }
 @media(prefers-reduced-motion:reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Added by the observer only for content below the initial viewport. */
+.reveal-pending { opacity: 0; transform: translate3d(0,24px,0); pointer-events: none; }
+@media(prefers-reduced-motion:reduce) {
+  .reveal-pending { opacity: 1; transform: none; pointer-events: auto; }
 }

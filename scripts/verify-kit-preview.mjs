@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url)
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright')
 const base = process.env.QA_URL
 assert.ok(base?.startsWith('https://'), 'QA_URL must name the preview deployment')
-const out = 'docs/design/evidence/kit/preview'
+const out = process.env.QA_OUTPUT || 'docs/design/evidence/kit/preview'
 mkdirSync(out,{recursive:true})
 const browser = await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE})
 const context = await browser.newContext({permissions:['clipboard-read','clipboard-write']})

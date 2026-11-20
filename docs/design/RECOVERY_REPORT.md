@@ -1,5 +1,30 @@
 # Recuperación de Tiago Systems
 
+## Apariciones al bajar y aprobación de publicación · 20/11/2026
+
+Después de revisar la preview, el usuario aprobó el diseño y pidió más animaciones: contenido inicial disponible y bloques que aparecen conforme baja. También autorizó expresamente **pushear todo a main para actualizar automáticamente el enlace público**. Esta instrucción sustituye el límite de preview de la primera fase, sin autorizar mensajes reales ni cambios del CRM.
+
+Implementación incremental: `src/scrollReveals.ts` es compartido por la landing (`useEffect` con limpieza) y la página estática de recursos. Conserva visibles el hero, la navegación y cualquier bloque dentro del primer viewport, incluso si hay restauración de scroll. Con JavaScript y observer disponibles, los bloques siguientes esperan con opacidad 0 y aparecen una vez al entrar 48px en el viewport: 650ms, 24px verticales, easing de marca y escalonado desktop de 40ms hasta 120ms. Se usan sólo IntersectionObserver, transform y opacity; no hay listeners de scroll, scroll hijacking ni librerías nuevas. El copy, el diseño aprobado, la demo y los cinco recursos no cambian.
+
+Se animan encabezados, tarjetas, mapa, proceso, fundador, contacto y footer de la landing; en recursos, índice móvil, rutas, biblioteca, tarjetas, FAQ, cierre y footer. Se excluyen animaciones anidadas de padre/hijo y no se vuelve a ocultar un bloque al subir o cambiar estado de la demo. Los controles dejan de ser objetivos de pointer sólo mientras su bloque está transparente y fuera de vista; durante la entrada ya están disponibles. El foco de teclado/programático muestra el bloque de inmediato; el foco de un clic no lo desplaza entre pointerdown y pointerup. Los fragmentos revelan su destino. Reduced-motion cancela animaciones activas y muestra todo; sin JavaScript, sin observer o con fallo de observe, no queda contenido oculto.
+
+Skills aplicadas: Taste (scroll reveal de 24px, una sola entrada y continuidad, diales 6/5/3); UI UX Pro Max (consulta local verificada de reduced-motion, sensibilidad al movimiento, foco e interacciones interrumpibles; escalonado corto); Impeccable (evidencia de estados inicial/intermedio/final, teclado y responsive); Google DESIGN.md (documentación y lint oficial sin errores/advertencias); Awesome Design MD (se conserva la referencia ya inspeccionada de Vercel para jerarquía de acciones, sin cambiar fuentes/paleta). Las tres referencias visuales y las tres capturas DentFlow inspeccionadas en la fase anterior permanecen como base; esta solicitud conserva expresamente ese diseño.
+
+La prueba del build real detectó que el minificador convierte `650ms` a `.65s`: se corrigió el lector del token para convertir ambas unidades a milisegundos de WAAPI. También se verificó que el foco por pointer no provoque un salto que anule el clic. No se declaran resultados a partir de una simulación de animaciones: se inspecciona la animación nativa en el navegador compilado.
+
+Verificación local:
+
+- Build TypeScript/Vite, typecheck y 11/11 pruebas correctos. Sin nuevo framework ni dependencias de producción.
+- [QA de apariciones](evidence/motion/report.json): ambas páginas a 390/768/1440; hero y CTA visibles, 38 bloques pendientes en la landing y 15–17 en recursos; opacidad 0 antes del scroll, estado intermedio real y final 1; duración real 650ms y demora máxima 120ms. Bloques ya revelados sin repetición, teclado, fragmento directo, reduced-motion en vivo, sin JS, sin observer y fallo de observe comprobados. Sin errores JS ni overflow.
+- [QA de recursos](evidence/motion/kit/kit-browser-report.json): 320/360/390/768/1440, cinco descargas íntegras, TXT/copiar/fallback, guía y checklist, navegación a DentFlow, enlace del menú, no-JS y reduced-motion. Axe: cero violaciones automáticas en ambas páginas a 390/1440.
+- [Regresión de demo](evidence/motion/regression/browser-report.json): conserva búsqueda/filtros, contacto simulado, citas, asistencia, métricas compartidas, tabs/diálogos/foco, recorrido guiado/reset, FAQ y los cinco enlaces WhatsApp sin enviar mensajes.
+- [Baseline](evidence/motion/baseline.json): antes de este ajuste los bloques inferiores tenían opacidad 1 desde el inicio. Capturas antes/después e intermedias reales en `evidence/motion/`; se revisaron los tamaños móvil, tablet y escritorio. El primer viewport conserva su composición.
+- [Lighthouse móvil actual de recursos](evidence/motion/lighthouse-resources-mobile.json): rendimiento **91**, accesibilidad/buenas prácticas/SEO **100**, LCP **1,74s**, TBT **338ms**, CLS **0**. Medición local con throttling simulado, sin otras tareas de QA simultáneas; no se atribuye toda diferencia respecto del ensayo anterior exclusivamente al cambio de código ni se presenta como dato de campo.
+
+Publicación autorizada mediante integración de la rama del kit a `main` y Git→Vercel, después de estos checks. Las mediciones anteriores de Lighthouse se conservan como histórico; los límites de teléfono físico/Excel siguen documentados. El estado del deployment y el enlace público se comprueban al terminar, no se infieren de un push exitoso.
+
+---
+
 ## Kit Agenda y Seguimiento · 20 de noviembre de 2026
 
 Esta revisión sustituye las notas históricas de recurso pendiente y autorización para publicar. La instrucción vigente permite una **versión de prueba**. No se modifica producción ni se envían mensajes reales. Rama: `codex/dentflow-kit-preview`, base `e549be09cab612482b1bee3347551589cc660e2d`, verificada contra origin/main y el SHA de producción de Vercel. Auditoría previa y plan de archivos: [KIT_AUDIT.md](KIT_AUDIT.md).

@@ -12,7 +12,7 @@ npm run build
 npm run preview
 ```
 
-Las pruebas usan el runner integrado de Node y requieren **Node 24 o superior**. No agregan dependencias. En Vercel, el comando de build es `npm run build` y la salida es `dist`. El repositorio está conectado a Vercel: un push a `main` actualiza producción. El encargo del 20/11/2026 autoriza una preview; producción requiere aprobación nueva.
+Las pruebas usan el runner integrado de Node y requieren **Node 24 o superior**. No agregan dependencias. En Vercel, el comando de build es `npm run build` y la salida es `dist`. El repositorio está conectado a Vercel: un push a `main` actualiza producción. Tras revisar la preview, el usuario autorizó el 20/11/2026 agregar apariciones al bajar y pushear todo a `main`.
 
 ## Configuración y destinos
 
@@ -74,3 +74,5 @@ La regresión de navegador está en `scripts/verify-landing.mjs`. Con el build s
 Resultados históricos de conversión: [CONVERSION_REPORT.md](docs/design/CONVERSION_REPORT.md). Auditoría del kit: [KIT_AUDIT.md](docs/design/KIT_AUDIT.md). Evidencia actual en `docs/design/evidence/kit/` y actualización de [RECOVERY_REPORT.md](docs/design/RECOVERY_REPORT.md).
 
 Para QA del kit: preparar/build primero, luego `node scripts/verify-kit.mjs` con `PLAYWRIGHT_MODULE`, `CHROMIUM_EXECUTABLE` y `AXE_MODULE` hacia instalaciones externas. `QA_URL` y `QA_OUTPUT` permiten probar preview y separar evidencia. Comprueba 320/360/390/768/1440px, descargas reales con hashes, MIME, TXT/clipboard y fallback, PDF, navegación preservada, accesibilidad automática, teclado, reduced-motion y lectura sin JS. La regresión existente acepta también `QA_OUTPUT` para no sobreescribir evidencia histórica.
+
+`src/scrollReveals.ts` coordina las apariciones de ambas páginas: primer viewport visible, bloques posteriores pendientes hasta entrar, una vez por visita, 650ms/24px y escalonado desktop hasta 120ms. No agrega bibliotecas ni listeners de scroll. Foco, enlaces directos, reduced-motion y ausencia/fallo del observer muestran el contenido inmediatamente. La limpieza de React cancela animaciones y restablece visibilidad. `scripts/verify-scroll-reveals.mjs` comprueba el efecto real en el build minificado, incluida la conversión de segundos/milisegundos, y guarda evidencia en `docs/design/evidence/motion/`.

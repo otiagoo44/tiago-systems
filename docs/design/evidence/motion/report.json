@@ -1,0 +1,134 @@
+{
+  "base": "http://localhost:4180",
+  "checkedAt": "2026-11-20T23:16:52.621Z",
+  "cases": [
+    {
+      "path": "/",
+      "width": 390,
+      "pending": 38,
+      "intermediate": 0.831322,
+      "animation": {
+        "duration": 650,
+        "delay": 0,
+        "frames": [
+          {
+            "opacity": "0",
+            "transform": "translate3d(0px, 24px, 0px)"
+          },
+          {
+            "opacity": "1",
+            "transform": "translate3d(0px, 0px, 0px)"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "path": "/recursos/",
+      "width": 390,
+      "pending": 17,
+      "intermediate": 0.831322,
+      "animation": {
+        "duration": 650,
+        "delay": 0,
+        "frames": [
+          {
+            "opacity": "0",
+            "transform": "translate3d(0px, 24px, 0px)"
+          },
+          {
+            "opacity": "1",
+            "transform": "translate3d(0px, 0px, 0px)"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "pending": 38,
+      "intermediate": 0.831322,
+      "animation": {
+        "duration": 650,
+        "delay": 0,
+        "frames": [
+          {
+            "opacity": "0",
+            "transform": "translate3d(0px, 24px, 0px)"
+          },
+          {
+            "opacity": "1",
+            "transform": "translate3d(0px, 0px, 0px)"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "path": "/recursos/",
+      "width": 768,
+      "pending": 15,
+      "intermediate": 0.527029,
+      "animation": {
+        "duration": 650,
+        "delay": 120,
+        "frames": [
+          {
+            "opacity": "0",
+            "transform": "translate3d(0px, 24px, 0px)"
+          },
+          {
+            "opacity": "1",
+            "transform": "translate3d(0px, 0px, 0px)"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "pending": 38,
+      "intermediate": 0.831322,
+      "animation": {
+        "duration": 650,
+        "delay": 0,
+        "frames": [
+          {
+            "opacity": "0",
+            "transform": "translate3d(0px, 24px, 0px)"
+          },
+          {
+            "opacity": "1",
+            "transform": "translate3d(0px, 0px, 0px)"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "path": "/recursos/",
+      "width": 1440,
+      "pending": 15,
+      "intermediate": 0.527029,
+      "animation": {
+        "duration": 650,
+        "delay": 120,
+        "frames": [
+          {
+            "opacity": "0",
+            "transform": "translate3d(0px, 24px, 0px)"
+          },
+          {
+            "opacity": "1",
+            "transform": "translate3d(0px, 0px, 0px)"
+          }
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

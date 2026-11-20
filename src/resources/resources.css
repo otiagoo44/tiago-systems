@@ -76,7 +76,6 @@
 .resource-contact .text-link { margin-left: 24px; }
 @media (prefers-reduced-motion: no-preference) {
   .resource-hero-copy { animation: kit-enter .6s cubic-bezier(.2,.7,.2,1); }
-  .kit-index { animation: kit-enter .65s cubic-bezier(.2,.7,.2,1); }
 }
 @keyframes kit-enter { from { opacity: .7; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @media(max-width:1000px) {

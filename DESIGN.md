@@ -168,7 +168,9 @@ Demo con reducer compartido, búsqueda/filtros, resumen, pacientes, pendientes, 
 
 Pestañas con flechas/Inicio/Fin y foco visible. Diálogos nativos con Escape, cancelación y devolución de foco. FAQ con `aria-expanded` y regiones asociadas. Menú con Escape, cierre al salir del header con teclado y navegación a anclas. Controles con margen de scroll para el header fijo.
 
-Entrada del hero 560ms con demoras máximas de 120ms; producto y asentamiento único 650ms, sin vaivén; bloques por IntersectionObserver 560ms y 10px, contenido visible por defecto; mapa 500ms, vistas y diálogos 450ms; feedback breve de estado y hover 200–250ms. Recursos entra en 600–650ms y mantiene disclosures nativos sin animar altura. Movimiento principalmente transform/opacity, sin librerías nuevas. FAQ conserva su transición existente de filas de grid. `prefers-reduced-motion` elimina animaciones/transiciones y cancela revelados WAAPI activos al cambiar la preferencia. Focus, CTA y textos nunca dependen de finalizar una entrada.
+Entrada del hero 560ms con demoras máximas de 120ms; producto y asentamiento único 650ms, sin vaivén; mapa 500ms, vistas y diálogos 450ms; feedback breve de estado y hover 200–250ms. Tras la aprobación de la preview, el usuario pidió apariciones más perceptibles: los bloques bajo el viewport inicial quedan pendientes y aparecen una sola vez con opacidad 0→1 y desplazamiento vertical de 24px durante 650ms (`--motion-reveal`), escalonados en desktop cada 40ms hasta 120ms. Sólo transform/opacity mediante IntersectionObserver/WAAPI; sin eventos de scroll ni bibliotecas nuevas. Se evita animar simultáneamente padres e hijos. La duración CSS se interpreta tanto en ms como en s para preservar el efecto después de minificar.
+
+El primer viewport siempre está visible. El contenido se oculta sólo con JavaScript y un observer disponible; si éste falla, todo queda visible. El teclado y los fragmentos muestran inmediatamente su bloque; un bloque ya revelado no se vuelve a ocultar al subir. Reduced-motion muestra todos los pendientes y cancela las animaciones activas, incluso al cambiar en vivo. Recursos comparte el mismo motor; los disclosures de lectura conservan comportamiento nativo sin animar altura. FAQ conserva su transición existente de filas de grid. Diales actuales: composición 6, movimiento 5, densidad 3; se conserva el lenguaje editorial para clínicas.
 
 ## Do's and Don'ts
 
@@ -178,6 +180,6 @@ Entrada del hero 560ms con demoras máximas de 120ms; producto y asentamiento ú
 - Comprobar responsive, teclado, contraste compuesto y estados; no confundir build con auditoría visual.
 - No inventar foto, clientes, casos, precios, resultados, integraciones ni publicaciones de Instagram.
 - No restaurar archivos históricos completos ni migrar de framework.
-- Cambios de producción requieren aprobación explícita nueva. El encargo del 20/11/2026 autoriza solamente una versión de prueba; ninguna autorización histórica habilita publicar este cambio.
+- Cambios de producción requieren aprobación explícita. Tras revisar la preview del kit, el usuario autorizó agregar las apariciones al bajar y pushear todo a main el 20/11/2026; esta autorización sustituye el límite de preview de la primera fase.
 
 La skill Autoeditor Animación y `config/estilo.json` se consultaron el 20/11/2026: negro/azul/dorado con tonos propuestos, sin HEX oficiales declarados. Se mantienen los tokens vigentes del repositorio: negro #05070B, dorado principal #D2B36C y azul informativo #70A5FF. El azul se aplica a rutas, tipos de archivo y enlaces de apoyo; no desplaza al CTA dorado. La pasada azul de fd03ccb continúa sustituida.

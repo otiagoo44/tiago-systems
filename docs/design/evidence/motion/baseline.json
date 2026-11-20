@@ -1,0 +1,32 @@
+[
+  {
+    "w": 390,
+    "route": "/",
+    "belowFoldOpacity": "1"
+  },
+  {
+    "w": 390,
+    "route": "/recursos/",
+    "belowFoldOpacity": "1"
+  },
+  {
+    "w": 768,
+    "route": "/",
+    "belowFoldOpacity": "1"
+  },
+  {
+    "w": 768,
+    "route": "/recursos/",
+    "belowFoldOpacity": "1"
+  },
+  {
+    "w": 1440,
+    "route": "/",
+    "belowFoldOpacity": "1"
+  },
+  {
+    "w": 1440,
+    "route": "/recursos/",
+    "belowFoldOpacity": "1"
+  }
+]

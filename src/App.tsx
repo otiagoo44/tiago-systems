@@ -13,39 +13,10 @@ import { getContactHref, site, type ContactContext } from './siteConfig'
 import { DentFlowDemo, HeroPreview } from './demo/DentFlowDemo'
 import { createInitialState, demoReducer } from './demo/model'
 import { kitFiles } from './resources/files'
+import { initScrollReveals } from './scrollReveals'
 
 function useEntranceMotion() {
-  useEffect(() => {
-    if (!('IntersectionObserver' in window) || !('animate' in document.documentElement)) return
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
-    if (reducedMotion.matches) return
-
-    const animations = new Set<Animation>()
-    const cancelMotion = () => { if (reducedMotion.matches) animations.forEach((animation) => animation.cancel()) }
-    reducedMotion.addEventListener('change', cancelMotion)
-
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue
-        const element = entry.target as HTMLElement
-        if (reducedMotion.matches) { observer.unobserve(element); continue }
-        const animation = element.animate(
-          [{ opacity: 0.65, transform: 'translateY(10px)' }, { opacity: 1, transform: 'translateY(0)' }],
-          { duration: 560, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'none' },
-        )
-        animations.add(animation)
-        animation.onfinish = () => animations.delete(animation)
-        observer.unobserve(element)
-      }
-    }, { threshold: 0.12 })
-
-    document.querySelectorAll('[data-animate]').forEach((element) => observer.observe(element))
-    return () => {
-      observer.disconnect()
-      reducedMotion.removeEventListener('change', cancelMotion)
-      animations.forEach((animation) => animation.cancel())
-    }
-  }, [])
+  useEffect(() => initScrollReveals('[data-animate], .footer-main, .footer-bottom'), [])
 }
 
 function Brand({ light = false }: { light?: boolean }) {
