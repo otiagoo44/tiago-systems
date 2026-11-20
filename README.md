@@ -12,7 +12,7 @@ npm run build
 npm run preview
 ```
 
-Las pruebas usan el runner integrado de Node y requieren **Node 24 o superior**. No agregan dependencias. En Vercel, el comando de build es `npm run build` y la salida es `dist`. El repositorio está conectado a Vercel: un push a `main` actualiza producción. El propietario autorizó ese push al finalizar esta recuperación.
+Las pruebas usan el runner integrado de Node y requieren **Node 24 o superior**. No agregan dependencias. En Vercel, el comando de build es `npm run build` y la salida es `dist`. El repositorio está conectado a Vercel: un push a `main` actualiza producción. El encargo del 20/11/2026 autoriza una preview; producción requiere aprobación nueva.
 
 ## Configuración y destinos
 
@@ -63,8 +63,14 @@ La foto profesional está incorporada. No se incorporó información nueva de In
 
 La revisión de conversión de octubre de 2026 conserva el diseño negro/dorado, fuentes, motion, hero y lógica de la demo. El recorrido es: problema → cuatro preguntas → DentFlow → recepción/dirección → implementación → prueba disponible → encaje → fundador → FAQ → conversación por WhatsApp.
 
-`site.resource` permanece `null`: no existe una URL verificada del recurso gratuito. Para publicarlo después, asignar un objeto con `url`, `title`, `description` y `cta`, únicamente tras comprobar su URL pública real. La sección aparece entre FAQ y contacto. No hay formularios ni descargas ficticias.
+El Kit Agenda y Seguimiento tiene su propia página `/recursos/`, enlazada desde navegación, hero y bloque dedicado. La fuente binaria original es `kit-separado-y-zip/`; `scripts/prepare-resources.mjs` comprueba tamaños/SHA-256 antes de copiar los cinco archivos a `public/recursos/`. El ZIP pesa 173225 bytes. No hay formularios para acceder. `site.resource` sigue como slot opcional independiente para futuros recursos.
+
+`src/resources/ResourcesPage.tsx` se renderiza a HTML durante preparación con React; Vite construye ambas páginas. Recursos no hidrata React ni carga PDF/XLSX en el primer render. Sus disclosures y lectura funcionan sin JavaScript. `copy.ts` añade copia al portapapeles con confirmación accesible y selección manual si falla. `src/resources/kit-content.json` conserva la transcripción íntegra de los PDF y las filas ficticias de muestra; el TXT se lee del archivo real en cada build. Los PDF originales siguen disponibles como alternativa a la transcripción, que no conserva diagramación de tablas.
+
+Si un recurso cambia, ejecutar `scripts/audit-kit.py` con Python/pypdf/openpyxl de QA, revisar el contenido y actualizar deliberadamente `kit-content.json`/hashes antes de construir. No guardar el XLSX desde el auditor ni modificar fórmulas. El build falla si los originales ya no coinciden. Las copias públicas y `recursos/index.html` son generadas y se excluyen de Git; los originales sí deben versionarse. Los encabezados XLSX/ZIP/TXT están en `vercel.json` y el MIME XLSX local en Vite.
 
 La regresión de navegador está en `scripts/verify-landing.mjs`. Con el build servido en `http://localhost:4173`, ejecutar `node scripts/verify-landing.mjs` en un entorno con Playwright disponible. Si la instalación es externa, definir `PLAYWRIGHT_MODULE` con su ruta y, opcionalmente, `CHROMIUM_EXECUTABLE` con el navegador instalado; `QA_URL` permite otro destino. No son dependencias de producción. El script verifica 375, 430, 768, 1024 y 1440 px, interacciones de la demo, teclado, FAQ, navegación, enlaces WhatsApp y SEO. Regenera evidencia en `docs/design/evidence/conversion/`.
 
-Resultados y límites de esta revisión: [CONVERSION_REPORT.md](docs/design/CONVERSION_REPORT.md). Sólo queda pendiente la URL real del recurso gratuito opcional; mientras no exista, su CTA permanece oculto.
+Resultados históricos de conversión: [CONVERSION_REPORT.md](docs/design/CONVERSION_REPORT.md). Auditoría del kit: [KIT_AUDIT.md](docs/design/KIT_AUDIT.md). Evidencia actual en `docs/design/evidence/kit/` y actualización de [RECOVERY_REPORT.md](docs/design/RECOVERY_REPORT.md).
+
+Para QA del kit: preparar/build primero, luego `node scripts/verify-kit.mjs` con `PLAYWRIGHT_MODULE`, `CHROMIUM_EXECUTABLE` y `AXE_MODULE` hacia instalaciones externas. `QA_URL` y `QA_OUTPUT` permiten probar preview y separar evidencia. Comprueba 320/360/390/768/1440px, descargas reales con hashes, MIME, TXT/clipboard y fallback, PDF, navegación preservada, accesibilidad automática, teclado, reduced-motion y lectura sin JS. La regresión existente acepta también `QA_OUTPUT` para no sobreescribir evidencia histórica.

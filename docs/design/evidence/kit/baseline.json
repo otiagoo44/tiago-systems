@@ -1,0 +1,2288 @@
+[
+  {
+    "base": "http://localhost:5173",
+    "width": 320,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 320,
+    "cta": {
+      "x": 19,
+      "y": 577.875,
+      "width": 282,
+      "height": 67.1875,
+      "top": 577.875,
+      "right": 301,
+      "bottom": 645.0625,
+      "left": 19
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "http://localhost:5173",
+    "width": 360,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 360,
+    "cta": {
+      "x": 19,
+      "y": 556.0625,
+      "width": 322,
+      "height": 54,
+      "top": 556.0625,
+      "right": 341,
+      "bottom": 610.0625,
+      "left": 19
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "http://localhost:5173",
+    "width": 390,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 390,
+    "cta": {
+      "x": 19,
+      "y": 572.6875,
+      "width": 352,
+      "height": 54,
+      "top": 572.6875,
+      "right": 371,
+      "bottom": 626.6875,
+      "left": 19
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "http://localhost:5173",
+    "width": 768,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 768,
+    "cta": {
+      "x": 28,
+      "y": 453.90625,
+      "width": 370,
+      "height": 54,
+      "top": 453.90625,
+      "right": 398,
+      "bottom": 507.90625,
+      "left": 28
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "http://localhost:5173",
+    "width": 1440,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 1440,
+    "cta": {
+      "x": 40,
+      "y": 591.21875,
+      "width": 370,
+      "height": 54,
+      "top": 591.21875,
+      "right": 410,
+      "bottom": 645.21875,
+      "left": 40
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-screen",
+        "timing": {
+          "delay": 1200,
+          "direction": "normal",
+          "duration": 4500,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "https://tiago-systems.vercel.app",
+    "width": 320,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 320,
+    "cta": {
+      "x": 19,
+      "y": 577.875,
+      "width": 282,
+      "height": 67.1875,
+      "top": 577.875,
+      "right": 301,
+      "bottom": 645.0625,
+      "left": 19
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "https://tiago-systems.vercel.app",
+    "width": 360,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 360,
+    "cta": {
+      "x": 19,
+      "y": 556.0625,
+      "width": 322,
+      "height": 54,
+      "top": 556.0625,
+      "right": 341,
+      "bottom": 610.0625,
+      "left": 19
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "https://tiago-systems.vercel.app",
+    "width": 390,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 390,
+    "cta": {
+      "x": 19,
+      "y": 572.6875,
+      "width": 352,
+      "height": 54,
+      "top": 572.6875,
+      "right": 371,
+      "bottom": 626.6875,
+      "left": 19
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "https://tiago-systems.vercel.app",
+    "width": 768,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 768,
+    "cta": {
+      "x": 28,
+      "y": 453.90625,
+      "width": 370,
+      "height": 54,
+      "top": 453.90625,
+      "right": 398,
+      "bottom": 507.90625,
+      "left": 28
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  },
+  {
+    "base": "https://tiago-systems.vercel.app",
+    "width": 1440,
+    "title": "Tiago Systems | Sistemas para Clínicas Odontológicas",
+    "scrollWidth": 1440,
+    "cta": {
+      "x": 40,
+      "y": 591.21875,
+      "width": 370,
+      "height": 54,
+      "top": 591.21875,
+      "right": 410,
+      "bottom": 645.21875,
+      "left": 40
+    },
+    "links": [
+      {
+        "text": "Saltar al contenido",
+        "href": "#contenido"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Problema",
+        "href": "#enfoque"
+      },
+      {
+        "text": "DentFlow",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "text": "FAQ",
+        "href": "#preguntas"
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar mi seguimiento",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Revisar el seguimiento de mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20DentFlow%20y%20quiero%20revisar%20c%C3%B3mo%20estamos%20gestionando%20el%20seguimiento%20de%20consultas%20en%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Ver DentFlow en acción ",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Probá la demo interactiva ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "DESLIZÁ PARA EXPLORAR ",
+        "href": "#enfoque"
+      },
+      {
+        "text": "Probar ese recorrido ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Quiero revisar si esto encaja con mi clínica",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Prob%C3%A9%20la%20demo%20de%20DentFlow%20y%20quiero%20revisar%20si%20podr%C3%ADa%20aplicarse%20a%20nuestra%20cl%C3%ADnica."
+      },
+      {
+        "text": "Instagram ",
+        "href": "https://www.instagram.com/dentflow.py/"
+      },
+      {
+        "text": "TikTok ",
+        "href": "https://www.tiktok.com/@dentflow.py"
+      },
+      {
+        "text": "Explorar la demo",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Ver el sistema",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "Revisar la implementación",
+        "href": "#proceso"
+      },
+      {
+        "text": "Seguir el proceso →",
+        "href": "https://www.instagram.com/tiago.systems/"
+      },
+      {
+        "text": "Conocer DentFlow →",
+        "href": "#dentflow"
+      },
+      {
+        "text": "Revisar mi proceso por WhatsApp",
+        "href": "https://wa.me/595993367341?text=Hola%20Tiago.%20Vi%20la%20p%C3%A1gina%20de%20DentFlow%20y%20me%20gustar%C3%ADa%20revisar%20nuestro%20proceso%20actual%20de%20seguimiento."
+      },
+      {
+        "text": "Volver a la demo ",
+        "href": "#demo-crm"
+      },
+      {
+        "text": "TIAGO SYSTEMS",
+        "href": "#inicio"
+      },
+      {
+        "text": "Volver arriba ",
+        "href": "#inicio"
+      }
+    ],
+    "forms": 0,
+    "overflow": [],
+    "animations": [
+      {
+        "target": "eyebrow eyebrow--brand",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 80,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 160,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-actions",
+        "timing": {
+          "delay": 240,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-credit",
+        "timing": {
+          "delay": 320,
+          "direction": "normal",
+          "duration": 700,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-visual",
+        "timing": {
+          "delay": 150,
+          "direction": "normal",
+          "duration": 1000,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "hero-screen",
+        "timing": {
+          "delay": 1200,
+          "direction": "normal",
+          "duration": 4500,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "work-map-content",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 300,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      },
+      {
+        "target": "",
+        "timing": {
+          "delay": 0,
+          "direction": "normal",
+          "duration": 220,
+          "easing": "linear",
+          "endDelay": 0,
+          "fill": "both",
+          "iterationStart": 0,
+          "iterations": 1
+        }
+      }
+    ]
+  }
+]

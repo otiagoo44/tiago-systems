@@ -1,0 +1,88 @@
+DENTFLOW — MEGA PROMPT PARA CREAR UNA WEB ODONTOLÓGICA BÁSICA
+Versión verificada: 18 de noviembre de 2026
+
+INSTRUCCIONES
+1. Sustituí los campos [ENTRE CORCHETES] con información verificada.
+2. Este texto es un BRIEF reutilizable. Si el creador de webs con IA no permite pegar un texto largo, respondé sus preguntas siguiendo las secciones del brief y terminá los textos en el editor.
+3. No publiques antes de revisar la web en computadora y celular.
+4. Para la reserva, empezá con un botón que abra el enlace Cal.com en otra pestaña. La incrustación requiere pruebas adicionales.
+
+==================== COPIAR DESDE AQUÍ ====================
+
+Actuá como diseñador web, redactor de contenido claro para servicios odontológicos, experto en accesibilidad y editor responsable de información sanitaria. Quiero una página institucional básica para un consultorio o clínica odontológica. El resultado debe ser usable desde teléfonos móviles, fácil de mantener y coherente con los datos que te entrego. No inventes información ni afirmaciones médicas.
+
+DATOS REALES DE LA CLÍNICA
+- Nombre comercial: [NOMBRE DE LA CLÍNICA]
+- Descripción en una frase, si existe: [DESCRIPCIÓN VERIFICADA O DEJAR EN BLANCO]
+- Ciudad y zona o barrio: [CIUDAD, ZONA, PAÍS]
+- Dirección comprobada para mostrar al público: [DIRECCIÓN O 'NO MOSTRAR']
+- Teléfono de contacto público: [TELÉFONO]
+- WhatsApp de recepción (opcional): [ENLACE https://wa.me/... O 'NO MOSTRAR']
+- Email institucional público (opcional): [CORREO]
+- Instagram oficial (opcional): [ENLACE]
+- Horarios de atención verificados: [DÍAS Y HORAS]
+- Tratamientos efectivamente ofrecidos: [LISTA VERIFICADA]
+- Profesionales que autorizaron publicar sus datos: [NOMBRE, FUNCIÓN, MATRÍCULA SI ESTÁ VERIFICADA; NO INVENTAR]
+- Enlace de agenda de Cal.com: [ENLACE REAL; SI FALTA MOSTRAR 'CONSULTAR DISPONIBILIDAD']
+- Alcance de la reserva: [RESERVA CONFIRMADA / SOLICITUD SUJETA A CONFIRMACIÓN, SEGÚN CONFIGURACIÓN REAL]
+- Duración y tipo de cita habilitada para reserva online: [EJ. EVALUACIÓN INICIAL, 30 MIN, SOLO SI LA CLÍNICA LO APRUEBA]
+- Aviso de privacidad real aprobado por la clínica: [URL O 'PENDIENTE DE REDACCIÓN Y REVISIÓN']
+- Fotos reales con autorización de uso: [ENLACES O 'SIN FOTOS PROPIAS']
+- Colores / marca (opcional): [COLORES, LOGO Y TIPOGRAFÍA]
+
+OBJETIVO Y RESTRICCIONES
+Crear una página simple que explique qué ofrece la clínica, dónde se encuentra, cómo comunicarse y cómo solicitar un horario. Un visitante debe entender en pocos segundos qué hacer. El CTA principal es 'Ver horarios disponibles' únicamente si el enlace está activo; en otro caso usar 'Consultar por WhatsApp' con un número real. No prometas asistencia inmediata ni turnos garantizados.
+
+ARQUITECTURA DE CONTENIDO
+1. Encabezado con nombre/logo, navegación clara: Inicio, Tratamientos, Equipo, Preguntas frecuentes, Contacto.
+2. Bloque principal (hero): H1 descriptivo y local, por ejemplo 'Atención odontológica en [CIUDAD]'. Subtítulo sobrio, con información verificada. Dos botones máximo: 'Ver horarios disponibles' y 'Contactar a recepción'.
+3. Sección 'Tratamientos': tarjetas breves solo de servicios confirmados, sin promesas de resultados ni lenguaje de diagnóstico o curación. No inventar precios ni duración del tratamiento.
+4. Sección 'Nuestro equipo': mostrar únicamente nombres, roles, matrículas y fotografías confirmadas y autorizadas. Si faltan datos, no fabricar fichas.
+5. Sección 'Cómo reservar': (1) elegir un horario visible; (2) completar datos estrictamente necesarios; (3) revisar confirmación. Si el tipo de cita requiere revisión humana, decir claramente 'Tu solicitud queda pendiente de confirmación de la clínica'.
+6. Ubicación, horarios, teléfono y enlaces reales. Mapa solo con dirección real y sin registrar información extra del visitante.
+7. Preguntas frecuentes: '¿Cómo solicito una cita?', '¿La reserva queda confirmada inmediatamente?', '¿Qué hago si necesito cambiar mi horario?', '¿Puedo hacer una consulta urgente?', '¿Qué información debo llevar?'. Respuestas concretas basadas en datos entregados. Para urgencias indicar un canal real o recomendar acudir a atención de urgencias apropiada, sin simular triage clínico.
+8. Pie de página: contacto, ciudad/país, política de privacidad real, aviso de que los mensajes online no sustituyen atención clínica ni emergencias.
+
+ESTILO Y ACCESIBILIDAD
+- Diseño limpio, sanitario y profesional, sin imágenes dramáticas ni fotos falsas de pacientes o profesionales.
+- Responsive primero para pantallas de 360 a 430 px, después tablet y escritorio.
+- Contraste legible, tipografía clara, áreas táctiles amplias, botones con texto descriptivo, foco visible por teclado, alt de imágenes informativas y orden lógico de encabezados.
+- Lenguaje español natural y local; evitar anglicismos innecesarios.
+- Optimizar peso de imágenes y evitar animaciones innecesarias.
+
+SEO BÁSICO (SIN GARANTÍAS)
+- Proponer un único H1, títulos H2 descriptivos, título SEO de la página y meta descripción natural basados exclusivamente en [NOMBRE], [CIUDAD] y servicios reales.
+- Mantener nombres de tratamientos y datos de contacto consistentes; no repetir palabras clave artificialmente.
+- Crear navegación y enlaces funcionales; usar texto alternativo pertinente en fotografías autorizadas.
+- No afirmar que habrá indexación, primeras posiciones ni captación de pacientes.
+- No inventar reseñas, estrellas, testimonios, acreditaciones, años de experiencia o casos clínicos.
+- Si un campo de SEO local estructurado requiere información no provista, marcarlo 'POR COMPLETAR' y no generar datos falsos.
+
+PRIVACIDAD Y RESERVAS
+- No solicitar síntomas, fotografías clínicas, diagnósticos, antecedentes ni detalles sensibles en formularios generales.
+- Si existe formulario, solicitar solo contacto mínimo y una consulta administrativa breve. Añadir aviso de privacidad real y revisar permisos, protección contra spam, acceso a bandejas, transferencias y conservación antes de publicarlo.
+- El enlace Cal.com debe abrir el evento correcto. El correo/nombre que el proveedor de reservas solicite se gestionará por su plataforma; no copiar automáticamente los datos a otra herramienta sin una integración y base jurídica verificadas.
+- No afirmar que la web sincroniza Cal.com, CRM, WhatsApp o agendas de otros profesionales salvo prueba técnica específica.
+- Si faltan medios de contacto o el enlace está incompleto, mostrar claramente 'FALTA CONFIGURAR' en el borrador y bloquear la publicación hasta corregirlo.
+
+ENTREGABLE EN EL EDITOR
+Mostrá una versión de la página con textos completos solo cuando estén respaldados por la información proporcionada. Entregá al final: (a) secciones utilizadas, (b) campos pendientes de verificación, (c) botones y enlaces que debo probar, (d) controles de accesibilidad y móvil, (e) advertencias sobre privacidad, y (f) pasos exactos para publicar en esta plataforma, indicando si hay una función de pago necesaria. Si la plataforma no puede ejecutar algo, no simules que lo hizo y ofrecé la alternativa simple de enlazar.
+
+==================== FIN DEL PROMPT ====================
+
+ANTES DE PUBLICAR — LISTA DE CONTROL
+[ ] Datos reales y permiso de uso de fotos/equipo.
+[ ] CTA lleva a la agenda correcta y es legible en móvil.
+[ ] Reserva ficticia de prueba comprobada, luego cancelada.
+[ ] Horarios, zona horaria, ubicación y correo revisados.
+[ ] Se explica si la reserva es directa o requiere confirmación.
+[ ] No hay testimonios, matrículas, precios o casos inventados.
+[ ] Privacidad y acceso a mensajes revisados.
+[ ] Se conoce URL gratuita, branding, hosting y costo al pasar a dominio propio.
+[ ] Título, meta descripción, H1/H2 y enlaces revisados, sin garantizar posicionamiento.
+
+FUENTES OFICIALES (consultadas el 18/11/2026)
+Wix gratis e IA: https://support.wix.com/en/article/building-a-website-for-free
+Wix formularios: https://support.wix.com/es/article/wix-formularios-agregar-y-configurar-un-formulario-en-tu-sitio
+Cal.com embed: https://cal.com/embed
+Google Search Central: https://developers.google.com/search/docs/fundamentals/seo-starter-guide

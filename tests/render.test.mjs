@@ -7,7 +7,7 @@ import { readFileSync } from 'node:fs'
 
 test('render React: enlaces públicos, texto exacto y vistas sin conexión al CRM', async () => {
   // Render en Node: complementa la revisión de navegador, no la sustituye.
-  const server = await createServer({ server: { middlewareMode: true }, appType: 'custom' })
+  const server = await createServer({ server: { middlewareMode: true, hmr: false }, optimizeDeps: { noDiscovery: true, include: [] }, appType: 'custom' })
   try {
     const { default: App } = await server.ssrLoadModule('/src/App.tsx')
     const { DentFlowDemo } = await server.ssrLoadModule('/src/demo/DentFlowDemo.tsx')

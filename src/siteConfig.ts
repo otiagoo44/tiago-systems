@@ -60,6 +60,7 @@ export const site: SiteConfig = {
     { label: 'DentFlow', href: '#dentflow' },
     { label: 'Cómo funciona', href: '#proceso' },
     { label: 'FAQ', href: '#preguntas' },
+    { label: 'Kit gratuito', href: '/recursos/' },
   ],
   hero: {
     eyebrow: 'DENTFLOW · SISTEMA PARA CLÍNICAS ODONTOLÓGICAS',

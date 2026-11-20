@@ -11,3 +11,5 @@ inspiracion-landing/
 ultima-conversacion.txt
 __pycache__/
 *.pyc
+/recursos/index.html
+/public/recursos/

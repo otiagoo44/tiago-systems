@@ -140,7 +140,7 @@ No usar grandes manchas doradas ni párrafos enteros de color. Contraste validad
 
 ## Typography
 
-Space Grotesk para títulos/cifras; DM Sans para cuerpo/controles. Se conserva la pareja histórica en vez de sustituirla. Hero fluido 47–86px; títulos de sección 40–100px según jerarquía; encabezado del fundador 44–68px y nombre editorial 48–174px; cuerpo de lectura 16–17px. Etiquetas CRM 11–13px acompañan datos y no reemplazan contenido explicativo.
+Space Grotesk para títulos/cifras; DM Sans para cuerpo/controles. Se conserva la pareja histórica en vez de sustituirla. Hero fluido 38–86px (38–56px en celulares); títulos de sección 40–100px según jerarquía; encabezado del fundador 44–68px y nombre editorial 48–174px; cuerpo de lectura 16–18px. Etiquetas CRM 11–13px acompañan datos y no reemplazan contenido explicativo. Recursos conserva las mismas familias con títulos de 35–70px y lectura de 16px/1.8.
 
 `text-wrap: balance` en titulares, anchos limitados y saltos deliberados en el hero. Cuerpo con interlínea 1.65–1.75. Las fuentes usan `display=swap` y preconexión a Google Fonts. El fallback sans-serif mantiene contenido visible.
 
@@ -148,7 +148,7 @@ Space Grotesk para títulos/cifras; DM Sans para cuerpo/controles. Se conserva l
 
 Contenedor máximo 1360px, márgenes de 40px en desktop y 19px en móvil. Ritmo de secciones 72–112px. Hero a dos columnas desde 901px; una columna por debajo. Mapa interactivo a dos paneles desde 761px; preguntas y diagrama apilados en móvil. Principios editoriales separados por líneas, producto a ancho completo, proceso numerado vertical y FAQ compacta. Fundador: encabezado amplio, retrato centrado con nombre superpuesto en el área inferior y relato debajo en dos columnas, una en móvil.
 
-La arquitectura comercial parte del problema de seguimiento: situaciones reconocibles, cuatro preguntas, producto, utilidad para el equipo, implementación, prueba disponible y encaje. Reutiliza divisores editoriales, mapa interactivo y proceso numerado. La navegación dice Problema, DentFlow, Cómo funciona y FAQ; los anclajes históricos se conservan. No se presentan métricas comerciales inventadas.
+La arquitectura comercial parte del problema de seguimiento: situaciones reconocibles, cuatro preguntas, producto, utilidad para el equipo, implementación, prueba disponible y encaje. Reutiliza divisores editoriales, mapa interactivo y proceso numerado. La navegación agrega Kit gratuito sin cambiar los rótulos ni anclajes históricos. Después del hero, un bloque vincula las dos rutas del kit. `/recursos/` es una página estática generada con React, con dos recorridos y cuatro recursos reales. Dos columnas desde 761px, una por debajo; al expandir un recurso ocupa el ancho disponible. Sin barras flotantes nuevas. No se presentan métricas comerciales inventadas.
 
 CRM: sidebar en desktop, cuatro pestañas en móvil; filas y formularios se reorganizan, nunca se escala la aplicación entera. Retrato real autorizado, optimizado a WebP 900×1125 y 480×600, con srcset, dimensiones y carga diferida. El encuadre se resuelve con CSS: primer plano, bordes fundidos con el fondo y sin marco cuadrado. El espacio conserva su altura y un monograma accesible si falla la imagen; no se modifica el rostro.
 
@@ -162,13 +162,13 @@ Radios de 4–6px en controles, 8px en paneles y 12px en marcos. Círculos sólo
 
 ## Components
 
-CTA principal: Revisar el seguimiento de mi clínica, hacia el número confirmado de `siteConfig.ts`, con mensajes prellenados según contexto general, después de la demo y cierre. Acceso secundario: Ver DentFlow en acción. El mapa conserva botones con `aria-pressed`, salida con anuncio cortés y recorrido ordenado; ahora explica estado, responsable, próxima acción y fecha. La introducción del producto inicia el mismo tour de la demo. El recurso gratuito permanece oculto mientras su configuración sea null.
+CTA principal: Revisar el seguimiento de mi clínica, hacia el número confirmado de `siteConfig.ts`, con mensajes prellenados según contexto general, después de la demo y cierre. Acceso secundario: Ver DentFlow en acción. El mapa conserva botones con `aria-pressed`, salida con anuncio cortés y recorrido ordenado; explica estado, responsable, próxima acción y fecha. La introducción del producto inicia el mismo tour de la demo. El kit tiene configuración propia en `src/resources/files.ts`: descarga ZIP y archivos individuales sin registro, PDF con transcripción HTML completa y apertura original alternativa, TXT íntegro copiable y XLSX con explicación estática. El antiguo slot opcional `site.resource` sigue disponible para otros recursos.
 
 Demo con reducer compartido, búsqueda/filtros, resumen, pacientes, pendientes, análisis, timeline, contacto interno, resultados y citas. Hero y métricas derivan de las mismas consultas. `Reiniciar demo` devuelve el escenario inicial exacto. Datos y reloj simulados identificados. Ninguna acción de la demo envía mensajes o consulta el CRM de producción.
 
 Pestañas con flechas/Inicio/Fin y foco visible. Diálogos nativos con Escape, cancelación y devolución de foco. FAQ con `aria-expanded` y regiones asociadas. Menú con Escape, cierre al salir del header con teclado y navegación a anclas. Controles con margen de scroll para el header fijo.
 
-Entrada escalonada del hero 700ms; producto 1000ms y asentamiento único 4500ms; bloques revelados por IntersectionObserver 620ms, contenido visible por defecto; mapa 300ms y demo/diálogos 220ms; hover 200ms. Movimiento principalmente transform/opacity, sin librerías nuevas. FAQ conserva transición de filas de grid. `prefers-reduced-motion` reduce transiciones y desactiva los revelados; también se consulta antes de cada revelado si cambia la preferencia durante la sesión.
+Entrada del hero 560ms con demoras máximas de 120ms; producto y asentamiento único 650ms, sin vaivén; bloques por IntersectionObserver 560ms y 10px, contenido visible por defecto; mapa 500ms, vistas y diálogos 450ms; feedback breve de estado y hover 200–250ms. Recursos entra en 600–650ms y mantiene disclosures nativos sin animar altura. Movimiento principalmente transform/opacity, sin librerías nuevas. FAQ conserva su transición existente de filas de grid. `prefers-reduced-motion` elimina animaciones/transiciones y cancela revelados WAAPI activos al cambiar la preferencia. Focus, CTA y textos nunca dependen de finalizar una entrada.
 
 ## Do's and Don'ts
 
@@ -178,4 +178,6 @@ Entrada escalonada del hero 700ms; producto 1000ms y asentamiento único 4500ms;
 - Comprobar responsive, teclado, contraste compuesto y estados; no confundir build con auditoría visual.
 - No inventar foto, clientes, casos, precios, resultados, integraciones ni publicaciones de Instagram.
 - No restaurar archivos históricos completos ni migrar de framework.
-- Cambios de producción requieren instrucción explícita; el propietario autorizó en esta sesión el push final a main.
+- Cambios de producción requieren aprobación explícita nueva. El encargo del 20/11/2026 autoriza solamente una versión de prueba; ninguna autorización histórica habilita publicar este cambio.
+
+La skill Autoeditor Animación y `config/estilo.json` se consultaron el 20/11/2026: negro/azul/dorado con tonos propuestos, sin HEX oficiales declarados. Se mantienen los tokens vigentes del repositorio: negro #05070B, dorado principal #D2B36C y azul informativo #70A5FF. El azul se aplica a rutas, tipos de archivo y enlaces de apoyo; no desplaza al CTA dorado. La pasada azul de fd03ccb continúa sustituida.

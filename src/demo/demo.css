@@ -19,7 +19,7 @@
 .crm-nav button[aria-selected=true] { background: var(--brand-subtle); color: var(--brand-highlight); border-bottom-color: var(--brand-highlight); }
 .crm-nav button:focus-visible { outline-offset: -5px; }
 .crm-body { padding: clamp(18px, 3vw, 40px); min-height: 640px; background: var(--bg-secondary); }
-.crm-view { animation: crm-enter .22s ease; }
+.crm-view { animation: crm-enter 450ms var(--motion-ease); }
 .crm-status { display: flex; align-items: center; gap: 8px; min-height: 46px; padding: 12px 26px; color: var(--text-secondary); font-size: 12px; line-height: 1.5; border-bottom: 1px solid var(--border); }
 .crm-status svg { flex: none; color: var(--success); }
 .crm-metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-bottom: 34px; }
@@ -85,7 +85,7 @@
 .crm-guide p { font-size: 14px; margin: 8px 0 0; line-height: 1.6; }
 .crm-guided { outline: 2px solid var(--brand-highlight); outline-offset: -2px; }
 .crm-dialog { position: fixed; width: min(560px,calc(100vw - 24px)); max-height: calc(100dvh - 32px); overflow: auto; margin: auto; padding: clamp(20px,4vw,32px); border: 1px solid var(--border-hover); border-radius: 10px; background: var(--bg-secondary); color: var(--text-primary); box-shadow: 0 24px 70px #0008; }
-.crm-dialog[open] { animation: crm-enter .22s ease; }
+.crm-dialog[open] { animation: crm-enter 450ms var(--motion-ease); }
 .crm-dialog::backdrop { background: #0b0f14d9; }
 .crm-dialog p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 .crm-dialog label { margin: 22px 0; }

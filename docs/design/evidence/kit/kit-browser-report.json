@@ -1,0 +1,334 @@
+{
+  "base": "http://localhost:4175",
+  "checkedAt": "2026-11-20T22:43:43.342Z",
+  "downloads": [
+    {
+      "name": "Dentflow_Checklist_Diagnostico.pdf",
+      "status": 200,
+      "bytes": 83658,
+      "mime": "application/pdf",
+      "sha256": "6cc56b2cb136532fa43fdffeeab24111c117f076085bc77f400f5b3ae22afd31"
+    },
+    {
+      "name": "Dentflow_Kit_Gratuito_Publico.zip",
+      "status": 200,
+      "bytes": 173225,
+      "mime": "application/zip",
+      "sha256": "3e1a122d1986ee4dcd2766b77f8c9254fef14e3406582d1f9f359642ef9e6214"
+    },
+    {
+      "name": "Dentflow_Kit_Guia_Practica.pdf",
+      "status": 200,
+      "bytes": 114094,
+      "mime": "application/pdf",
+      "sha256": "fc72df70d56230bd0698993738867c75cb1dc1871960b7c77133bd98f4a5babe"
+    },
+    {
+      "name": "Dentflow_Mega_Prompt_Web_Odontologica.txt",
+      "status": 200,
+      "bytes": 8249,
+      "mime": "text/plain",
+      "sha256": "886e8d8e24df8a4f1aeb777484ccaaebb9782300847ddb5398f4a00c62ff7e17"
+    },
+    {
+      "name": "Dentflow_Planilla_Seguimiento.xlsx",
+      "status": 200,
+      "bytes": 32153,
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sha256": "593f392cba5bca4439fffddbba497fa10871709abe75bba142eb337005b4b7df"
+    }
+  ],
+  "layouts": [
+    {
+      "path": "/",
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 19,
+        "y": 151,
+        "width": 282,
+        "height": 164.125,
+        "top": 151,
+        "right": 301,
+        "bottom": 315.125,
+        "left": 19
+      },
+      "cta": {
+        "x": 19,
+        "y": 520.375,
+        "width": 282,
+        "height": 67.1875,
+        "top": 520.375,
+        "right": 301,
+        "bottom": 587.5625,
+        "left": 19
+      }
+    },
+    {
+      "path": "/recursos/",
+      "width": 320,
+      "scrollWidth": 320,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 19,
+        "y": 153.5,
+        "width": 282,
+        "height": 151.1875,
+        "top": 153.5,
+        "right": 301,
+        "bottom": 304.6875,
+        "left": 19
+      },
+      "cta": {
+        "x": 19,
+        "y": 515.03125,
+        "width": 245.984375,
+        "height": 54,
+        "top": 515.03125,
+        "right": 264.984375,
+        "bottom": 569.03125,
+        "left": 19
+      }
+    },
+    {
+      "path": "/",
+      "width": 360,
+      "scrollWidth": 360,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 19,
+        "y": 151,
+        "width": 322,
+        "height": 134.15625,
+        "top": 151,
+        "right": 341,
+        "bottom": 285.15625,
+        "left": 19
+      },
+      "cta": {
+        "x": 19,
+        "y": 463.53125,
+        "width": 322,
+        "height": 54,
+        "top": 463.53125,
+        "right": 341,
+        "bottom": 517.53125,
+        "left": 19
+      }
+    },
+    {
+      "path": "/recursos/",
+      "width": 360,
+      "scrollWidth": 360,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 19,
+        "y": 153.5,
+        "width": 322,
+        "height": 151.1875,
+        "top": 153.5,
+        "right": 341,
+        "bottom": 304.6875,
+        "left": 19
+      },
+      "cta": {
+        "x": 19,
+        "y": 488.640625,
+        "width": 245.984375,
+        "height": 54,
+        "top": 488.640625,
+        "right": 264.984375,
+        "bottom": 542.640625,
+        "left": 19
+      }
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 19,
+        "y": 151,
+        "width": 352,
+        "height": 145.265625,
+        "top": 151,
+        "right": 371,
+        "bottom": 296.265625,
+        "left": 19
+      },
+      "cta": {
+        "x": 19,
+        "y": 474.640625,
+        "width": 352,
+        "height": 54,
+        "top": 474.640625,
+        "right": 371,
+        "bottom": 528.640625,
+        "left": 19
+      }
+    },
+    {
+      "path": "/recursos/",
+      "width": 390,
+      "scrollWidth": 390,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 19,
+        "y": 153.5,
+        "width": 352,
+        "height": 113.390625,
+        "top": 153.5,
+        "right": 371,
+        "bottom": 266.890625,
+        "left": 19
+      },
+      "cta": {
+        "x": 19,
+        "y": 424.453125,
+        "width": 245.984375,
+        "height": 54,
+        "top": 424.453125,
+        "right": 264.984375,
+        "bottom": 478.453125,
+        "left": 19
+      }
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "scrollWidth": 768,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 28,
+        "y": 177.5,
+        "width": 712,
+        "height": 135.78125,
+        "top": 177.5,
+        "right": 740,
+        "bottom": 313.28125,
+        "left": 28
+      },
+      "cta": {
+        "x": 28,
+        "y": 453.90625,
+        "width": 370,
+        "height": 54,
+        "top": 453.90625,
+        "right": 398,
+        "bottom": 507.90625,
+        "left": 28
+      }
+    },
+    {
+      "path": "/recursos/",
+      "width": 768,
+      "scrollWidth": 768,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 28,
+        "y": 205.5,
+        "width": 405.59375,
+        "height": 190.0625,
+        "top": 205.5,
+        "right": 433.59375,
+        "bottom": 395.5625,
+        "left": 28
+      },
+      "cta": {
+        "x": 28,
+        "y": 566.3125,
+        "width": 276.140625,
+        "height": 54,
+        "top": 566.3125,
+        "right": 304.140625,
+        "bottom": 620.3125,
+        "left": 28
+      }
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 40,
+        "y": 189.5,
+        "width": 619.390625,
+        "height": 256.078125,
+        "top": 189.5,
+        "right": 659.390625,
+        "bottom": 445.578125,
+        "left": 40
+      },
+      "cta": {
+        "x": 40,
+        "y": 591.21875,
+        "width": 370,
+        "height": 54,
+        "top": 591.21875,
+        "right": 410,
+        "bottom": 645.21875,
+        "left": 40
+      }
+    },
+    {
+      "path": "/recursos/",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "brokenAnchors": [],
+      "h1": {
+        "x": 40,
+        "y": 260.3125,
+        "width": 834.78125,
+        "height": 143.0625,
+        "top": 260.3125,
+        "right": 874.78125,
+        "bottom": 403.375,
+        "left": 40
+      },
+      "cta": {
+        "x": 40,
+        "y": 544.4375,
+        "width": 276.140625,
+        "height": 54,
+        "top": 544.4375,
+        "right": 316.140625,
+        "bottom": 598.4375,
+        "left": 40
+      }
+    }
+  ],
+  "checks": [
+    "All five widths: commercial link baseline preserved, primary CTA visible, no global overflow, all four panels expand, full prompt copied, all five real downloads match hashes.",
+    "Resources menu, product CTA, back/forward native multi-page navigation.",
+    "Normal motion present; switching reduced motion during section entry cancels active animations.",
+    "Reduced motion: zero running animations. No JS: landing links, resources, full PDF reading, TXT and downloads remain accessible. Clipboard denial selects full text and explains fallback. Keyboard disclosure and real PDF popup checked."
+  ],
+  "axe": [
+    {
+      "path": "/",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "/recursos/",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "/recursos/",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "forbiddenRequests": [],
+  "passed": true
+}

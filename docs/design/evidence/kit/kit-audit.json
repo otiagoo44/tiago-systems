@@ -1,0 +1,804 @@
+{
+  "files": [
+    {
+      "name": "Dentflow_Checklist_Diagnostico.pdf",
+      "bytes": 83658,
+      "sha256": "6cc56b2cb136532fa43fdffeeab24111c117f076085bc77f400f5b3ae22afd31"
+    },
+    {
+      "name": "Dentflow_Kit_Gratuito_Publico.zip",
+      "bytes": 173225,
+      "sha256": "3e1a122d1986ee4dcd2766b77f8c9254fef14e3406582d1f9f359642ef9e6214"
+    },
+    {
+      "name": "Dentflow_Kit_Guia_Practica.pdf",
+      "bytes": 114094,
+      "sha256": "fc72df70d56230bd0698993738867c75cb1dc1871960b7c77133bd98f4a5babe"
+    },
+    {
+      "name": "Dentflow_Mega_Prompt_Web_Odontologica.txt",
+      "bytes": 8249,
+      "sha256": "886e8d8e24df8a4f1aeb777484ccaaebb9782300847ddb5398f4a00c62ff7e17"
+    },
+    {
+      "name": "Dentflow_Planilla_Seguimiento.xlsx",
+      "bytes": 32153,
+      "sha256": "593f392cba5bca4439fffddbba497fa10871709abe75bba142eb337005b4b7df"
+    }
+  ],
+  "pdfs": {
+    "Dentflow_Checklist_Diagnostico.pdf": {
+      "pages": 2,
+      "text": [
+        "DENTFLOW\nRECURSOS PRÁCTICOS  /  CLÍNICAS ODONTOLÓGICAS\nDIAGNÓSTICO\nDE CONTROL\nCOMERCIAL\n9 preguntas. Elegí el primer proceso que debés ordenar.\nCHECKLIST IMPRIMIBLE  •  SIN PUNTUACIÓN CIENTÍFICA\nEdición de trabajo  •  18 de noviembre de 2026\nUso educativo. Verificá planes, interfaces y privacidad antes de publicar.\n",
+        "DENTFLOW\nCHECKLIST\nHerramientas administrativas  •  No reemplazan un sistema clínico\n2\nChecklist de control en 9 preguntas\nRespondé pensando en el funcionamiento real de la última semana. Marcá una respuesta por pregunta. No\nes una escala científica; es una herramienta operativa para detectar dónde comenzar.\nControl\nSí\nNo\nNo sé\n1. Registramos todas las consultas nuevas en un lugar reconocible.\n□\n□\n□\n2. Podemos identificar las consultas que aún no se agendaron.\n□\n□\n□\n3. Cada consulta abierta tiene una persona responsable.\n□\n□\n□\n4. Sabemos cuándo corresponde el próximo contacto.\n□\n□\n□\n5. La próxima acción está escrita de forma concreta.\n□\n□\n□\n6. Al cambiar el turno o el personal, sigue visible el estado de cada consulta.\n□\n□\n□\n7. Revisamos todos los días pendientes y atrasados.\n□\n□\n□\n8. Contamos semanalmente nuevas consultas, agendadas y abiertas.\n□\n□\n□\n9. El propietario puede ver el proceso sin reconstruirlo desde WhatsApp o de memoria.\n□\n□\n□\nCómo interpretar: empezá por las preguntas marcadas “No” o “No sé”. No sumes puntos ni compares el\nresultado con otras clínicas; elegí el primer bloqueo operativo verificable.\nPriorizá una mejora esta semana\n Si fallan estas preguntas\nComenzá por\n1 o 2\nRegistro único por consulta e identificación de las que siguen sin cita.\n3, 4 o 5\nAsignar responsable, próxima acción y fecha; activar revisión diaria de\npendientes.\n6 o 7\nProtocolo de actualización después de cada interacción y revisión en el cambio de\nturno.\n8 o 9\nDefinir métricas de la semana y reunión breve de control con el dueño.\nEvitar datos personales o clínicos al completar esta hoja. La checklist no determina eficiencia clínica ni calidad asistencial.\n"
+      ]
+    },
+    "Dentflow_Kit_Guia_Practica.pdf": {
+      "pages": 11,
+      "text": [
+        "DENTFLOW\nRECURSOS PRÁCTICOS  /  CLÍNICAS ODONTOLÓGICAS\nKIT GRATUITO\nAGENDA Y\nSEGUIMIENTO\nPara clínicas odontológicas. Dos rutas, resultados concretos.\nRUTA A  •  RESERVAS    |    RUTA B  •  CONTROL\nEdición de trabajo  •  18 de noviembre de 2026\nUso educativo. Verificá planes, interfaces y privacidad antes de publicar.\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n2\nEmpezá por el problema que tenés hoy\nElegí una sola ruta. Cada una produce un resultado útil por sí misma. No necesitás completar la otra para\nempezar.\nRUTA A • RESERVAS\nRUTA B • SEGUIMIENTO\nPara consultorios donde una persona necesita ver horarios\nsin intercambiar varios mensajes. Resultado: un enlace\nCal.com probado y, opcionalmente, una web básica con\nbotón de reserva.\nPara clínicas con consultas pendientes, varios estados y\nresponsables. Resultado: una planilla editable con semáforo\nde acciones y resumen semanal.\nRegla de alcance: esto no es un sistema de historia clínica, ni promete más pacientes, ni integra\nautomáticamente web, agenda, WhatsApp y Dentflow CRM.\nQué trae el kit\n1. Guía de agenda individual Cal.com • 2. Brief y mega prompt para web con IA • 3. Planilla Excel/Google\nSheets • 4. Checklist de control • 5. Mini guía de seguimiento y mensajes • 6. Preguntas frecuentes.\nPrimer recorrido\n • Si te cuesta coordinar citas: empezá por Cal.com, realizá una reserva ficticia y revisá correo y calendario.\n • Si perdés el hilo de las consultas: abrí la planilla, revisá las diez filas ficticias y detectá qué aparece como\n “Vencido”, “Hoy” o “Sin fecha”.\n• Si ambas cosas pasan: implementá primero la ruta que hoy causa más trabajo o incertidumbre; la otra queda\n disponible para después.\nRUTA A / AGENDA INDIVIDUAL\nObjetivo: permitir que una persona vea horarios disponibles de un profesional para un tipo de cita de\nalcance conocido. Para tratamientos con duración, equipamiento o evaluación previa incierta, preferí una\nsolicitud pendiente de confirmación.\n1 • Antes de crear tu cuenta\n • Definí qué se reserva: ejemplo “Evaluación odontológica inicial”. No habilites una intervención clínica de\n duración variable sin revisión profesional.\n• Elegí una persona responsable y decidí qué calendario refleja sus ocupaciones. Si hay otras agendas no\n conectadas, agregá esos bloqueos manualmente al calendario controlado.\n• Definí días, intervalos de atención, duración realista y tiempo de margen si corresponde. No publiques un\n horario hasta probarlo.\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n3\n• Tené disponible una dirección real de atención, correo para confirmaciones y un criterio claro de\n cancelación/reprogramación.\n2 • Qué está incluido gratuitamente\nFunción\nSituación documentada 18/11/2026\nAlcance de esta guía\nCuenta individual\nCal.com indica Individuals — Free forever, 1\nusuario.\nUsar para un profesional y una modalidad\nsencilla.\nEventos y calendarios\nDocumenta enlaces, eventos, conexiones a\ncalendarios y detección de conflictos.\nUsar los tipos de evento necesarios, con\ndisponibilidad configurada.\nConfirmación manual\nCal.com documenta Requires confirmation;\ncomprobar su disponibilidad y configuración en\nel evento de la cuenta.\nUsarla si está visible; si no, no ofrecer\nreserva automática de actos que\nrequieren validación.\nEquipos y varias sedes\nFunciones específicas de equipo y asignación\ncompartida se diferencian del plan individual.\nNo prometer coordinación multiusuario\ngratuita.\nFuente: https://cal.com/pricing • https://cal.com/features/requires-confirmation\n3 • Creá y configurá la agenda\n01 · Alta\nEntrá a https://app.cal.com/signup. Creá una cuenta individual (correo/contraseña o acceso disponible),\nconfirmá el acceso y elegí un nombre de usuario profesional.\n02 · Perfil\nCompletá nombre visible y zona horaria correcta (America/Asuncion si operás desde Paraguay). Revisá\ncómo aparecerá ante quien reserve; la interfaz puede mostrar nombres de menú en inglés.\n03 · Conectar calendario\nEn la configuración de Calendars / Apps / Calendar connections conectá Google Calendar, Outlook o\nproveedor compatible. Autorizá solo la cuenta necesaria. Elegí qué calendarios consultan ocupación y dónde\nse escriben reservas, si aparece esa opción.\n04 · Disponibilidad\nEntrá a Availability. Definí días y franjas. Ejemplo ficticio: lunes a viernes de 09:00 a 12:00. Dejá libres los\nintervalos de almuerzo o bloqueos clínicos. Guardá.\n05 · Tipo de evento\nEn Event Types → New Event Type, creá “Evaluación inicial — ejemplo de prueba”. Seleccioná duración (por\nejemplo, 30 minutos SOLO si la clínica lo aprueba), modalidad presencial y lugar verdadero. Elegí el\ncalendario de disponibilidad.\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n4\n06 · Reglas prácticas\nRevisá tiempo de antelación, márgenes y horizonte de reserva si están en el editor. Las reglas cambian por\nplan: comprobá su presencia en tu cuenta y probá cómo impactan los horarios.\n07 · Evitar choques\nAnotá un evento ocupado de prueba en el calendario conectado. Abrí tu página de reserva desde un\nnavegador privado: ese intervalo no debería ofrecerse si el calendario y la detección de conflictos están bien\nconfigurados. No funciona para agendas que no hayas conectado ni bloqueado.\n08 · Compartir enlace\nDesde el tipo de evento usá Share / Copy link. La forma habitual es https://cal.com/[usuario]/[evento]:\ncopiá tu enlace real; no uses este marcador como URL final.\n09 · Instagram\nEn Instagram abrí Editar perfil → Enlaces → Agregar enlace externo (etiquetas pueden variar). Pegá el\nenlace real y poné un título como “Reservar evaluación inicial”. Probalo desde otro teléfono.\n10 · Página web\nOpción básica: agregá un botón “Ver horarios disponibles” que abra tu URL de Cal.com. Opción avanzada:\nCal.com documenta widgets embed; probá compatibilidad de la plataforma, móvil, cookies y seguridad antes\nde incrustar.\n11 · Reserva de prueba\nUsá datos inventados o una dirección de prueba controlada. Elegí un horario, completá la reserva y verificá\ntanto la pantalla final como el correo de notificación, la carpeta de spam y la entrada en el calendario.\n12 · Cerrar prueba\nCancelá la reserva ficticia para liberar el horario. Comprobá que vuelve a mostrarse disponible y que no\npersisten datos ficticios innecesarios.\nPrueba mínima obligatoria: link → vista de franjas → reserva ficticia → recepción de notificación → bloqueo\ndel horario → cancelación → horario liberado.\n4 • ¿Cuándo conviene confirmación manual?\n • La duración depende de una evaluación previa o la reserva exige autorización del profesional.\n • El uso de sillón, equipo especial o personal auxiliar no está representado de manera confiable en la agenda\n conectada.\n• Se reciben solicitudes para diferentes profesionales y no existe una coordinación probada entre calendarios.\n • La clínica debe distinguir “solicitud recibida” de “cita confirmada”: mostrale esa diferencia al paciente y revisá\n el flujo de correo antes de activarlo.\nSi la función Requires confirmation aparece en las opciones del evento, activala y repetí la prueba\nverificando cuándo se envía la confirmación. Si no está disponible en tu plan o interfaz, restringí el enlace a\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n5\ncitas que la clínica sí puede confirmar automáticamente; para lo demás, usá un contacto humano.\n5 • Seguridad y privacidad de la agenda\n • No agregues campos de texto para síntomas, imágenes, diagnóstico, antecedentes u otros datos médicos en\n el formulario de reserva.\n• El proveedor puede solicitar nombre y correo para gestionar una cita; informá al usuario quién recibe esos\n datos. La categoría «tratamiento de interés» puede ser dato de salud cuando se vincula a una persona:\nminimizala, protegela y verificá obligaciones locales.\n• Verificá permisos de calendarios conectados. Evitá exponer detalles de eventos privados o calendarios\n personales al equipo de forma innecesaria.\n• No uses la agenda como registro clínico. Configurá retención, acceso y responsables según las obligaciones\n locales aplicables.\n• No supongas sincronización automática con Dentflow CRM, WhatsApp ni agendas ajenas.\n \n6 • Problemas frecuentes al probar\nSíntoma\nQué revisar\nAparece un horario ocupado\nZona horaria, conexión del calendario, opción de “comprobar conflictos”, evento\nmarcado ocupado y otras agendas no conectadas.\nNo aparecen horarios\nDisponibilidad semanal, pausas, feriados, antelación mínima y calendarios con bloqueos.\nNo llega confirmación\nEmail ingresado, spam, estado pendiente de aprobación, notificaciones activas y evento\nrealmente guardado.\nReserva duplicada\nComprobar los dos flujos que generan citas: link y recepcionista. Necesitan una única\nfuente de ocupación.\nLa clínica tiene 3 odontólogos\nNo usar el enlace de un único profesional como si fuera una agenda coordinada de\nequipo. Revisar alcance y plan apropiado.\nRUTA A / PÁGINA BÁSICA CON IA\nObjetivo: publicar una página informativa sencilla con datos reales de la clínica y un enlace externo de\nreserva. No reemplaza un proyecto web profesional cuando hay objetivos de marca, contenido, seguridad,\nSEO local o integraciones más exigentes.\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n6\n7 • Qué plataforma usar\nOpción\nGratuito verificable\nLímites y decisión\nWix (recomendada)\nCreación asistida por IA, edición y publicación\ncon alojamiento gratuito en URL\nsiteprefix.wixsite.com/siteaddress.\nIncluye 500 MB de almacenamiento, 1 GB\nde ancho de banda y banner/favicón Wix.\nHasta 4 formularios gratis (con campos\npremium restringidos). Dominio propio y\nquitar anuncios: plan pago.\nFramer (alternativa)\nPermite publicar en dominio de Framer; plan\nFree $0, 1 GB de ancho de banda y créditos de\nIA de prueba cuando la cuenta cumple las\ncondiciones.\nEl plan Free se orienta a pruebas/no\ncomercial. Dominio propio requiere pago.\nFormularios integrados documentados;\nrevisar límites y políticas antes de usar en\nclínica.\nFuentes: https://support.wix.com/en/article/building-a-website-for-free • https://www.framer.com/pricing\n8 • Publicá en Wix, paso a paso\n • Entrá a https://www.wix.com/ y creá tu cuenta. Seleccioná la opción de crear sitio con IA si aparece en tu\n flujo de alta.\n• Prepará los datos reales: nombre, zona, dirección, horarios, tratamientos, responsables autorizados, teléfono,\n fotos propias con permiso y enlace Cal.com.\n• Copiá el archivo Dentflow_Mega_Prompt_Web_Odontologica.txt. Si Wix admite instrucciones largas, pegá el\n brief. Si usa preguntas guiadas, respondelas con las secciones del prompt; no supongas que interpreta un\nmega prompt completo de una vez.\n• Elegí un diseño sobrio; revisá cada texto generado para corregir tratamientos o afirmaciones que la IA pudiera\n inventar.\n• Creá un botón “Ver horarios disponibles” → acción Abrir enlace web → pegá la URL real de Cal.com. Elegí\n abrir en pestaña nueva si corresponde.\n• Wix Forms documenta hasta 4 formularios gratuitos; ciertas funciones (por ejemplo, carga de archivos)\n requieren plan de pago. No recolectes información clínica. Para empezar, contacto institucional y botón de\nreserva son suficientes.\n• Comprobá visualización móvil, contenido y datos legales. Publicá con el subdominio gratuito y revisá la página\n como visitante.\n• No compres un plan por impulso: anotá qué funcionalidad justifica pagar (dominio propio, ausencia de\n branding, mayor capacidad o necesidades de negocio).\n9 • ¿Enlazar o incrustar Cal.com?\nEnlace (recomendado para principiantes): el visitante toca un botón y abre Cal.com. Es más fácil de\ncomprobar y reduce fallos de compatibilidad.\nIncrustación (opcional): Cal.com ofrece código de embed, y Wix permite elementos HTML/iFrame en su\neditor. No presupongas que todas las combinaciones de cookies, móvil y seguridad funcionan; probá con\nteléfonos reales y conservá un botón alternativo.\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n7\nFuentes: https://cal.com/embed • https://support.wix.com/es/article/editor-de-wix-incrustar-un-sitio-o-un-widget\n10 • Límites reales de una web con IA\n • SEO: Google advierte que rastrear, indexar o mostrar una página no está garantizado, incluso si cumple las\n recomendaciones. Un prompt no posiciona por sí solo.\n• Seguridad y privacidad: verificar formularios, consentimiento, acceso a mensajes, permisos y política de\n privacidad; las herramientas no sustituyen revisión profesional.\n• Profesionales y fotos: nunca inventes matrículas, reseñas, resultados, casos clínicos, años de experiencia ni\n personas.\n• Alojamiento: la web gratis funciona en infraestructura y marca de Wix, con límites documentados. El dominio\n propio tiene un costo separado o un plan asociado según proveedor.\n• Contenido: la IA puede crear texto correcto en apariencia pero falso en sus detalles. Revisá todo antes de\n publicar.\nRUTA B / SEGUIMIENTO Y CONTROL\nObjetivo: que cada consulta administrativa tenga identificador, estado, responsable y próxima acción visible.\nLa planilla es un registro operativo manual, no un CRM integrado ni una historia clínica.\n11 • Usá la planilla real\nAbrí Dentflow_Planilla_Seguimiento.xlsx. Tiene cuatro pestañas: INICIO, CONSULTAS, RESUMEN y\nLISTAS. Funciona como archivo Excel editable y se puede importar a Google Sheets, aunque luego conviene\nrevisar listas, formato y fórmulas.\nPestaña\nQué permite hacer\nINICIO\nDiez instrucciones prácticas y advertencias de seguridad.\nCONSULTAS\nID, fechas, canal, tratamiento de interés amplio, estado, responsable, última interacción,\npróxima acción, fecha de seguimiento, fecha agendada, observación mínima, semáforo y\nsemana de ingreso.\nRESUMEN\nConsultas ingresadas y reservas pactadas en la semana elegida, oportunidades abiertas\nactuales, vencimientos y consultas nuevas por canal.\nLISTAS\nEditá las opciones de estados, canales, responsables, tratamientos y próximas acciones. No\ncambies estados sin revisar las fórmulas que dependen de ellos.\n12 • Flujo de trabajo recomendado\n • Al ingresar una consulta: cargá un ID interno, fecha, canal y estado “Nueva”. No copies nombre, número o\n detalle médico.\n• Asigná propietario: seleccioná quién responde. No dejes dos personas como dueñas difusas.\n ",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n8\n• Después del primer contacto: cambiá estado a “En conversación” o “En espera” y registrá próxima acción\n concreta con fecha.\n• Cada día: filtrá Semáforo por “Vencido”, “Hoy”, “Sin fecha” o “Falta fecha agenda”; revisá responsables y\n corregí las reservas sin fecha de acuerdo.\n• Si se pacta cita: cambiá estado a “Agendada” y completá Fecha agendada, que significa cuándo se acordó, NO\n el día de la visita.\n• Si termina el proceso: marcá “Cerrada” o “No contactar”; no continúes mensajes contra la voluntad de la\n persona.\n• Cada lunes: revisá RESUMEN, seleccioná el lunes de la semana y discutí tres preguntas: cuántas entraron,\n cuántas se agendaron y cuáles siguen sin responsable o próxima fecha.\n13 • Caso completo (100 % ficticio)\nMomento\nRegistro administrativo\nLunes 16/11\nID: DF-101 · Canal: Instagram · Estado: Nueva · Responsable: Recepción · Próxima acción:\nResponder consulta · Seguimiento: 16/11.\nMartes 17/11\nSe enviaron horarios. Estado: En espera · Última interacción: 17/11 · Próxima acción: Esperar\nrespuesta · Seguimiento: 19/11.\nJueves 19/11\nLa persona acepta un horario. Estado: Agendada · Fecha agendada: 19/11 · Observación:\n“Horario pactado”. Se deja de tratar como pendiente.\nAlternativa de cierre\nSi la persona pide no recibir más mensajes: Estado: No contactar; se evita nuevo seguimiento\ncomercial.\nImportante: “Consultas agendadas esta semana” cuenta la Fecha agendada (cuándo se pactó la reserva), no\ntodas las consultas que siguen en estado Agendada. Así evitás mezclar un stock de estados con un flujo\nsemanal.\n14 • Mensajes administrativos respetuosos\n • Respuesta inicial: “Hola, gracias por escribir a [CLÍNICA]. Soy [NOMBRE/ROL] de recepción. ¿Querés que te\n comparta los horarios disponibles para una evaluación?”\n• Seguimiento si corresponde y existe permiso: “Hola, te escribo desde [CLÍNICA] por la consulta sobre\n disponibilidad. Si todavía te interesa, puedo enviarte opciones de horario. Si preferís dejarlo acá, no hay\nproblema.”\n• Confirmación manual: “Recibimos tu solicitud de horario para [DÍA/HORA]. Está pendiente de confirmación;\n desde recepción te avisaremos cuando quede confirmada.”\n• Cierre administrativo: “Gracias por avisarnos. Damos por cerrada esta consulta y no volveremos a contactarte\n por este motivo. Si necesitás algo, podés escribirnos.”\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n9\n15 • Qué no hace esta planilla\n • No sincroniza automáticamente WhatsApp, Cal.com, formularios ni Dentflow CRM.\n • No genera alertas push; el semáforo se actualiza al abrir/recalcular la hoja y alguien debe revisarlo.\n • No controla automáticamente duplicados ni el historial inmutable de cambios.\n • No define permisos por fila ni sustituye controles de privacidad, cifrado y auditoría de una solución clínica.\n • No debe contener historias clínicas, radiografías, diagnósticos o antecedentes, ni nombres y teléfonos reales.\n Aun con ID interno, el tratamiento de interés puede permitir vincular datos de salud: limitarlo y aplicar\ncontroles de acceso.\nDIAGNÓSTICO / 9 PREGUNTAS\nUsá el PDF independiente Dentflow_Checklist_Diagnostico.pdf. Marcá Sí / No / No sé para nueve\ncontroles. No es un instrumento validado científicamente ni genera una nota clínica: muestra qué proceso\nrevisar primero.\nDecisión práctica según el problema\nSi falta...\nPrimera corrección\nRegistro de consultas nuevas\nDefinir un único lugar e ID para cada consulta.\nResponsable o próxima acción\nAsignar propietario y acción con fecha a cada oportunidad abierta.\nControl diario de pendientes\nRevisar semáforo y registrar resultado del contacto.\nMétricas o visibilidad del dueño\nHacer una revisión semanal simple de entradas, agendadas y abiertas.\nDisponibilidad online\nProbar un evento individual de Cal.com antes de ampliar al equipo.\nPREGUNTAS FRECUENTES\n¿Necesito usar las dos rutas?\nNo. Una clínica puede usar solo enlace de reservas o solo planilla. Las dos rutas están diseñadas para\nfuncionar de manera independiente.\n¿Es gratis para siempre?\nCal.com describe un plan individual gratuito y Wix permite publicar en un subdominio gratuito con\nlimitaciones. Los proveedores pueden modificar planes y condiciones: verificá sus páginas oficiales cuando\nimplementes.\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n10\n¿Puedo conectar automáticamente todo con Dentflow?\nNo se afirma ninguna integración. La agenda online, la web y el CRM son capas distintas hasta que se\ncompruebe una integración concreta, con permisos y pruebas.\n¿La página aparecerá en Google?\nNo hay garantía de indexación ni posicionamiento. Una estructura clara es un punto de partida, pero SEO\nrequiere revisión de contenido, técnica y mantenimiento.\n¿Puedo gestionar información de pacientes en la planilla?\nLa plantilla es administrativa y usa referencias internas. No la utilices como historia clínica ni compartas\npúblicamente un archivo con datos identificables o sensibles.\n¿Y si mi clínica tiene varios profesionales?\nHacé un relevamiento de horarios, personas, recursos, permisos y reglas. Una agenda individual no equivale\na una coordinación de equipo. La solución adecuada depende de requisitos y presupuesto.\nCONTINUACIÓN OPCIONAL / DENTFLOW\nSi tu clínica necesita coordinar varios profesionales, gestionar más consultas o disponer de un sistema más\ncompleto de seguimiento y métricas, podés solicitar una revisión de tu proceso. La implementación\nprofesional puede incluir web, reservas, formularios y CRM según el alcance acordado, sin presuponer que\ntodas las herramientas están integradas.\nHerramienta básica\nServicio de mayor alcance\nAgenda de un profesional\nCoordinación multiusuario y recursos compartidos, según solución\ntécnica aprobada.\nPágina gratuita con subdominio\nDiseño profesional, dominio propio, mantenimiento, seguridad y SEO\ntrabajado sin garantía de ranking.\nPlanilla manual\nCRM multiusuario, flujos y permisos específicos cuando estén\ntécnicamente implementados.\nConteos semanales básicos\nPaneles de dirección con definiciones, fuentes y calidad de datos\nverificadas.\nAutoconfiguración\nDiagnóstico, implementación, pruebas, capacitación y soporte según\nacuerdo.\nFuentes y comprobación técnica\nCal.com: https://cal.com/pricing\nCal.com: https://cal.com/blog/cal-com-try-it-for-free-and-discover-how-it-can-simplify-your-scheduling\nCal.com: https://cal.com/features/requires-confirmation\n",
+        "DENTFLOW\nGUÍA PRÁCTICA\nHerramientas administrativas  •  No reemplazan un sistema clínico\n11\nCal.com: https://cal.com/embed\nWix: https://support.wix.com/en/article/building-a-website-for-free\nWix Forms: https://support.wix.com/en/article/wix-forms-upgrading-wix-forms\nWix: https://support.wix.com/es/article/editor-de-wix-incrustar-un-sitio-o-un-widget\nFramer: https://www.framer.com/pricing\nGoogle: https://developers.google.com/search/docs/fundamentals/seo-starter-guide\nFuentes del proyecto: $100M Leads (sección Lead Magnets); $100M Playbook: Lead Nurture; Hooks; Marketing Machine;\nBiblia de contenido (Fede Caball); Masterclass de Hooks; Carruseles con IA; Dentflow_Contexto_Actualizado_2026-11-18.txt\nDocumentación consultada el 18/11/2026. Instrucciones de menús: orientativas según información oficial; comprobar la\ninterfaz real y el plan de cada cuenta. Este kit no ha sido conectado a las cuentas privadas de los proveedores.\n"
+      ]
+    }
+  },
+  "workbook": {
+    "INICIO": {
+      "rows": 34,
+      "columns": 8,
+      "sample": [
+        [
+          "DENTFLOW  |  Inicio rápido",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "PLANILLA DE CONSULTAS • Uso administrativo, no historia clínica",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "1  Duplicá el archivo",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Guardá una copia privada en Excel o importalo en Google Drive → Abrir con Google Sheets. Verificá listas y fórmulas luego de importar.",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "2  Elegí quién actualiza",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Nombrá responsable de recepción/administración. Una consulta = una fila. No edites fórmulas de las columnas L y M.",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "3  Usá una referencia interna",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Cargá un ID sin nombre de paciente ni teléfono. Buscá los datos de contacto únicamente en el sistema seguro de la clínica.",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "4  Completá mínimos",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Fecha ingreso, canal, estado, responsable, próxima acción y fecha de seguimiento para toda oportunidad abierta.",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "formula_count": 0,
+      "validation_count": 0
+    },
+    "CONSULTAS": {
+      "rows": 308,
+      "columns": 13,
+      "sample": [
+        [
+          "DENTFLOW  |  Control de consultas",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "DATOS FICTICIOS: eliminá las filas de ejemplo antes de cargar actividad real. No escribas datos personales ni clínicos.",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "ID consulta",
+          "Fecha ingreso",
+          "Canal",
+          "Tratamiento de interés",
+          "Estado",
+          "Responsable",
+          "Última interacción",
+          "Próxima acción",
+          "Fecha seguimiento",
+          "Fecha agendada*",
+          "Observaciones admin.",
+          "Semáforo",
+          "Semana ingreso"
+        ],
+        [
+          "DF-001",
+          "2026-11-10 00:00:00",
+          "WhatsApp",
+          "Ortodoncia",
+          "Agendada",
+          "Recepción",
+          "2026-11-12 00:00:00",
+          "Cita registrada",
+          null,
+          "2026-11-12 00:00:00",
+          "Ejemplo: horario acordado",
+          "=IF(A9=\"\",\"\",IF(E9=\"Agendada\",IF(J9=\"\",\"Falta fecha agenda\",\"Finalizada\"),IF(OR(E9=\"Cerrada\",E9=\"No contactar\"),\"Finalizada\",IF(I9=\"\",\"Sin fecha\",IF(I9<TODAY(),\"Vencido\",IF(I9=TODAY(),\"Hoy\",\"Programado\"))))))",
+          "=IF(B9=\"\",\"\",B9-WEEKDAY(B9,2)+1)"
+        ],
+        [
+          "DF-002",
+          "2026-11-12 00:00:00",
+          "Instagram",
+          "Evaluación general",
+          "En espera",
+          "Administración",
+          "2026-11-16 00:00:00",
+          "Esperar respuesta",
+          "2026-11-19 00:00:00",
+          null,
+          "Ejemplo: se enviaron opciones",
+          "=IF(A10=\"\",\"\",IF(E10=\"Agendada\",IF(J10=\"\",\"Falta fecha agenda\",\"Finalizada\"),IF(OR(E10=\"Cerrada\",E10=\"No contactar\"),\"Finalizada\",IF(I10=\"\",\"Sin fecha\",IF(I10<TODAY(),\"Vencido\",IF(I10=TODAY(),\"Hoy\",\"Programado\"))))))",
+          "=IF(B10=\"\",\"\",B10-WEEKDAY(B10,2)+1)"
+        ],
+        [
+          "DF-003",
+          "2026-11-13 00:00:00",
+          "Formulario web",
+          "Implantes",
+          "En conversación",
+          "Recepción",
+          "2026-11-17 00:00:00",
+          "Enviar horarios",
+          "2026-11-18 00:00:00",
+          null,
+          "Ejemplo: coordinación pendiente",
+          "=IF(A11=\"\",\"\",IF(E11=\"Agendada\",IF(J11=\"\",\"Falta fecha agenda\",\"Finalizada\"),IF(OR(E11=\"Cerrada\",E11=\"No contactar\"),\"Finalizada\",IF(I11=\"\",\"Sin fecha\",IF(I11<TODAY(),\"Vencido\",IF(I11=TODAY(),\"Hoy\",\"Programado\"))))))",
+          "=IF(B11=\"\",\"\",B11-WEEKDAY(B11,2)+1)"
+        ],
+        [
+          "DF-004",
+          "2026-11-14 00:00:00",
+          "Llamada",
+          "Otro / no indicado",
+          "Cerrada",
+          "Recepción",
+          "2026-11-14 00:00:00",
+          "Cerrar registro",
+          null,
+          null,
+          "Ejemplo: consulta concluida",
+          "=IF(A12=\"\",\"\",IF(E12=\"Agendada\",IF(J12=\"\",\"Falta fecha agenda\",\"Finalizada\"),IF(OR(E12=\"Cerrada\",E12=\"No contactar\"),\"Finalizada\",IF(I12=\"\",\"Sin fecha\",IF(I12<TODAY(),\"Vencido\",IF(I12=TODAY(),\"Hoy\",\"Programado\"))))))",
+          "=IF(B12=\"\",\"\",B12-WEEKDAY(B12,2)+1)"
+        ],
+        [
+          "DF-005",
+          "2026-11-16 00:00:00",
+          "WhatsApp",
+          "Ortodoncia",
+          "Nueva",
+          "Recepción",
+          "2026-11-16 00:00:00",
+          "Responder consulta",
+          "2026-11-17 00:00:00",
+          null,
+          "Ejemplo: sin horario confirmado",
+          "=IF(A13=\"\",\"\",IF(E13=\"Agendada\",IF(J13=\"\",\"Falta fecha agenda\",\"Finalizada\"),IF(OR(E13=\"Cerrada\",E13=\"No contactar\"),\"Finalizada\",IF(I13=\"\",\"Sin fecha\",IF(I13<TODAY(),\"Vencido\",IF(I13=TODAY(),\"Hoy\",\"Programado\"))))))",
+          "=IF(B13=\"\",\"\",B13-WEEKDAY(B13,2)+1)"
+        ],
+        [
+          "DF-006",
+          "2026-11-16 00:00:00",
+          "Instagram",
+          "Estética dental",
+          "Agendada",
+          "Administración",
+          "2026-11-17 00:00:00",
+          "Cita registrada",
+          null,
+          "2026-11-17 00:00:00",
+          "Ejemplo: fecha pactada",
+          "=IF(A14=\"\",\"\",IF(E14=\"Agendada\",IF(J14=\"\",\"Falta fecha agenda\",\"Finalizada\"),IF(OR(E14=\"Cerrada\",E14=\"No contactar\"),\"Finalizada\",IF(I14=\"\",\"Sin fecha\",IF(I14<TODAY(),\"Vencido\",IF(I14=TODAY(),\"Hoy\",\"Programado\"))))))",
+          "=IF(B14=\"\",\"\",B14-WEEKDAY(B14,2)+1)"
+        ],
+        [
+          "DF-007",
+          "2026-11-17 00:00:00",
+          "Formulario web",
+          "Evaluación general",
+          "En espera",
+          "Recepción",
+          "2026-11-17 00:00:00",
+          "Esperar respuesta",
+          "2026-11-20 00:00:00",
+          null,
+          "Ejemplo: verificar disponibilidad",
+          "=IF(A15=\"\",\"\",IF(E15=\"Agendada\",IF(J15=\"\",\"Falta fecha agenda\",\"Finalizada\"),IF(OR(E15=\"Cerrada\",E15=\"No contactar\"),\"Finalizada\",IF(I15=\"\",\"Sin fecha\",IF(I15<TODAY(),\"Vencido\",IF(I15=TODAY(),\"Hoy\",\"Programado\"))))))",
+          "=IF(B15=\"\",\"\",B15-WEEKDAY(B15,2)+1)"
+        ],
+        [
+          "DF-008",
+          "2026-11-17 00:00:00",
+          "WhatsApp",
+          "Otro / no indicado",
+          "No contactar",
+          "Dirección",
+          "2026-11-17 00:00:00",
+          "Cerrar registro",
+          null,
+          null,
+          "Ejemplo: pidió no más mensajes",
+          "=IF(A16=\"\",\"\",IF(E16=\"Agendada\",IF(J16=\"\",\"Falta fecha agenda\",\"Finalizada\"),IF(OR(E16=\"Cerrada\",E16=\"No contactar\"),\"Finalizada\",IF(I16=\"\",\"Sin fecha\",IF(I16<TODAY(),\"Vencido\",IF(I16=TODAY(),\"Hoy\",\"Programado\"))))))",
+          "=IF(B16=\"\",\"\",B16-WEEKDAY(B16,2)+1)"
+        ]
+      ],
+      "formula_count": 600,
+      "validation_count": 5
+    },
+    "RESUMEN": {
+      "rows": 25,
+      "columns": 10,
+      "sample": [
+        [
+          "DENTFLOW  |  Resumen semanal",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Seleccioná el lunes de una semana en B5. Solo cuenta registros de las filas 9–308 de CONSULTAS.",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Inicio semana",
+          "2026-11-16 00:00:00",
+          "Fin semana",
+          "=B5+6",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Indicador",
+          "Resultado",
+          "Definición",
+          "Período",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Consultas nuevas",
+          "=COUNTIFS(CONSULTAS!$B$9:$B$308,\">=\"&$B$5,CONSULTAS!$B$9:$B$308,\"<\"&($B$5+7),CONSULTAS!$A$9:$A$308,\"<>\")",
+          "Fecha de ingreso dentro de la semana",
+          "Esta semana",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Consultas agendadas",
+          "=COUNTIFS(CONSULTAS!$J$9:$J$308,\">=\"&$B$5,CONSULTAS!$J$9:$J$308,\"<\"&($B$5+7),CONSULTAS!$A$9:$A$308,\"<>\")",
+          "Fecha en que se acordó la cita; no fecha de atención",
+          "Esta semana",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Oportunidades abiertas",
+          "=COUNTIF(CONSULTAS!$E$9:$E$308,\"Nueva\")+COUNTIF(CONSULTAS!$E$9:$E$308,\"En conversación\")+COUNTIF(CONSULTAS!$E$9:$E$308,\"En espera\")",
+          "Estados abiertos actuales, sin filtro semanal",
+          "Hoy",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Seguimientos vencidos",
+          "=COUNTIF(CONSULTAS!$L$9:$L$308,\"Vencido\")",
+          "Abiertas con fecha anterior a hoy",
+          "Hoy",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Seguimientos de hoy",
+          "=COUNTIF(CONSULTAS!$L$9:$L$308,\"Hoy\")",
+          "Abiertas cuya fecha es hoy",
+          "Hoy",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Abiertas sin fecha",
+          "=COUNTIF(CONSULTAS!$L$9:$L$308,\"Sin fecha\")",
+          "Pendientes sin fecha definida",
+          "Hoy",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Agendadas sin fecha",
+          "=COUNTIF(CONSULTAS!$L$9:$L$308,\"Falta fecha agenda\")",
+          "Agendada sin fecha en que se pactó; corregir para métricas",
+          "Calidad",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "CONSULTAS NUEVAS POR CANAL • semana seleccionada",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "formula_count": 13,
+      "validation_count": 0
+    },
+    "LISTAS": {
+      "rows": 15,
+      "columns": 5,
+      "sample": [
+        [
+          "LISTAS EDITABLES  |  Ajustá a tu clínica",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Estados",
+          "Canales",
+          "Responsables",
+          "Tratamiento (amplio)",
+          "Acciones habituales"
+        ],
+        [
+          "Nueva",
+          "WhatsApp",
+          "Recepción",
+          "Evaluación general",
+          "Responder consulta"
+        ],
+        [
+          "En conversación",
+          "Instagram",
+          "Administración",
+          "Ortodoncia",
+          "Enviar horarios"
+        ],
+        [
+          "En espera",
+          "Formulario web",
+          "Odontólogo/a",
+          "Implantes",
+          "Confirmar cita"
+        ],
+        [
+          "Agendada",
+          "Llamada",
+          "Dirección",
+          "Estética dental",
+          "Revisar disponibilidad"
+        ],
+        [
+          "Cerrada",
+          "Otro",
+          "Otro responsable",
+          "Otro / no indicado",
+          "Esperar respuesta"
+        ],
+        [
+          "No contactar",
+          null,
+          null,
+          null,
+          "Cerrar registro"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          "Otra gestión"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "Estados cerrados: Agendada / Cerrada / No contactar",
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "formula_count": 0,
+      "validation_count": 0
+    }
+  },
+  "zip": [
+    {
+      "name": "Dentflow_Kit_Guia_Practica.pdf",
+      "matches_original": true
+    },
+    {
+      "name": "Dentflow_Planilla_Seguimiento.xlsx",
+      "matches_original": true
+    },
+    {
+      "name": "Dentflow_Mega_Prompt_Web_Odontologica.txt",
+      "matches_original": true
+    },
+    {
+      "name": "Dentflow_Checklist_Diagnostico.pdf",
+      "matches_original": true
+    }
+  ],
+  "external_links": 0
+}

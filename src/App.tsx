@@ -12,6 +12,7 @@ import {
 import { getContactHref, site, type ContactContext } from './siteConfig'
 import { DentFlowDemo, HeroPreview } from './demo/DentFlowDemo'
 import { createInitialState, demoReducer } from './demo/model'
+import { kitFiles } from './resources/files'
 
 function useEntranceMotion() {
   useEffect(() => {
@@ -19,21 +20,31 @@ function useEntranceMotion() {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
     if (reducedMotion.matches) return
 
+    const animations = new Set<Animation>()
+    const cancelMotion = () => { if (reducedMotion.matches) animations.forEach((animation) => animation.cancel()) }
+    reducedMotion.addEventListener('change', cancelMotion)
+
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue
         const element = entry.target as HTMLElement
         if (reducedMotion.matches) { observer.unobserve(element); continue }
-        element.animate(
-          [{ opacity: 0.3, transform: 'translateY(22px)' }, { opacity: 1, transform: 'translateY(0)' }],
-          { duration: 620, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'none' },
+        const animation = element.animate(
+          [{ opacity: 0.65, transform: 'translateY(10px)' }, { opacity: 1, transform: 'translateY(0)' }],
+          { duration: 560, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'none' },
         )
+        animations.add(animation)
+        animation.onfinish = () => animations.delete(animation)
         observer.unobserve(element)
       }
     }, { threshold: 0.12 })
 
     document.querySelectorAll('[data-animate]').forEach((element) => observer.observe(element))
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      reducedMotion.removeEventListener('change', cancelMotion)
+      animations.forEach((animation) => animation.cancel())
+    }
   }, [])
 }
 
@@ -213,6 +224,7 @@ function App() {
                 <div className="hero-primary"><ContactLink>{site.ctas.primary}</ContactLink><p className="cta-microcopy">{site.hero.microcopy}</p></div>
                 <a className="button button--dark" href="#dentflow">{site.ctas.demo} <ArrowDownRight size={18} aria-hidden="true" /></a>
               </div>
+              <a className="hero-kit-link" href="/recursos/">Kit gratuito: agenda y seguimiento <ArrowUpRight size={17} aria-hidden="true" /></a>
               <div className="hero-credit"><span>{site.founder.name.toUpperCase()}</span><span>{site.founder.role}</span></div>
             </div>
             <div className="hero-visual">
@@ -225,6 +237,13 @@ function App() {
             </div>
           </div>
           <div className="shell hero-footer"><span>TECNOLOGÍA PARA EL TRABAJO REAL</span><a href="#enfoque">DESLIZÁ PARA EXPLORAR <ArrowDownRight size={16} /></a></div>
+        </section>
+
+        <section className="kit-feature" id="kit-gratuito" aria-labelledby="kit-title">
+          <div className="shell kit-feature-layout">
+            <div data-animate><span className="eyebrow">DENTFLOW / RECURSOS GRATUITOS</span><h2 id="kit-title">Un primer paso.<br /><em>Dos formas de empezar.</em></h2><p>Facilitá las reservas o poné en orden las consultas pendientes. Elegí lo que tu clínica necesita hoy.</p><div className="kit-feature-actions"><a className="button button--brand" href="/recursos/">Explorar el kit gratuito <ArrowUpRight size={18} aria-hidden="true" /></a><a className="text-link" href={kitFiles.zip.url} download>Descargar kit completo (.zip) <ArrowDownRight size={18} aria-hidden="true" /></a></div><p className="kit-note">4 archivos · Sin costo ni formulario · También podés leerlos desde el celular.</p></div>
+            <div className="kit-feature-routes" data-animate><a href="/recursos/#ruta-a"><span>RUTA A / RESERVAS</span><h3>Un enlace para ver horarios.</h3><p>Guía de agenda individual y prompt para una web básica.</p><ArrowUpRight size={22} aria-hidden="true" /></a><a href="/recursos/#ruta-b"><span>RUTA B / SEGUIMIENTO</span><h3>Claridad sobre lo que sigue.</h3><p>Planilla editable y checklist de control en nueve preguntas.</p><ArrowUpRight size={22} aria-hidden="true" /></a></div>
+          </div>
         </section>
 
         <section className="approach section-light" id="enfoque" aria-labelledby="approach-title">

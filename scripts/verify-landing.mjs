@@ -8,7 +8,7 @@ import assert from 'node:assert/strict'
 const require = createRequire(import.meta.url)
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright')
 const base = process.env.QA_URL || 'http://localhost:4173'
-const output = 'docs/design/evidence/conversion'
+const output = process.env.QA_OUTPUT || 'docs/design/evidence/conversion'
 mkdirSync(output, { recursive: true })
 const browser = await chromium.launch({ headless: true, executablePath: process.env.CHROMIUM_EXECUTABLE })
 const report = { base, checkedAt: new Date().toISOString(), viewports: [], interactions: [], errors: [], failedRequests: [], forbiddenRequests: [] }
@@ -195,7 +195,7 @@ try {
   const description = await page.locator('meta[name=description]').getAttribute('content')
   for (const selector of ['meta[property="og:description"]', 'meta[name="twitter:description"]']) assert.equal(await page.locator(selector).getAttribute('content'), description)
   for (const asset of ['/favicon.svg', '/social-preview.png']) assert.equal((await page.request.get(base + asset)).status(), 200)
-  check('SEO, language, canonical, social metadata, favicon/OG assets and absent resource CTA')
+  check('SEO, language, canonical, social metadata, favicon/OG assets and preserved optional legacy resource slot')
 
   // The real portrait has a useful fallback if either responsive asset fails.
   assert.deepEqual(report.errors, [])

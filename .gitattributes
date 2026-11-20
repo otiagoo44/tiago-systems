@@ -1,0 +1,2 @@
+# Preserve owner-supplied resources byte for byte, including TXT line endings.
+kit-separado-y-zip/* -text

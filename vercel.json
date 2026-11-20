@@ -1,0 +1,23 @@
+{
+  "headers": [
+    {
+      "source": "/recursos/Dentflow_Planilla_Seguimiento.xlsx",
+      "headers": [
+        { "key": "Content-Type", "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" },
+        { "key": "Content-Disposition", "value": "attachment; filename=\"Dentflow_Planilla_Seguimiento.xlsx\"" }
+      ]
+    },
+    {
+      "source": "/recursos/Dentflow_Kit_Gratuito_Publico.zip",
+      "headers": [{ "key": "Content-Disposition", "value": "attachment; filename=\"Dentflow_Kit_Gratuito_Publico.zip\"" }]
+    },
+    {
+      "source": "/recursos/Dentflow_Mega_Prompt_Web_Odontologica.txt",
+      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+    },
+    {
+      "source": "/recursos/:file*",
+      "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }]
+    }
+  ]
+}
