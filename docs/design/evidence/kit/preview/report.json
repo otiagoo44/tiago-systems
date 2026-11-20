@@ -1,0 +1,60 @@
+{
+  "base": "https://tiago-systems-gcqlmgzja-ortegatiago733-2656s-projects.vercel.app",
+  "checkedAt": "2026-11-20T22:53:53.329Z",
+  "downloads": [
+    {
+      "name": "Dentflow_Checklist_Diagnostico.pdf",
+      "status": 200,
+      "bytes": 83658,
+      "mime": "application/pdf"
+    },
+    {
+      "name": "Dentflow_Kit_Gratuito_Publico.zip",
+      "status": 200,
+      "bytes": 173225,
+      "mime": "application/zip"
+    },
+    {
+      "name": "Dentflow_Kit_Guia_Practica.pdf",
+      "status": 200,
+      "bytes": 114094,
+      "mime": "application/pdf"
+    },
+    {
+      "name": "Dentflow_Mega_Prompt_Web_Odontologica.txt",
+      "status": 200,
+      "bytes": 8249,
+      "mime": "text/plain; charset=utf-8"
+    },
+    {
+      "name": "Dentflow_Planilla_Seguimiento.xlsx",
+      "status": 200,
+      "bytes": 32153,
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    }
+  ],
+  "screens": [
+    {
+      "path": "/",
+      "width": 390,
+      "title": "Tiago Systems | Sistemas para Clínicas Odontológicas"
+    },
+    {
+      "path": "/recursos/",
+      "width": 390,
+      "title": "Kit gratuito de agenda y seguimiento | DentFlow · Tiago Systems"
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "title": "Tiago Systems | Sistemas para Clínicas Odontológicas"
+    },
+    {
+      "path": "/recursos/",
+      "width": 1440,
+      "title": "Kit gratuito de agenda y seguimiento | DentFlow · Tiago Systems"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

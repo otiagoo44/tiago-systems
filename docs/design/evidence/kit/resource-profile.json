@@ -1,0 +1,51 @@
+{
+  "tasks": [
+    {
+      "start": 1938.2000000001863,
+      "duration": 110
+    },
+    {
+      "start": 2831.899999999441,
+      "duration": 89
+    },
+    {
+      "start": 2921.7999999998137,
+      "duration": 113
+    },
+    {
+      "start": 3035.7000000001863,
+      "duration": 84
+    },
+    {
+      "start": 5218.700000000186,
+      "duration": 515
+    }
+  ],
+  "resources": [
+    {
+      "name": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      "bytes": 952
+    },
+    {
+      "name": "http://localhost:4175/assets/resources-mvWZxpCY.js",
+      "bytes": 1147
+    },
+    {
+      "name": "http://localhost:4175/assets/styles-Br5xrPEy.js",
+      "bytes": 1011
+    },
+    {
+      "name": "http://localhost:4175/assets/styles-B9DigUWQ.css",
+      "bytes": 8038
+    },
+    {
+      "name": "http://localhost:4175/assets/resources-S2EDSTDk.css",
+      "bytes": 2362
+    },
+    {
+      "name": "http://localhost:4175/favicon.svg",
+      "bytes": 528
+    }
+  ],
+  "nodes": 356
+}

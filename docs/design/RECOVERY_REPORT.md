@@ -57,6 +57,16 @@ Capturas nuevas inspeccionadas: hero y recursos en 320/360/390/768/1440; bloque 
 
 La revisión usa Chromium con viewports emulados, no teléfono físico ni navegador integrado de Instagram. La estructura del XLSX se abrió en lectura y sus fórmulas/validaciones se inventariaron; no se afirma recálculo probado en Excel o importación real a Sheets. La transcripción HTML conserva el texto completo, pero no la diagramación de tablas del PDF: el original siempre está disponible. Los planes de terceros se presentan como contenido fechado del kit, sin afirmar una nueva verificación contractual. Promover a producción requiere la aprobación explícita del usuario después de revisar la preview.
 
+### Preview verificada en Vercel
+
+Aplicación revisada en commit `bb862ddf4a9a82e0bd8b3444efcf3da8761a5c63`, rama `codex/dentflow-kit-preview`. Deployment `dpl_3Ep6rPM6xdHv7SDFV3KypqUQcyhw`, READY, entorno de prueba (target distinto de production): [abrir preview](https://tiago-systems-gcqlmgzja-ortegatiago733-2656s-projects.vercel.app/). Recursos: `/recursos/`. Vercel mantiene su protección; se generó un enlace temporal de revisión sin desactivarla. El parámetro temporal no se versiona.
+
+`scripts/verify-kit-preview.mjs` pasó contra esa URL: los cinco recursos responden **200**, MIME apropiado y SHA-256 idéntico; ZIP descargado por clic; prompt completo copiado; navegación de recursos a DentFlow y cinco enlaces comerciales presentes. Sin errores JS y sin overflow a 390/1440. Capturas reales remotas y [reporte de preview](evidence/kit/preview/report.json) guardados. La espera de carga React después de navegar es explícita para evitar comprobar una página aún vacía.
+
+Producción se volvió a consultar al terminar: sigue en `dpl_3rq59Dceovtz7PvEtYCDwbN55DGe`, commit `e549be09cab612482b1bee3347551589cc660e2d`. No se promovió ni se cambiaron dominios. El commit posterior de documentación/evidencia no cambia la aplicación de la preview probada.
+
+Perfil directo local complementario: [resource-profile.json](evidence/kit/resource-profile.json), 356 nodos y cinco tareas mayores de 50ms (máxima 515ms). La red confirma sólo CSS, dos módulos JS pequeños y fuentes/favicón; no React, PDF, XLSX ni ZIP en la carga inicial. No se adjudica el TBT alto a una causa sin evidencia adicional: requiere perfilado específico y prueba de teléfono antes de producción.
+
 ---
 
 > Cierre, 5 de octubre de 2026: foto profesional real incorporada y revisión comercial finalizada. La nota de foto pendiente al final de la recuperación histórica ya no aplica. El recurso gratuito permanece oculto porque no tiene URL real.
